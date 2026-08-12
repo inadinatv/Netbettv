@@ -55,11 +55,26 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 <section class="toolbar" style="margin-bottom: 20px; display: block;">
     <h3 style="color: var(--cyan); margin-bottom: 10px; font-size: 1rem;">📅 Günün Maçları (12.08.2026)</h3>
     <ul style="list-style: none; font-size: 0.85rem; color: var(--text); line-height: 1.8;">
+        <li><a href="https://fixbettv84.com/channel?id=trtspor" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 19:15 - Newcastle Utd. vs Everton (Hazırlık Maçı)</a></li>
         <li><a href="https://fixbettv84.com/channel?id=trtspor" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 21:30 - Leeds United vs Manchester Utd (Hazırlık Maçı)</a></li>
         <li><a href="https://fixbettv84.com/channel?id=trt1" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 22:00 - PSG vs Aston Villa (UEFA Süper Kupa Final)</a></li>
     </ul>
 </section>
 <!-- GUNUN_MACLARI_BITIS -->
+
+<!-- PUAN_DURUMU_BASLANGIC -->
+<section class="toolbar" style="margin-bottom: 20px; display: block;">
+    <button id="standingsToggle" onclick="document.getElementById('standingsContent').style.display = document.getElementById('standingsContent').style.display === 'none' ? 'block' : 'none'" style="width: 100%; padding: 12px; background: rgba(76, 244, 255, 0.1); border: 1px solid rgba(76, 244, 255, 0.3); border-radius: 12px; color: var(--cyan); font-weight: 700; cursor: pointer; font-size: 0.9rem;">📊 Puan Durumu</button>
+    <div id="standingsContent" style="display: none; margin-top: 15px; overflow-x: auto;">
+        
+        <iframe frameborder="0" scrolling="no" width="100%" height="600" 
+                src="https://fixbettv84.com/puan.html" 
+                style="border: none; border-radius: 8px; background: transparent;">
+        </iframe>
+        
+    </div>
+</section>
+<!-- PUAN_DURUMU_BITIS -->
 
 <section id="contentGrid" class="content-grid" aria-live="polite"></section>
 </main>
@@ -85,8 +100,21 @@ const contentGrid=document.getElementById("contentGrid"),categoryTabs=document.g
 const arrowIcon='<svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m13 6 6 6-6 6"></path></svg>';
 const normalize=value=>value.toLocaleLowerCase("tr-TR");
 function renderTabs(){categories.forEach(category=>{const button=document.createElement("button");button.type="button";button.className="tab-button";button.dataset.filter=category.title;button.textContent=category.title;button.addEventListener("click",()=>{activeFilter=category.title;document.querySelectorAll(".tab-button").forEach(tab=>tab.classList.toggle("active",tab===button));renderCategories()});categoryTabs.appendChild(button)})}
-function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=BASE_URL+"channel?id="+encodeURIComponent(channel.id);link.target="macth-video";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
+function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=BASE_URL+"channel?id="+encodeURIComponent(channel.id);link.target="match-video";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
 totalChannelsElement.textContent=categories.reduce((sum,category)=>sum+category.channels.length,0);totalCategoriesElement.textContent=categories.length;renderTabs();renderCategories();searchInput.addEventListener("input",renderCategories);
+
+// iframe reklam engelleme - bet afişlerini gizle
+function hideIframeAds(){
+    const iframes=document.querySelectorAll('iframe');
+    iframes.forEach(iframe=>{
+        const src=iframe.src.toLowerCase();
+        if(src.includes('bet')||src.includes('reklam')||src.includes('ad')){
+            iframe.style.display='none';
+        }
+    });
+}
+setInterval(hideIframeAds,500);
+hideIframeAds();
 </script>
 </body>
 </html>
