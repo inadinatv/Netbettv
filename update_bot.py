@@ -126,15 +126,16 @@ class MatchFetcher:
             logger.error(f"Maçlar çekilirken beklenmeyen hata: {e}")
             return None
     
-    def _parse_matches(self, html_content: str) -> str:
+    def _parse_matches(self, html_content: str, base_url: str = Config.DEFAULT_DOMAIN) -> str:
         """
         API'den gelen HTML içeriğini parse eder ve temizler.
         
         Args:
             html_content: API'den gelen ham HTML içeriği
+            base_url: Temel URL adresi
             
         Returns:
-            Temizlenmiş maç HTML'i
+            Temizlenmiş maç HTML'i (tıklanabilir linklerle)
         """
         soup = BeautifulSoup(html_content, 'html.parser')
         matches = []
@@ -166,7 +167,7 @@ class MatchFetcher:
                     'channel_id': channel_id
                 })
         
-        # HTML oluştur
+        # HTML oluştur - tıklanabilir linklerle
         if not matches:
             return ""
         
@@ -178,9 +179,15 @@ class MatchFetcher:
         
         for match in matches:
             icon = "⚽" if "Hazırlık" in match['type'] or "Kupa" in match['type'] else "🏀"
-            html_parts.append(
-                f'        <li>{icon} {match["time"]} - {match["title"]} ({match["type"]})</li>'
-            )
+            # Tıklanabilir link oluştur - channel_id ile
+            if match['channel_id']:
+                html_parts.append(
+                    f'        <li><a href="{base_url}channel?id={match["channel_id"]}" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">{icon} {match["time"]} - {match["title"]} ({match["type"]})</a></li>'
+                )
+            else:
+                html_parts.append(
+                    f'        <li>{icon} {match["time"]} - {match["title"]} ({match["type"]})</li>'
+                )
         
         html_parts.extend([
             '    </ul>',
