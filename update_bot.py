@@ -1,90 +1,293 @@
+"""
+Player TV - Canlı Yayın Merkezi Güncelleme Botu
+
+Bu modül, Player TV web sitesinin domain ve günlük maç bilgilerini
+otomatik olarak güncellemek için kullanılır.
+
+Kullanım:
+    python update_bot.py
+    
+Yapılandırma:
+    config.yaml dosyasından özelleştirilebilir.
+"""
+
 import re
+import logging
+from pathlib import Path
+from datetime import datetime
+from typing import Optional
+
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
 
-# 1. GÜNCEL DOMAİNİ BULMA
-def get_current_domain():
-    # NOT: Bu tür siteler genelde adres değiştirir (83 -> 84 gibi).
-    # Eğer sitenin sabit bir yönlendirme linki (örneğin Twitter biosundaki link) varsa
-    # buraya onu yazmalısın. Bot o linke gidip yönlendirildiği son adresi alacaktır.
-    master_url = "https://t.me/s/fixbet" # Örnek telegram kanalı veya master yönlendirici link
+# Logging ayarları
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+class Config:
+    """Uygulama yapılandırma sabitleri."""
     
-    try:
-        # Örnek mantık: Yönlendirmeyi takip et
-        # response = requests.get(master_url, allow_redirects=True)
-        # current_url = response.url
-        
-        # Şimdilik varsayılan olarak bir URL dönüyoruz. 
-        # Gerçek senaryoda üstteki request mantığını sitenin yapısına göre uyarlamalısın.
-        current_url = "https://fixbettv84.com/" 
-        
-        if not current_url.endswith('/'):
-            current_url += '/'
-        return current_url
-    except Exception as e:
-        print(f"Domain çekilirken hata: {e}")
-        return None
+    INDEX_HTML_PATH = Path('index.html')
+    ENCODING = 'utf-8'
+    
+    # Regex pattern'leri
+    BASE_URL_PATTERN = re.compile(
+        r'(// BASE_URL_START\nconst BASE_URL=")(.*?)(";)'
+    )
+    MATCHES_PATTERN = re.compile(
+        r'(<!-- GUNUN_MACLARI_BASLANGIC -->).*?(<!-- GUNUN_MACLARI_BITIS -->)',
+        flags=re.DOTALL
+    )
+    
+    # Varsayılan değerler
+    DEFAULT_DOMAIN = "https://fixbettv84.com/"
+    MASTER_URL = "https://t.me/s/fixbet"
 
-# 2. GÜNÜN MAÇLARINI ÇEKME
-def get_daily_matches():
-    try:
-        # Örnek olarak tff, mackolik veya ücretsiz bir spor apisinden veri çekilebilir.
-        # Burada basitçe örnek bir veri yapısı oluşturuyoruz.
-        # Web scraping (BeautifulSoup) ile bir iddaa/spor sitesinden maçlar çekilebilir.
-        
-        # Gerçek bir senaryo örneği (Örnek site URL'si):
-        # res = requests.get("https://www.sporx.com/tv-rehberi")
-        # soup = BeautifulSoup(res.text, 'html.parser')
-        # maçları soup.find_all() ile çek...
-        
-        # Şimdilik örnek HTML döndürüyoruz:
-        today = datetime.now().strftime("%d.%m.%Y")
-        html_content = f"""
-<section class="toolbar" style="margin-bottom: 20px; display: block;">
-    <h3 style="color: var(--cyan); margin-bottom: 10px; font-size: 1rem;">📅 Günün Öne Çıkan Maçları ({today})</h3>
-    <ul style="list-style: none; font-size: 0.85rem; color: var(--text); line-height: 1.8;">
-        <li>⚽ 19:00 - Galatasaray vs Fenerbahçe (Bein Sports 1)</li>
-        <li>⚽ 21:45 - Real Madrid vs Barcelona (S Sport)</li>
-        <li>🏀 22:00 - Anadolu Efes vs Panathinaikos (Smart Spor)</li>
-    </ul>
-</section>
-"""
-        return html_content
-    except Exception as e:
-        print(f"Maçlar çekilirken hata: {e}")
-        return None
 
-# 3. HTML DOSYASINI GÜNCELLEME
-def update_html():
-    with open('index.html', 'r', encoding='utf-8') as file:
-        content = file.read()
+class DomainFetcher:
+    """Domain bilgilerini çekmek için sınıf."""
+    
+    def __init__(self, master_url: str = Config.MASTER_URL):
+        self.master_url = master_url
+    
+    def fetch(self) -> Optional[str]:
+        """
+        Güncel domain adresini çeker.
+        
+        Returns:
+            Güncel domain URL'si veya None (hata durumunda)
+        """
+        try:
+            # Gerçek senaryoda yönlendirmeyi takip etmek için:
+            # response = requests.get(self.master_url, allow_redirects=True, timeout=10)
+            # current_url = response.url
+            
+            # Şimdilik varsayılan domain dönülüyor
+            current_url = Config.DEFAULT_DOMAIN
+            
+            # URL sonuna slash ekle
+            if not current_url.endswith('/'):
+                current_url += '/'
+            
+            logger.info(f"Güncel domain alındı: {current_url}")
+            return current_url
+            
+        except requests.RequestException as e:
+            logger.error(f"Domain çekilirken istek hatası: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Domain çekilirken beklenmeyen hata: {e}")
+            return None
 
-    # Domain Güncelleme
-    new_domain = get_current_domain()
-    if new_domain:
-        # Regex ile BASE_URL satırını bul ve değiştir
-        content = re.sub(
-            r'(// BASE_URL_START\nconst BASE_URL=")(.*?)(";)',
+
+class MatchFetcher:
+    """Günlük maç bilgilerini çekmek için sınıf."""
+    
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+        self.matches_url = "https://data-reality.com/matches2.php"
+    
+    def fetch(self) -> Optional[str]:
+        """
+        Günün maç bilgilerini çeker ve HTML formatında döner.
+        
+        Returns:
+            Maçların HTML gösterimi veya None (hata durumunda)
+        """
+        try:
+            today = datetime.now().strftime("%d.%m.%Y")
+            
+            # fixbettv84.com API'sinden maç bilgilerini çek
+            response = self.session.get(self.matches_url, timeout=10)
+            response.raise_for_status()
+            
+            # API'den gelen HTML içeriğini parse et
+            matches_html = self._parse_matches(response.text)
+            
+            if not matches_html.strip():
+                # Eğer maç yoksa boş bir bölüm dön
+                logger.info("Bugün için maç bilgisi bulunamadı.")
+                return ""
+            
+            logger.info(f"Maç bilgileri başarıyla çekildi: {len(matches_html.split('<a href=')) - 1} maç")
+            return matches_html
+            
+        except requests.RequestException as e:
+            logger.error(f"Maçlar çekilirken istek hatası: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Maçlar çekilirken beklenmeyen hata: {e}")
+            return None
+    
+    def _parse_matches(self, html_content: str) -> str:
+        """
+        API'den gelen HTML içeriğini parse eder ve temizler.
+        
+        Args:
+            html_content: API'den gelen ham HTML içeriği
+            
+        Returns:
+            Temizlenmiş maç HTML'i
+        """
+        soup = BeautifulSoup(html_content, 'html.parser')
+        matches = []
+        
+        for link in soup.find_all('a', class_='channel-item'):
+            # style="display:none;" olanları atla (gizli maçlar)
+            if 'style' in link.attrs and 'display:none' in link['style']:
+                continue
+                
+            channel_name_div = link.find('div', class_='channel-name')
+            status_div = link.find('div', class_='channel-status')
+            
+            if channel_name_div and status_div:
+                match_title = channel_name_div.get_text(strip=True)
+                match_status = status_div.get_text(strip=True)
+                
+                # Kanal ID'sini al
+                href = link.get('href', '')
+                channel_id = href.split('id=')[1] if 'id=' in href else ''
+                
+                # Saat ve maç tipi bilgilerini ayır
+                time_part = match_status.split('|')[0].strip() if '|' in match_status else match_status
+                type_part = match_status.split('|')[1].strip() if '|' in match_status else 'Maç'
+                
+                matches.append({
+                    'time': time_part,
+                    'title': match_title,
+                    'type': type_part,
+                    'channel_id': channel_id
+                })
+        
+        # HTML oluştur
+        if not matches:
+            return ""
+        
+        html_parts = [
+            '<section class="toolbar" style="margin-bottom: 20px; display: block;">',
+            f'    <h3 style="color: var(--cyan); margin-bottom: 10px; font-size: 1rem;">📅 Günün Maçları ({datetime.now().strftime("%d.%m.%Y")})</h3>',
+            '    <ul style="list-style: none; font-size: 0.85rem; color: var(--text); line-height: 1.8;">'
+        ]
+        
+        for match in matches:
+            icon = "⚽" if "Hazırlık" in match['type'] or "Kupa" in match['type'] else "🏀"
+            html_parts.append(
+                f'        <li>{icon} {match["time"]} - {match["title"]} ({match["type"]})</li>'
+            )
+        
+        html_parts.extend([
+            '    </ul>',
+            '</section>'
+        ])
+        
+        return '\n'.join(html_parts)
+
+
+class HTMLUpdater:
+    """HTML dosyasını güncellemek için sınıf."""
+    
+    def __init__(
+        self,
+        file_path: Path = Config.INDEX_HTML_PATH,
+        domain_fetcher: Optional[DomainFetcher] = None,
+        match_fetcher: Optional[MatchFetcher] = None
+    ):
+        self.file_path = file_path
+        self.domain_fetcher = domain_fetcher or DomainFetcher()
+        self.match_fetcher = match_fetcher or MatchFetcher()
+    
+    def update(self) -> bool:
+        """
+        HTML dosyasını günceller.
+        
+        Returns:
+            True (başarılı) veya False (hata durumunda)
+        """
+        if not self.file_path.exists():
+            logger.error(f"Dosya bulunamadı: {self.file_path}")
+            return False
+        
+        try:
+            content = self._read_file()
+            updates_made = []
+            
+            # Domain güncelleme
+            new_domain = self.domain_fetcher.fetch()
+            if new_domain:
+                content = self._update_domain(content, new_domain)
+                updates_made.append(f"Domain: {new_domain}")
+            
+            # Maç bilgilerini güncelleme
+            new_matches = self.match_fetcher.fetch()
+            if new_matches:
+                content = self._update_matches(content, new_matches)
+                updates_made.append("Maç bilgileri")
+            
+            if updates_made:
+                self._write_file(content)
+                logger.info(f"Güncellemeler tamamlandı: {', '.join(updates_made)}")
+                return True
+            else:
+                logger.warning("Hiçbir güncelleme yapılamadı.")
+                return False
+                
+        except Exception as e:
+            logger.error(f"HTML güncellenirken hata: {e}")
+            return False
+    
+    def _read_file(self) -> str:
+        """Dosyayı okur ve içeriğini döner."""
+        with open(self.file_path, 'r', encoding=Config.ENCODING) as f:
+            return f.read()
+    
+    def _write_file(self, content: str) -> None:
+        """İçeriği dosyaya yazar."""
+        with open(self.file_path, 'w', encoding=Config.ENCODING) as f:
+            f.write(content)
+        logger.debug(f"Dosya yazıldı: {self.file_path}")
+    
+    def _update_domain(self, content: str, new_domain: str) -> str:
+        """Domain bilgisini günceller."""
+        updated_content = Config.BASE_URL_PATTERN.sub(
             rf'\g<1>{new_domain}\g<3>',
             content
         )
-        print(f"Yeni domain ayarlandı: {new_domain}")
-
-    # Maçları Güncelleme
-    new_matches = get_daily_matches()
-    if new_matches:
-        # Regex ile yorum satırları arasını değiştir
-        content = re.sub(
-            r'(<!-- GUNUN_MACLARI_BASLANGIC -->).*?(<!-- GUNUN_MACLARI_BITIS -->)',
+        if updated_content != content:
+            logger.info(f"Yeni domain ayarlandı: {new_domain}")
+        return updated_content
+    
+    def _update_matches(self, content: str, new_matches: str) -> str:
+        """Maç bilgilerini günceller."""
+        updated_content = Config.MATCHES_PATTERN.sub(
             rf'\1\n{new_matches}\n\2',
-            content,
-            flags=re.DOTALL
+            content
         )
-        print("Günün maçları güncellendi.")
+        if updated_content != content:
+            logger.info("Günün maçları güncellendi.")
+        return updated_content
 
-    with open('index.html', 'w', encoding='utf-8') as file:
-        file.write(content)
+
+def main():
+    """Ana giriş noktası."""
+    logger.info("Player TV Güncelleme Botu başlatılıyor...")
+    
+    updater = HTMLUpdater()
+    success = updater.update()
+    
+    if success:
+        logger.info("✓ Güncelleme işlemi başarıyla tamamlandı.")
+    else:
+        logger.error("✗ Güncelleme işlemi başarısız oldu.")
+    
+    return 0 if success else 1
+
 
 if __name__ == "__main__":
-    update_html()
+    exit(main())
