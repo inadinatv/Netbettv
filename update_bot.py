@@ -42,6 +42,10 @@ class Config:
         r'(<!-- GUNUN_MACLARI_BASLANGIC -->).*?(<!-- GUNUN_MACLARI_BITIS -->)',
         flags=re.DOTALL
     )
+    STANDINGS_PATTERN = re.compile(
+        r'(<!-- PUAN_DURUMU_BASLANGIC -->).*?(<!-- PUAN_DURUMU_BITIS -->)',
+        flags=re.DOTALL
+    )
     
     # Varsayılan değerler
     DEFAULT_DOMAIN = "https://fixbettv84.com/"
@@ -93,6 +97,7 @@ class MatchFetcher:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         })
         self.matches_url = "https://data-reality.com/matches2.php"
+        self.standings_url = "https://fixbettv84.com/puan.html"
     
     def fetch(self) -> Optional[str]:
         """
@@ -124,6 +129,35 @@ class MatchFetcher:
             return None
         except Exception as e:
             logger.error(f"Maçlar çekilirken beklenmeyen hata: {e}")
+            return None
+    
+    def fetch_standings(self) -> Optional[str]:
+        """
+        Puan durumu bilgilerini çeker ve HTML formatında döner.
+        
+        Returns:
+            Puan durumunun HTML gösterimi veya None (hata durumunda)
+        """
+        try:
+            # fixbettv84.com API'sinden puan durumu bilgilerini çek
+            response = self.session.get(self.standings_url, timeout=10)
+            response.raise_for_status()
+            
+            # API'den gelen HTML içeriğini parse et
+            standings_html = self._parse_standings(response.text)
+            
+            if not standings_html.strip():
+                logger.info("Puan durumu bilgisi bulunamadı.")
+                return ""
+            
+            logger.info("Puan durumu başarıyla çekildi.")
+            return standings_html
+            
+        except requests.RequestException as e:
+            logger.error(f"Puan durumu çekilirken istek hatası: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Puan durumu çekilirken beklenmeyen hata: {e}")
             return None
     
     def _parse_matches(self, html_content: str, base_url: str = Config.DEFAULT_DOMAIN) -> str:
@@ -195,6 +229,27 @@ class MatchFetcher:
         ])
         
         return '\n'.join(html_parts)
+    
+    def _parse_standings(self, html_content: str) -> str:
+        """
+        API'den gelen puan durumu HTML içeriğini parse eder.
+        fixbettv84.com/puan.html JavaScript ile dinamik olarak tabloyu oluşturuyor,
+        bu yüzden statik bir iframe ile gösteriyoruz.
+        
+        Args:
+            html_content: API'den gelen ham HTML içeriği
+            
+        Returns:
+            Iframe ile puan durumu HTML'i
+        """
+        # Puan durumu için iframe oluştur (JavaScript ile dinamik yüklendiği için)
+        standings_html = '''
+        <iframe frameborder="0" scrolling="no" width="100%" height="600" 
+                src="https://fixbettv84.com/puan.html" 
+                style="border: none; border-radius: 8px; background: transparent;">
+        </iframe>
+        '''
+        return standings_html
 
 
 class HTMLUpdater:
@@ -237,6 +292,12 @@ class HTMLUpdater:
                 content = self._update_matches(content, new_matches)
                 updates_made.append("Maç bilgileri")
             
+            # Puan durumunu güncelleme
+            new_standings = self.match_fetcher.fetch_standings()
+            if new_standings:
+                content = self._update_standings(content, new_standings)
+                updates_made.append("Puan durumu")
+            
             if updates_made:
                 self._write_file(content)
                 logger.info(f"Güncellemeler tamamlandı: {', '.join(updates_made)}")
@@ -278,6 +339,27 @@ class HTMLUpdater:
         )
         if updated_content != content:
             logger.info("Günün maçları güncellendi.")
+        return updated_content
+    
+    def _update_standings(self, content: str, new_standings: str) -> str:
+        """Puan durumunu günceller."""
+        # Puan durumu için özel HTML formatı oluştur
+        standings_html = f'''
+<!-- PUAN_DURUMU_BASLANGIC -->
+<section class="toolbar" style="margin-bottom: 20px; display: block;">
+    <button id="standingsToggle" onclick="document.getElementById('standingsContent').style.display = document.getElementById('standingsContent').style.display === 'none' ? 'block' : 'none'" style="width: 100%; padding: 12px; background: rgba(76, 244, 255, 0.1); border: 1px solid rgba(76, 244, 255, 0.3); border-radius: 12px; color: var(--cyan); font-weight: 700; cursor: pointer; font-size: 0.9rem;">📊 Puan Durumu</button>
+    <div id="standingsContent" style="display: none; margin-top: 15px; overflow-x: auto;">
+        {new_standings}
+    </div>
+</section>
+<!-- PUAN_DURUMU_BITIS -->
+'''
+        updated_content = Config.STANDINGS_PATTERN.sub(
+            standings_html.strip(),
+            content
+        )
+        if updated_content != content:
+            logger.info("Puan durumu güncellendi.")
         return updated_content
 
 
