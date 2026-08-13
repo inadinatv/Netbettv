@@ -13,6 +13,7 @@ Yapılandırma:
 
 import re
 import logging
+import html
 from pathlib import Path
 from datetime import datetime
 from typing import Optional
@@ -206,25 +207,30 @@ class MatchFetcher:
             return ""
         
         html_parts = [
-            '<section class="toolbar" style="margin-bottom: 20px; display: block;">',
-            f'    <h3 style="color: var(--cyan); margin-bottom: 10px; font-size: 1rem;">📅 Günün Maçları ({datetime.now().strftime("%d.%m.%Y")})</h3>',
-            '    <ul style="list-style: none; font-size: 0.85rem; color: var(--text); line-height: 1.8;">'
+            '<section class="toolbar matches-panel" style="margin-bottom: 20px; display: block;">',
+            f'    <div class="section-heading"><h3>📅 Günün Maçları</h3><span>{datetime.now().strftime("%d.%m.%Y")}</span></div>',
+            '    <div class="match-list">'
         ]
         
         for match in matches:
             icon = "⚽" if "Hazırlık" in match['type'] or "Kupa" in match['type'] else "🏀"
-            # Tıklanabilir link oluştur - channel_id ile
-            if match['channel_id']:
+            title = html.escape(match['title'])
+            match_type = html.escape(match['type'])
+            channel_id = html.escape(match['channel_id'])
+            label = f'{icon} {match["time"]} - {title} ({match_type})'
+            if channel_id:
                 html_parts.append(
-                    f'        <li><a href="{base_url}channel?id={match["channel_id"]}" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">{icon} {match["time"]} - {match["title"]} ({match["type"]})</a></li>'
+                    f'        <button type="button" class="match-item" data-channel-id="{channel_id}" onclick="openMatchById(\'{channel_id}\')" aria-label="{label}">'
+                    f'<span class="match-badge">{icon}</span><span class="match-copy"><strong>{match["time"]} - {title}</strong><span>{match_type}</span></span><span class="match-arrow">→</span></button>'
                 )
             else:
                 html_parts.append(
-                    f'        <li>{icon} {match["time"]} - {match["title"]} ({match["type"]})</li>'
+                    f'        <div class="match-item" aria-label="{label}" style="pointer-events:none; opacity:0.8;">'
+                    f'<span class="match-badge">{icon}</span><span class="match-copy"><strong>{match["time"]} - {title}</strong><span>{match_type}</span></span><span class="match-arrow">•</span></div>'
                 )
         
         html_parts.extend([
-            '    </ul>',
+            '    </div>',
             '</section>'
         ])
         
@@ -244,10 +250,15 @@ class MatchFetcher:
         """
         # Puan durumu için iframe oluştur (JavaScript ile dinamik yüklendiği için)
         standings_html = '''
-        <iframe frameborder="0" scrolling="no" width="100%" height="600" 
-                src="https://fixbettv84.com/puan.html" 
-                style="border: none; border-radius: 8px; background: transparent;">
-        </iframe>
+        <div class="standings-modal visible" aria-hidden="false" role="dialog" aria-modal="true" aria-labelledby="standingsModalTitle" style="position: static; visibility: visible; opacity: 1; pointer-events: auto; padding: 0;">
+            <div class="standings-modal-panel" style="width: 100%; max-height: none; border-radius: 12px;">
+                <div class="standings-modal-header">
+                    <h3 id="standingsModalTitle">📊 Puan Durumu</h3>
+                    <button type="button" class="standings-close" aria-label="Pencereyi kapat" style="display:none;">✕</button>
+                </div>
+                <iframe frameborder="0" scrolling="no" width="100%" height="680" src="https://fixbettv84.com/puan.html" title="Puan durumu" style="border: none; background: transparent; display: block;"></iframe>
+            </div>
+        </div>
         '''
         return standings_html
 
@@ -347,11 +358,18 @@ class HTMLUpdater:
         standings_html = f'''
 <!-- PUAN_DURUMU_BASLANGIC -->
 <section class="toolbar" style="margin-bottom: 20px; display: block;">
-    <button id="standingsToggle" onclick="document.getElementById('standingsContent').style.display = document.getElementById('standingsContent').style.display === 'none' ? 'block' : 'none'" style="width: 100%; padding: 12px; background: rgba(76, 244, 255, 0.1); border: 1px solid rgba(76, 244, 255, 0.3); border-radius: 12px; color: var(--cyan); font-weight: 700; cursor: pointer; font-size: 0.9rem;">📊 Puan Durumu</button>
-    <div id="standingsContent" style="display: none; margin-top: 15px; overflow-x: auto;">
+    <button id="standingsToggle" type="button" class="standings-toggle" onclick="openStandingsModal()">📊 Puan Durumu</button>
+</section>
+<div id="standingsModal" class="standings-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="standingsModalTitle">
+    <div class="standings-modal-backdrop" data-close-standings="true"></div>
+    <div class="standings-modal-panel">
+        <div class="standings-modal-header">
+            <h3 id="standingsModalTitle">📊 Puan Durumu</h3>
+            <button id="standingsClose" type="button" class="standings-close" aria-label="Pencereyi kapat">✕</button>
+        </div>
         {new_standings}
     </div>
-</section>
+</div>
 <!-- PUAN_DURUMU_BITIS -->
 '''
         updated_content = Config.STANDINGS_PATTERN.sub(
