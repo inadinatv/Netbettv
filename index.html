@@ -49,7 +49,13 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 <section class="toolbar" aria-label="Kanal araçları"><nav class="category-tabs" id="categoryTabs" aria-label="Kategori filtreleri"><button class="tab-button active" type="button" data-filter="all">Tümü</button></nav><label class="search-box" for="channelSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="channelSearch" type="search" placeholder="Kanal ara..." autocomplete="off"></label></section>
 
 <!-- GUNUN_MACLARI_BASLANGIC -->
-
+<section class="matches-panel" aria-labelledby="todayMatchesTitle">
+  <div class="section-heading">
+    <h3 id="todayMatchesTitle">Günün Maçları</h3>
+    <span>Canlı takip</span>
+  </div>
+  <div id="matchList" class="match-list" aria-live="polite"></div>
+</section>
 <!-- GUNUN_MACLARI_BITIS -->
 
 <!-- PUAN_DURUMU_BASLANGIC -->
@@ -63,7 +69,7 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
             <h3 id="standingsModalTitle">📊 Puan Durumu</h3>
             <button id="standingsClose" type="button" class="standings-close" aria-label="Pencereyi kapat">✕</button>
         </div>
-        <iframe frameborder="0" scrolling="no" width="100%" height="680" src="https://fixbettv84.com/puan.html" title="Puan durumu" style="border: none; background: transparent;"></iframe>
+        <iframe frameborder="0" scrolling="no" width="100%" height="680" src="https://fixbettv84.com/puan.html" title="Puan durumu" style="border: none; background: transparent;" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <!-- PUAN_DURUMU_BITIS -->
@@ -105,9 +111,18 @@ const categories=[
 {title:"TABİİ SPOR",icon:"◈",channels:[{id:"ex7",name:"Tabii Spor"},{id:"ex1",name:"Tabii Spor 1"},{id:"ex2",name:"Tabii Spor 2"},{id:"ex3",name:"Tabii Spor 3"},{id:"ex4",name:"Tabii Spor 4"},{id:"ex5",name:"Tabii Spor 5"},{id:"ex6",name:"Tabii Spor 6"}]},
 {title:"DİĞER SPOR",icon:"✺",channels:[{id:"as",name:"Bir Spor"},{id:"eu1",name:"Euro Sport 1"},{id:"eu2",name:"Euro Sport 2"}]}
 ];
+const todayMatches=[
+    {title:"Galatasaray - Fenerbahçe",time:"20:00",channel:"S Sport",id:"ss"},
+    {title:"Başakşehir - Beşiktaş",time:"18:30",channel:"Tivibu Spor 1",id:"t1"},
+    {title:"Trabzonspor - Adana Demirspor",time:"19:00",channel:"TRT Spor",id:"trtspor"},
+    {title:"Bursaspor - Kocaelispor",time:"21:00",channel:"Bein Sports 2",id:"b2"},
+    {title:"Göztepe - Samsunspor",time:"17:15",channel:"Smart Spor",id:"smarts"}
+];
 const contentGrid=document.getElementById("contentGrid"),categoryTabs=document.getElementById("categoryTabs"),searchInput=document.getElementById("channelSearch"),totalChannelsElement=document.getElementById("totalChannels"),totalCategoriesElement=document.getElementById("totalCategories");let activeFilter="all";
 const arrowIcon='<svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m13 6 6 6-6 6"></path></svg>';
 const normalize=value=>value.toLocaleLowerCase("tr-TR");
+const fallbackVideoUrl='https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&rel=0';
+let videoFallbackTimer=null;
 const standingsToggle=document.getElementById("standingsToggle");
 const standingsModal=document.getElementById("standingsModal");
 const standingsClose=document.getElementById("standingsClose");
@@ -116,15 +131,39 @@ const videoFrame=document.getElementById("videoFrame");
 const videoClose=document.getElementById("videoClose");
 const videoLoader=document.getElementById("videoLoader");
 
+function renderMatches(){
+    const target=document.getElementById("matchList");
+    if(!target){return;}
+    target.innerHTML="";
+    todayMatches.forEach((match,index)=>{
+        const button=document.createElement("button");
+        button.type="button";
+        button.className="match-item";
+        button.setAttribute("aria-label",match.title+" maçını aç");
+        button.innerHTML='<span class="match-badge">'+(index+1)+'</span><span class="match-copy"><strong>'+match.title+'</strong><span>'+match.time+' • '+match.channel+'</span></span><span class="match-arrow">›</span>';
+        button.addEventListener("click",()=>openMatchById(match.id));
+        target.appendChild(button);
+    });
+}
+
 function openMatchById(channelId){
     if(!channelId){return;}
     const url=BASE_URL+"channel?id="+encodeURIComponent(channelId);
     if(videoModal&&videoFrame){
         videoFrame.src=url;
+        videoFrame.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen");
+        videoFrame.setAttribute("referrerpolicy","no-referrer-when-downgrade");
         videoLoader&&videoLoader.classList.remove("hidden");
         videoModal.classList.add("visible");
         videoModal.setAttribute("aria-hidden","false");
         document.body.style.overflow="hidden";
+        clearTimeout(videoFallbackTimer);
+        videoFallbackTimer=setTimeout(()=>{
+            if(videoFrame && videoFrame.src && videoFrame.src.includes('fixbettv84.com/channel')){
+                videoFrame.src=fallbackVideoUrl;
+                videoLoader&&videoLoader.classList.add("hidden");
+            }
+        },9000);
         return;
     }
     window.location.assign(url);
@@ -132,7 +171,8 @@ function openMatchById(channelId){
 
 function closeVideoModal(){
     if(!videoModal||!videoFrame){return;}
-    videoFrame.src="";
+    clearTimeout(videoFallbackTimer);
+    videoFrame.src="about:blank";
     videoModal.classList.remove("visible");
     videoModal.setAttribute("aria-hidden","true");
     document.body.style.overflow="";
@@ -162,7 +202,8 @@ if(standingsClose){standingsClose.addEventListener("click",closeStandingsModal);
 if(standingsModal){standingsModal.addEventListener("click",event=>{if(event.target && event.target.hasAttribute("data-close-standings")){closeStandingsModal();}});}
 if(videoClose){videoClose.addEventListener("click",closeVideoModal);}
 if(videoModal){videoModal.addEventListener("click",event=>{if(event.target && event.target.hasAttribute("data-close-video")){closeVideoModal();}});}
-if(videoFrame){videoFrame.addEventListener("load",()=>{if(videoLoader){videoLoader.classList.add("hidden");}});}
+if(videoFrame){videoFrame.addEventListener("load",()=>{videoFrame.dataset.loaded="1";if(videoLoader){videoLoader.classList.add("hidden");}});}
+renderMatches();
 document.addEventListener("keydown",event=>{if(event.key==="Escape"){if(standingsModal&&standingsModal.classList.contains("visible")){closeStandingsModal();}if(videoModal&&videoModal.classList.contains("visible")){closeVideoModal();}}});
 
 // iframe reklam engelleme - bet afişlerini gizle
