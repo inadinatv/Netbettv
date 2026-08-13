@@ -1,486 +1,112 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netbettv - Canlı Maç İzle</title>
-    <style>
-        :root {
-            --primary-color: #00ff88;
-            --bg-color: #0f0f13;
-            --card-bg: #1a1a24;
-            --text-color: #ffffff;
-            --neon-glow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070817">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+<!-- ÖNBELLEK (CACHE) ENGELLEYİCİ ETİKETLER -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
-        /* Neon Logo Efekti */
-        .logo-container {
-            padding: 20px;
-            background: linear-gradient(180deg, #1a1a24 0%, #0f0f13 100%);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        h1.logo {
-            font-size: 2.5rem;
-            margin: 0;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px var(--primary-color),
-                0 0 40px var(--primary-color),
-                0 0 80px var(--primary-color);
-            animation: neon-pulse 1.5s infinite alternate;
-        }
-
-        @keyframes neon-pulse {
-            from {
-                text-shadow: 
-                    0 0 5px #fff,
-                    0 0 10px #fff,
-                    0 0 20px var(--primary-color),
-                    0 0 40px var(--primary-color);
-            }
-            to {
-                text-shadow: 
-                    0 0 10px #fff,
-                    0 0 20px #fff,
-                    0 0 30px var(--primary-color),
-                    0 0 60px var(--primary-color),
-                    0 0 90px var(--primary-color);
-            }
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background-color: var(--card-bg);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            padding: 12px 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 0 5px var(--primary-color);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-color);
-            color: #000;
-            box-shadow: 0 0 20px var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .channel-list, .match-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .channel-item, .match-item {
-            background-color: var(--card-bg);
-            padding: 15px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            border: 1px solid #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px;
-        }
-
-        .channel-item:hover, .match-item:hover {
-            transform: scale(1.05);
-            background-color: #252530;
-            border-color: var(--primary-color);
-        }
-
-        .match-time {
-            font-size: 0.8rem;
-            color: #aaa;
-            margin-top: 5px;
-        }
-
-        .section-title {
-            color: var(--primary-color);
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-
-        /* Iframe Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 900px;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .close-btn:hover {
-            color: var(--primary-color);
-        }
-
-        /* Reklam Gizleme (Iframe içi) */
-        .ad-blocker-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Tıklamaları engellemez ama görseli örter */
-            z-index: 10;
-            display: none; /* JS ile kontrol edilecek */
-        }
-        
-        /* Puan Durumu Tablosu */
-        #standings-container {
-            display: none;
-            margin-top: 20px;
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 10px;
-            overflow-x: auto;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            color: #fff;
-        }
-        
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #333;
-        }
-        
-        th {
-            color: var(--primary-color);
-        }
-
-        .loading {
-            color: #aaa;
-            font-style: italic;
-        }
-    </style>
+<title>PLAYER TV · Canlı Yayın Merkezi</title>
+<style>
+:root{--bg:#060713;--panel:rgba(18,21,43,.78);--line:rgba(157,164,255,.16);--text:#f7f8ff;--muted:#9298b8;--muted-light:#c3c8e1;--cyan:#4cf4ff;--blue:#5d8dff;--violet:#a875ff;--pink:#ff5bd7;--green:#a9ffb5;--radius-lg:20px;--shadow:0 26px 80px rgba(0,0,0,.42)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{min-height:100vh;overflow-x:hidden;color:var(--text);background:radial-gradient(circle at 15% 0%,rgba(93,141,255,.16),transparent 30%),radial-gradient(circle at 90% 8%,rgba(255,91,215,.12),transparent 26%),linear-gradient(145deg,#050611,#080a19 50%,#09061b);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:0 18px 42px}
+body:before{position:fixed;z-index:-2;inset:0;content:"";opacity:.34;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+body:after{position:fixed;z-index:-1;top:-160px;left:50%;width:700px;height:380px;content:"";opacity:.18;pointer-events:none;transform:translateX(-50%);filter:blur(70px);background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));border-radius:50%}
+button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-container{width:min(1180px,100%);margin:0 auto}
+.site-header{position:sticky;z-index:20;top:0;padding:18px 0 14px;background:linear-gradient(180deg,rgba(6,7,19,.97) 55%,rgba(6,7,19,0));backdrop-filter:blur(16px)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 18px;border:1px solid var(--line);border-radius:var(--radius-lg);background:rgba(13,16,35,.74);box-shadow:0 18px 50px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.05)}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-mark{position:relative;display:grid;flex:0 0 45px;width:45px;height:45px;place-items:center;overflow:hidden;border:2px solid rgba(76,244,255,.8);border-radius:15px;background:linear-gradient(140deg,#0a0f1f,var(--cyan) 30%,#0a0f1f 60%,var(--blue));box-shadow:0 0 35px rgba(76,244,255,.6),0 0 70px rgba(76,244,255,.3),inset 0 0 20px rgba(76,244,255,.2),inset 0 0 40px rgba(93,141,255,.15);animation:neon-pulse 2s ease-in-out infinite alternate}.brand-mark:before{position:absolute;inset:-2px;content:"";filter:blur(12px);background:radial-gradient(circle at 30% 30%,rgba(76,244,255,.8),transparent 60%),radial-gradient(circle at 70% 70%,rgba(93,141,255,.6),transparent 50%);opacity:.8;animation:neon-flicker 3s linear infinite}.brand-mark span{position:relative;font-size:1.2rem;font-weight:900;letter-spacing:-1px;color:#fff;text-shadow:0 0 10px rgba(76,244,255,.9),0 0 20px rgba(76,244,255,.7),0 0 30px rgba(76,244,255,.5),0 0 40px var(--cyan);z-index:2}.brand-copy{min-width:0}.brand-copy strong{display:block;overflow:hidden;font-size:1rem;letter-spacing:.16em;text-overflow:ellipsis;white-space:nowrap}.brand-copy span{display:block;margin-top:3px;color:var(--muted);font-size:.74rem;letter-spacing:.03em}
+.live-badge,.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(169,255,181,.23);border-radius:999px;background:rgba(97,255,139,.08);color:var(--green);font-size:.71rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}.live-badge{padding:9px 12px}.live-badge:before,.live-dot{width:7px;height:7px;content:"";border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(169,255,181,.08),0 0 15px var(--green)}
+.hero{display:grid;grid-template-columns:1fr auto;align-items:end;gap:26px;padding:44px 4px 32px}.hero-content{max-width:720px}.eyebrow{padding:7px 11px;margin-bottom:15px;border-color:rgba(138,117,255,.26);background:rgba(138,117,255,.09);color:#c7b7ff}.eyebrow:before{width:6px;height:6px;content:"";border-radius:50%;background:var(--violet);box-shadow:0 0 14px var(--violet)}
+.hero h1{max-width:700px;font-size:clamp(2.3rem,7vw,5.25rem);font-weight:900;letter-spacing:-.075em;line-height:.96;background:linear-gradient(110deg,#fff 12%,#b6f8ff 42%,#a78bfa 72%,#ff8de5);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-description{max-width:590px;margin-top:19px;color:var(--muted-light);font-size:clamp(.94rem,2vw,1.08rem);line-height:1.65}
+.hero-stats{display:flex;align-items:stretch;gap:10px}.stat-card{min-width:115px;padding:15px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(17,20,43,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}.stat-card strong{display:block;color:#fff;font-size:1.5rem;letter-spacing:-.04em}.stat-card span{display:block;margin-top:4px;color:var(--muted);font-size:.69rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(13,16,35,.74);box-shadow:0 14px 42px rgba(0,0,0,.2)}.category-tabs{display:flex;gap:8px;min-width:0;overflow-x:auto;scrollbar-width:none}.category-tabs::-webkit-scrollbar{display:none}.tab-button{flex:0 0 auto;cursor:pointer;border:1px solid transparent;border-radius:11px;padding:9px 12px;color:var(--muted);background:transparent;font-size:.78rem;font-weight:750;transition:180ms ease}.tab-button:hover,.tab-button.active{border-color:rgba(76,244,255,.24);color:var(--cyan);background:rgba(76,244,255,.1);box-shadow:0 0 20px rgba(76,244,255,.08)}
+.search-box{position:relative;flex:0 0 min(260px,33vw)}.search-box svg{position:absolute;top:50%;left:13px;width:16px;height:16px;color:var(--muted);pointer-events:none;transform:translateY(-50%)}.search-box input{width:100%;border:1px solid var(--line);border-radius:11px;outline:none;padding:10px 13px 10px 37px;color:var(--text);background:rgba(6,8,21,.6);font-size:.8rem;transition:180ms ease}.search-box input::placeholder{color:#6d7395}.search-box input:focus{border-color:rgba(92,239,255,.38);box-shadow:0 0 0 4px rgba(76,244,255,.07),0 0 22px rgba(76,244,255,.08)}
+.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:18px}.category{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(21,24,52,.88),rgba(12,14,31,.78));box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.045);transition:240ms ease;animation:card-in 620ms both cubic-bezier(.2,.8,.2,1)}.category:before{position:absolute;z-index:-1;top:-100px;right:-80px;width:230px;height:230px;content:"";opacity:.13;filter:blur(18px);background:linear-gradient(135deg,var(--cyan),var(--violet),var(--pink));border-radius:50%;transition:240ms ease}.category:hover{border-color:rgba(76,244,255,.31);transform:translateY(-4px);box-shadow:0 30px 80px rgba(0,0,0,.48),0 0 42px rgba(76,244,255,.08),inset 0 1px 0 rgba(255,255,255,.08)}.category:hover:before{opacity:.25;transform:scale(1.2)}
+.category-header{display:flex;align-items:center;gap:12px;padding:19px 20px 16px;border-bottom:1px solid var(--line)}.category-icon{display:grid;flex:0 0 39px;width:39px;height:39px;place-items:center;border:1px solid rgba(76,244,255,.22);border-radius:12px;color:var(--cyan);background:linear-gradient(135deg,rgba(76,244,255,.18),rgba(167,117,255,.18));box-shadow:0 0 20px rgba(76,244,255,.1),inset 0 0 14px rgba(76,244,255,.08);font-size:1.1rem}.category-heading{min-width:0}.category-title{overflow:hidden;color:#fff;font-size:.82rem;font-weight:850;letter-spacing:.12em;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}.category-subtitle{margin-top:4px;color:var(--muted);font-size:.72rem}.category-count{margin-left:auto;border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 9px;color:var(--muted-light);background:rgba(255,255,255,.04);font-size:.69rem;font-weight:800;white-space:nowrap}
+.channel-list{list-style:none;padding:7px 9px 10px}.channel-item{border-bottom:1px solid rgba(157,164,255,.09)}.channel-item:last-child{border-bottom:0}.channel-link{display:flex;align-items:center;gap:12px;min-height:58px;border-radius:13px;padding:9px 10px;color:var(--text);text-decoration:none;transition:180ms ease}.channel-link:hover,.channel-link:focus-visible{outline:none;background:linear-gradient(90deg,rgba(76,244,255,.11),rgba(167,117,255,.08));box-shadow:inset 3px 0 0 var(--cyan),0 0 22px rgba(76,244,255,.06);transform:translateX(4px)}.channel-number{display:grid;flex:0 0 27px;width:27px;height:27px;place-items:center;border:1px solid rgba(255,255,255,.09);border-radius:9px;color:#8991b7;background:rgba(255,255,255,.04);font-size:.68rem;font-weight:800}.channel-live{flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(169,255,181,.055),0 0 12px var(--green)}.channel-name{overflow:hidden;color:#eef0ff;font-size:.93rem;font-weight:650;text-overflow:ellipsis;white-space:nowrap}.channel-meta{margin-left:auto;color:#727a9f;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.channel-arrow{flex:0 0 auto;width:18px;height:18px;color:#7780a6;transition:180ms ease}.channel-link:hover .channel-arrow,.channel-link:focus-visible .channel-arrow{color:var(--cyan);transform:translateX(3px)}
+.empty-state{grid-column:1/-1;padding:48px 24px;border:1px dashed rgba(157,164,255,.25);border-radius:var(--radius-lg);color:var(--muted);text-align:center;background:rgba(17,20,43,.45)}.empty-state strong{display:block;margin-bottom:8px;color:var(--text);font-size:1.1rem}.footer{padding:38px 12px 8px;color:#686f91;text-align:center;font-size:.76rem;line-height:1.8}.footer strong{color:#a9afd0;font-weight:700}.footer-line{display:inline-flex;align-items:center;gap:8px}
+@keyframes card-in{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes neon-pulse{0%{box-shadow:0 0 35px rgba(76,244,255,.6),0 0 70px rgba(76,244,255,.3),inset 0 0 20px rgba(76,244,255,.2),inset 0 0 40px rgba(93,141,255,.15)}100%{box-shadow:0 0 50px rgba(76,244,255,.8),0 0 90px rgba(76,244,255,.5),inset 0 0 30px rgba(76,244,255,.3),inset 0 0 60px rgba(93,141,255,.2)}}@keyframes neon-flicker{0%,100%{opacity:.8}10%{opacity:.85}20%{opacity:.75}30%{opacity:.9}40%{opacity:.7}50%{opacity:.95}60%{opacity:.8}70%{opacity:.85}80%{opacity:.78}90%{opacity:.92}}
+@media(max-width:800px){body{padding-inline:12px}.hero{grid-template-columns:1fr;padding-top:34px}.hero-stats{max-width:420px}.stat-card{flex:1;min-width:0}.toolbar{align-items:stretch;flex-direction:column}.search-box{flex-basis:auto;width:100%}}
+@media(max-width:620px){.site-header{padding-top:10px}.topbar{padding:12px}.live-badge{padding:8px 9px;font-size:.62rem}.brand-mark{flex-basis:40px;width:40px;height:40px;border-radius:13px}.brand-copy strong{font-size:.86rem}.brand-copy span{font-size:.66rem}.hero h1{font-size:clamp(2.55rem,15vw,4.6rem)}.hero-description{font-size:.9rem}.content-grid{grid-template-columns:1fr;gap:14px}.category-header{padding-inline:16px}.channel-list{padding-inline:7px}.channel-meta{display:none}}
+@media(max-width:390px){.live-badge{display:none}.hero-stats{gap:7px}.stat-card{padding:12px}.stat-card strong{font-size:1.25rem}.stat-card span{font-size:.6rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
+<div class="app-container">
+<header class="site-header"><div class="topbar">
+<div class="brand" aria-label="Player TV ana sayfa"><div class="brand-mark" aria-hidden="true"><span>TV</span></div><div class="brand-copy"><strong>PLAYER TV</strong><span>Canlı yayın merkezi</span></div></div>
+<div class="live-badge">Yayınlar aktif</div>
+</div></header>
+<main>
+<section class="hero" aria-labelledby="page-title"><div class="hero-content"><div class="eyebrow">Yeni nesil yayın deneyimi</div><h1 id="page-title">Canlı maçları izle.</h1></div><div class="hero-stats" aria-label="Yayın istatistikleri"><div class="stat-card"><strong id="totalChannels">0</strong><span>Toplam kanal</span></div><div class="stat-card"><strong id="totalCategories">0</strong><span>Kategori</span></div></div></section>
 
-    <div class="logo-container">
-        <h1 class="logo">NETBETTV</h1>
+<section class="toolbar" aria-label="Kanal araçları"><nav class="category-tabs" id="categoryTabs" aria-label="Kategori filtreleri"><button class="tab-button active" type="button" data-filter="all">Tümü</button></nav><label class="search-box" for="channelSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="channelSearch" type="search" placeholder="Kanal ara..." autocomplete="off"></label></section>
+
+<!-- GUNUN_MACLARI_BASLANGIC -->
+
+<!-- GUNUN_MACLARI_BITIS -->
+
+<!-- PUAN_DURUMU_BASLANGIC -->
+<section class="toolbar" style="margin-bottom: 20px; display: block;">
+    <button id="standingsToggle" onclick="document.getElementById('standingsContent').style.display = document.getElementById('standingsContent').style.display === 'none' ? 'block' : 'none'" style="width: 100%; padding: 12px; background: rgba(76, 244, 255, 0.1); border: 1px solid rgba(76, 244, 255, 0.3); border-radius: 12px; color: var(--cyan); font-weight: 700; cursor: pointer; font-size: 0.9rem;">📊 Puan Durumu</button>
+    <div id="standingsContent" style="display: none; margin-top: 15px; overflow-x: auto;">
+
+        <iframe frameborder="0" scrolling="no" width="100%" height="600"
+                src="https://fixbettv84.com/puan.html"
+                style="border: none; border-radius: 8px; background: transparent;">
+        </iframe>
+
     </div>
+</section>
+<!-- PUAN_DURUMU_BITIS -->
 
-    <div class="container">
-        <!-- Butonlar -->
-        <div class="btn-group">
-            <button class="btn" onclick="toggleSection('main-channels')">📺 Ana Kanallar</button>
-            <button class="btn" onclick="loadTodaysMatches()">📅 Günün Maçları</button>
-            <button class="btn" onclick="toggleStandings()">📊 Puan Durumu</button>
-        </div>
+<section id="contentGrid" class="content-grid" aria-live="polite"></section>
+</main>
+<footer class="footer"><p class="footer-line"><span class="live-dot" aria-hidden="true"></span><strong>PLAYER TV</strong> · Kesintisiz yayın deneyimi</p><p>© 2026 · Tüm yayınlar test amaçlıdır · 7/24</p></footer>
+</div>
 
-        <!-- Ana Kanallar Bölümü -->
-        <div id="main-channels" class="section-content" style="display:none;">
-            <h2 class="section-title">Popüler Kanallar</h2>
-            <div class="channel-list" id="channel-grid">
-                <!-- Kanallar JS ile doldurulacak -->
-            </div>
-        </div>
+<script>
+// BASE_URL_START
+const BASE_URL="https://fixbettv84.com/";
+// BASE_URL_END
 
-        <!-- Günün Maçları Bölümü -->
-        <div id="matches-section" class="section-content" style="display:none;">
-            <h2 class="section-title">Bugünkü Maçlar & Saatleri</h2>
-            <div id="matches-loading" class="loading">Maçlar yükleniyor...</div>
-            <div class="match-list" id="match-grid"></div>
-        </div>
+const categories=[
+{title:"BEIN SPORTS",icon:"▰",channels:[{id:"zirve",name:"Bein Sports 1"},{id:"b2",name:"Bein Sports 2"},{id:"b3",name:"Bein Sports 3"},{id:"b4",name:"Bein Sports 4"},{id:"b5",name:"Bein Sports 5"},{id:"bm1",name:"Bein Sports Max 1"},{id:"bm2",name:"Bein Sports Max 2"},{id:"bh",name:"Bein Sports Haber"}]},
+{title:"S SPORT",icon:"✦",channels:[{id:"ss",name:"S Sport"},{id:"ss2",name:"S Sport 2"}]},
+{title:"TİVİBU SPOR",icon:"◉",channels:[{id:"t0",name:"Tivibu Spor (Genel)"},{id:"t1",name:"Tivibu Spor 1"},{id:"t2",name:"Tivibu Spor 2"},{id:"t3",name:"Tivibu Spor 3"},{id:"t4",name:"Tivibu Spor 4"}]},
+{title:"SMART SPOR",icon:"✧",channels:[{id:"smarts",name:"Akıllı Spor"},{id:"sms2",name:"Smart Spor 2"}]},
+{title:"TRT SPOR",icon:"▣",channels:[{id:"trtspor",name:"Trt Spor"},{id:"trtspor2",name:"Trt Spor Yıldız"},{id:"trt1",name:"Trt 1"}]},
+{title:"GENEL KANALLAR",icon:"◇",channels:[{id:"atv",name:"Atv"},{id:"tv8",name:"Tv 8"},{id:"tv85",name:"Tv 8,5"}]},
+{title:"TABİİ SPOR",icon:"◈",channels:[{id:"ex7",name:"Tabii Spor"},{id:"ex1",name:"Tabii Spor 1"},{id:"ex2",name:"Tabii Spor 2"},{id:"ex3",name:"Tabii Spor 3"},{id:"ex4",name:"Tabii Spor 4"},{id:"ex5",name:"Tabii Spor 5"},{id:"ex6",name:"Tabii Spor 6"}]},
+{title:"DİĞER SPOR",icon:"✺",channels:[{id:"as",name:"Bir Spor"},{id:"eu1",name:"Euro Sport 1"},{id:"eu2",name:"Euro Sport 2"}]}
+];
+const contentGrid=document.getElementById("contentGrid"),categoryTabs=document.getElementById("categoryTabs"),searchInput=document.getElementById("channelSearch"),totalChannelsElement=document.getElementById("totalChannels"),totalCategoriesElement=document.getElementById("totalCategories");let activeFilter="all";
+const arrowIcon='<svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><path d="m13 6 6 6-6 6"></path></svg>';
+const normalize=value=>value.toLocaleLowerCase("tr-TR");
+function renderTabs(){categories.forEach(category=>{const button=document.createElement("button");button.type="button";button.className="tab-button";button.dataset.filter=category.title;button.textContent=category.title;button.addEventListener("click",()=>{activeFilter=category.title;document.querySelectorAll(".tab-button").forEach(tab=>tab.classList.toggle("active",tab===button));renderCategories()});categoryTabs.appendChild(button)})}
+function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=BASE_URL+"channel?id="+encodeURIComponent(channel.id);link.target="match-video";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
+totalChannelsElement.textContent=categories.reduce((sum,category)=>sum+category.channels.length,0);totalCategoriesElement.textContent=categories.length;renderTabs();renderCategories();searchInput.addEventListener("input",renderCategories);
 
-        <!-- Puan Durumu Bölümü -->
-        <div id="standings-container">
-            <h2 class="section-title">Süper Lig Puan Durumu</h2>
-            <div id="standings-loading" class="loading">Puan durumu yükleniyor...</div>
-            <table id="standings-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Takım</th>
-                        <th>O</th>
-                        <th>G</th>
-                        <th>B</th>
-                        <th>M</th>
-                        <th>P</th>
-                    </tr>
-                </thead>
-                <tbody id="standings-body"></tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Iframe Modal -->
-    <div id="player-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closePlayer()">&times; Kapat</button>
-            <iframe id="player-frame" src="" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Kanal Listesi (Ana Kanallar)
-        const channels = [
-            { name: "BeIN Sports 1", url: "https://www.fixbettv84.com/bein-sports-1-canli-izle" },
-            { name: "BeIN Sports 2", url: "https://www.fixbettv84.com/bein-sports-2-canli-izle" },
-            { name: "BeIN Sports 3", url: "https://www.fixbettv84.com/bein-sports-3-canli-izle" },
-            { name: "BeIN Sports 4K", url: "https://www.fixbettv84.com/bein-sports-4k-canli-izle" },
-            { name: "S Sport 1", url: "https://www.fixbettv84.com/s-sport-1-canli-izle" },
-            { name: "S Sport 2", url: "https://www.fixbettv84.com/s-sport-2-canli-izle" },
-            { name: "A Spor", url: "https://www.fixbettv84.com/a-spor-canli-izle" },
-            { name: "TRT Spor", url: "https://www.fixbettv84.com/trt-spor-canli-izle" },
-            { name: "Fanatik", url: "https://www.fixbettv84.com/fanatik-tv-canli-izle" },
-            { name: "TJK TV", url: "https://www.fixbettv84.com/tjk-tv-canli-izle" }
-        ];
-
-        // Sayfa Yüklendiğinde Ana Kanalları Getir
-        window.onload = function() {
-            const channelGrid = document.getElementById('channel-grid');
-            channelGrid.innerHTML = '';
-            
-            channels.forEach(ch => {
-                const div = document.createElement('div');
-                div.className = 'channel-item';
-                div.innerHTML = `<strong>${ch.name}</strong>`;
-                div.onclick = () => openPlayer(ch.url);
-                channelGrid.appendChild(div);
-            });
-        };
-
-        // Bölüm Aç/Kapa
-        function toggleSection(id) {
-            const el = document.getElementById(id);
-            const isVisible = el.style.display === 'block';
-            // Diğerlerini kapat
-            document.querySelectorAll('.section-content').forEach(d => d.style.display = 'none');
-            document.getElementById('standings-container').style.display = 'none';
-            
-            if (!isVisible) {
-                el.style.display = 'block';
-            }
+// iframe reklam engelleme - bet afişlerini gizle
+function hideIframeAds(){
+    const iframes=document.querySelectorAll('iframe');
+    iframes.forEach(iframe=>{
+        const src=iframe.src.toLowerCase();
+        if(src.includes('bet')||src.includes('reklam')||src.includes('ad')){
+            iframe.style.display='none';
         }
-
-        // Puan Durumu Toggle
-        function toggleStandings() {
-            const container = document.getElementById('standings-container');
-            const isVisible = container.style.display === 'block';
-            
-            document.querySelectorAll('.section-content').forEach(d => d.style.display = 'none');
-            
-            if (!isVisible) {
-                container.style.display = 'block';
-                fetchStandings();
-            } else {
-                container.style.display = 'none';
-            }
-        }
-
-        // Puan Durumunu Çek (API veya Mock Data - Burada örnek veri kullanıyoruz çünkü CORS sorunu olabilir)
-        async function fetchStandings() {
-            const tbody = document.getElementById('standings-body');
-            const loading = document.getElementById('standings-loading');
-            
-            // Gerçek API yoksa örnek veri gösterelim (Kullanıcı isteğine göre burası güncellenebilir)
-            // Not: Fixbettv84'den puan durumunu çekmek için özel bir scraper gerekir, şimdilik statik yapıyoruz.
-            // İsterseniz bir API endpoint'i ekleyebiliriz.
-            
-            loading.style.display = 'none';
-            tbody.innerHTML = '';
-            
-            // Örnek Veri (Gerçek veriyi çekmek için backend gerekir, frontend CORS hatası verir)
-            const mockData = [
-                { rank: 1, team: "Galatasaray", p: 3, w: 3, d: 0, l: 0, pts: 9 },
-                { rank: 2, team: "Fenerbahçe", p: 3, w: 3, d: 0, l: 0, pts: 9 },
-                { rank: 3, team: "Beşiktaş", p: 3, w: 2, d: 1, l: 0, pts: 7 },
-                { rank: 4, team: "Trabzonspor", p: 3, w: 2, d: 0, l: 1, pts: 6 },
-                { rank: 5, team: "Başakşehir", p: 3, w: 1, d: 2, l: 0, pts: 5 },
-                { rank: 6, team: "Samsunspor", p: 3, w: 1, d: 1, l: 1, pts: 4 },
-                { rank: 7, team: "Göztepe", p: 3, w: 1, d: 1, l: 1, pts: 4 },
-                { rank: 8, team: "Kasımpaşa", p: 3, w: 1, d: 0, l: 2, pts: 3 },
-                { rank: 9, team: "Rizespor", p: 3, w: 1, d: 0, l: 2, pts: 3 },
-                { rank: 10, team: "Konyaspor", p: 3, w: 0, d: 2, l: 1, pts: 2 }
-            ];
-
-            mockData.forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${row.rank}</td>
-                    <td><strong>${row.team}</strong></td>
-                    <td>${row.p}</td>
-                    <td>${row.w}</td>
-                    <td>${row.d}</td>
-                    <td>${row.l}</td>
-                    <td style="color:var(--primary-color); font-weight:bold;">${row.pts}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        // Günün Maçlarını Çek ve Listele
-        async function loadTodaysMatches() {
-            toggleSection('matches-section');
-            const matchGrid = document.getElementById('match-grid');
-            const loading = document.getElementById('matches-loading');
-            
-            matchGrid.innerHTML = '';
-            loading.style.display = 'block';
-
-            try {
-                // Fixbettv84 ana sayfasından maçları çekme simülasyonu
-                // Gerçek senaryoda bir proxy veya backend gerekir. 
-                // Burada kullanıcıya doğrudan linkleri sunuyoruz.
-                
-                // NOT: Frontend'den direkt fetch CORS hatası vereceği için, 
-                // bu örnekte manuel olarak tanımlanmış bugünün maçlarını gösteriyoruz.
-                // Botunuzun çektiği veriyi buraya JSON olarak aktarabilirsiniz.
-                
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                    
-                    // Örnek Maç Verisi (Botunuzdan gelen veri buraya gelecek)
-                    const todayMatches = [
-                        { home: "Galatasaray", away: "Fenerbahçe", time: "21:00", channelUrl: "https://www.fixbettv84.com/bein-sports-1-canli-izle" },
-                        { home: "Beşiktaş", away: "Trabzonspor", time: "19:30", channelUrl: "https://www.fixbettv84.com/bein-sports-2-canli-izle" },
-                        { home: "Hazırlık Maçı", away: "Liverpool - Milan", time: "22:00", channelUrl: "https://www.fixbettv84.com/s-sport-1-canli-izle" },
-                        { home: "İngiltere U21", away: "Almanya U21", time: "18:45", channelUrl: "https://www.fixbettv84.com/a-spor-canli-izle" }
-                    ];
-
-                    if(todayMatches.length === 0) {
-                        matchGrid.innerHTML = '<p>Bugün maç bulunamadı.</p>';
-                        return;
-                    }
-
-                    todayMatches.forEach(match => {
-                        const div = document.createElement('div');
-                        div.className = 'match-item';
-                        div.innerHTML = `
-                            <div style="font-weight:bold; font-size:1.1em;">${match.home} vs ${match.away}</div>
-                            <div class="match-time">⏰ Saat: ${match.time}</div>
-                            <div style="font-size:0.8em; color:var(--primary-color); margin-top:5px;">İzlemek için tıkla</div>
-                        `;
-                        div.onclick = () => openPlayer(match.channelUrl);
-                        matchGrid.appendChild(div);
-                    });
-                }, 1000);
-
-            } catch (error) {
-                console.error("Maçlar yüklenirken hata:", error);
-                loading.innerText = "Maçlar yüklenirken bir hata oluştu.";
-            }
-        }
-
-        // Player Modalını Aç ve Reklamı Gizle
-        function openPlayer(url) {
-            const modal = document.getElementById('player-modal');
-            const iframe = document.getElementById('player-frame');
-            
-            // URL'i ayarla
-            iframe.src = url;
-            modal.style.display = 'flex';
-
-            // Reklam gizleme işlemi (Iframe yüklendikten sonra)
-            iframe.onload = function() {
-                try {
-                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                    // Bet reklamlarını ve gereksiz elementleri gizle
-                    const styles = `
-                        <style>
-                            .banner, .ad, .advertisement, .promo, .bet-banner, 
-                            [class*="reklam"], [id*="reklam"], [class*="bet"], 
-                            .modal-overlay, .pop-up { 
-                                display: none !important; 
-                                visibility: hidden !important; 
-                            }
-                        </style>
-                    `;
-                    if(iframeDoc.head) {
-                        iframeDoc.head.insertAdjacentHTML('beforeend', styles);
-                    }
-                } catch (e) {
-                    console.log("Cross-origin policy nedeniyle iframe içine müdahale edilemedi.", e);
-                }
-            };
-        }
-
-        function closePlayer() {
-            const modal = document.getElementById('player-modal');
-            const iframe = document.getElementById('player-frame');
-            iframe.src = "";
-            modal.style.display = 'none';
-        }
-    </script>
+    });
+}
+setInterval(hideIframeAds,500);
+hideIframeAds();
+</script>
 </body>
 </html>
