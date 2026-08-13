@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetbetTV - Canlı Maç İzle</title>
+    <title>Netbettv - Canlı Maç İzle</title>
     <style>
         :root {
             --primary-color: #00ff88;
-            --secondary-color: #00ccff;
             --bg-color: #0f0f13;
             --card-bg: #1a1a24;
             --text-color: #ffffff;
+            --neon-glow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
         }
 
         body {
@@ -19,24 +19,22 @@
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* NEON LOGO EFEKTİ */
-        .logo-container {
-            margin-top: 30px;
-            margin-bottom: 20px;
             text-align: center;
         }
 
-        .logo {
-            font-size: 3rem;
-            font-weight: 900;
-            text-transform: uppercase;
+        /* Neon Logo Efekti */
+        .logo-container {
+            padding: 20px;
+            background: linear-gradient(180deg, #1a1a24 0%, #0f0f13 100%);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        h1.logo {
+            font-size: 2.5rem;
+            margin: 0;
             color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             text-shadow: 
                 0 0 5px #fff,
                 0 0 10px #fff,
@@ -44,138 +42,129 @@
                 0 0 40px var(--primary-color),
                 0 0 80px var(--primary-color);
             animation: neon-pulse 1.5s infinite alternate;
-            letter-spacing: 2px;
         }
 
         @keyframes neon-pulse {
-            0% {
+            from {
                 text-shadow: 
                     0 0 5px #fff,
                     0 0 10px #fff,
                     0 0 20px var(--primary-color),
-                    0 0 40px var(--primary-color),
-                    0 0 80px var(--primary-color);
-                opacity: 1;
-            }
-            100% {
-                text-shadow: 
-                    0 0 2px #fff,
-                    0 0 5px #fff,
-                    0 0 10px var(--primary-color),
-                    0 0 20px var(--primary-color),
                     0 0 40px var(--primary-color);
-                opacity: 0.9;
+            }
+            to {
+                text-shadow: 
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px var(--primary-color),
+                    0 0 60px var(--primary-color),
+                    0 0 90px var(--primary-color);
             }
         }
 
         .container {
-            width: 90%;
             max-width: 800px;
-            text-align: center;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
         .btn {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
-            color: #000;
-            font-weight: bold;
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 12px 25px;
             font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
             cursor: pointer;
-            margin: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 5px var(--primary-color);
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.5);
+            background-color: var(--primary-color);
+            color: #000;
+            box-shadow: 0 0 20px var(--primary-color);
+            transform: translateY(-3px);
         }
 
-        .btn-secondary {
-            background: linear-gradient(45deg, #ff0055, #ff5500);
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.3);
-        }
-
-        .btn-secondary:hover {
-            box-shadow: 0 6px 20px rgba(255, 0, 85, 0.5);
-        }
-
-        #matchList {
-            list-style: none;
-            padding: 0;
+        .channel-list, .match-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
 
-        .match-item {
+        .channel-item, .match-item {
             background-color: var(--card-bg);
-            margin: 10px 0;
             padding: 15px;
             border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-left: 4px solid var(--primary-color);
             cursor: pointer;
-            transition: background 0.3s;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
         }
 
-        .match-item:hover {
+        .channel-item:hover, .match-item:hover {
+            transform: scale(1.05);
             background-color: #252530;
-        }
-
-        .match-info {
-            text-align: left;
-            flex-grow: 1;
+            border-color: var(--primary-color);
         }
 
         .match-time {
-            color: var(--secondary-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .match-teams {
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            color: #aaa;
             margin-top: 5px;
         }
 
-        .match-channel {
-            background: rgba(255,255,255,0.1);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
+        .section-title {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
 
         /* Iframe Modal */
-        #playerModal {
+        .modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.95);
+            background-color: rgba(0, 0, 0, 0.95);
             z-index: 1000;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
-        #playerContainer {
+        .modal-content {
+            position: relative;
             width: 90%;
-            max-width: 1000px;
+            max-width: 900px;
             aspect-ratio: 16/9;
             background: #000;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-            position: relative;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
         }
 
         iframe {
@@ -186,65 +175,60 @@
 
         .close-btn {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
             cursor: pointer;
-            z-index: 1001;
+            background: none;
+            border: none;
         }
 
-        /* Puan Durumu Tablosu */
-        #standingsModal {
-            display: none;
-            position: fixed;
+        .close-btn:hover {
+            color: var(--primary-color);
+        }
+
+        /* Reklam Gizleme (Iframe içi) */
+        .ad-blocker-overlay {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            pointer-events: none; /* Tıklamaları engellemez ama görseli örter */
+            z-index: 10;
+            display: none; /* JS ile kontrol edilecek */
         }
         
-        #standingsContent {
-            width: 90%;
-            max-width: 800px;
-            max-height: 80vh;
-            overflow-y: auto;
+        /* Puan Durumu Tablosu */
+        #standings-container {
+            display: none;
+            margin-top: 20px;
             background: var(--card-bg);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            border: 1px solid var(--primary-color);
+            overflow-x: auto;
         }
-
+        
         table {
             width: 100%;
             border-collapse: collapse;
-            color: white;
+            color: #fff;
         }
-
+        
         th, td {
             padding: 10px;
             text-align: left;
             border-bottom: 1px solid #333;
         }
-
+        
         th {
-            background-color: rgba(0, 255, 136, 0.2);
             color: var(--primary-color);
         }
 
-        /* Reklam Gizleme */
-        iframe {
-            pointer-events: auto;
-        }
-        /* Bet reklamlarını gizlemek için iframe içine müdahale edemeyiz ama çerçeveyi temiz tutuyoruz */
-        
         .loading {
-            color: var(--secondary-color);
+            color: #aaa;
             font-style: italic;
         }
     </style>
@@ -252,142 +236,250 @@
 <body>
 
     <div class="logo-container">
-        <div class="logo">NETBET TV</div>
+        <h1 class="logo">NETBETTV</h1>
     </div>
 
     <div class="container">
-        <!-- Gereksiz yazılar kaldırıldı -->
-        
-        <button class="btn" onclick="loadMatches()">📅 Günün Maçları</button>
-        <button class="btn btn-secondary" onclick="toggleStandings()">📊 Puan Durumu</button>
+        <!-- Butonlar -->
+        <div class="btn-group">
+            <button class="btn" onclick="toggleSection('main-channels')">📺 Ana Kanallar</button>
+            <button class="btn" onclick="loadTodaysMatches()">📅 Günün Maçları</button>
+            <button class="btn" onclick="toggleStandings()">📊 Puan Durumu</button>
+        </div>
 
-        <ul id="matchList">
-            <li class="loading">Maçları yüklemek için "Günün Maçları" butonuna tıklayın.</li>
-        </ul>
-    </div>
+        <!-- Ana Kanallar Bölümü -->
+        <div id="main-channels" class="section-content" style="display:none;">
+            <h2 class="section-title">Popüler Kanallar</h2>
+            <div class="channel-list" id="channel-grid">
+                <!-- Kanallar JS ile doldurulacak -->
+            </div>
+        </div>
 
-    <!-- Oyuncu Modal -->
-    <div id="playerModal">
-        <span class="close-btn" onclick="closePlayer()">&times;</span>
-        <div id="playerContainer">
-            <iframe id="streamFrame" src="" allowfullscreen></iframe>
+        <!-- Günün Maçları Bölümü -->
+        <div id="matches-section" class="section-content" style="display:none;">
+            <h2 class="section-title">Bugünkü Maçlar & Saatleri</h2>
+            <div id="matches-loading" class="loading">Maçlar yükleniyor...</div>
+            <div class="match-list" id="match-grid"></div>
+        </div>
+
+        <!-- Puan Durumu Bölümü -->
+        <div id="standings-container">
+            <h2 class="section-title">Süper Lig Puan Durumu</h2>
+            <div id="standings-loading" class="loading">Puan durumu yükleniyor...</div>
+            <table id="standings-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Takım</th>
+                        <th>O</th>
+                        <th>G</th>
+                        <th>B</th>
+                        <th>M</th>
+                        <th>P</th>
+                    </tr>
+                </thead>
+                <tbody id="standings-body"></tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Puan Durumu Modal -->
-    <div id="standingsModal">
-        <span class="close-btn" onclick="toggleStandings()">&times;</span>
-        <div id="standingsContent">
-            <h2 style="text-align:center; color: var(--primary-color);">Süper Lig Puan Durumu</h2>
-            <div id="standingsTableContainer">Yükleniyor...</div>
+    <!-- Iframe Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closePlayer()">&times; Kapat</button>
+            <iframe id="player-frame" src="" allowfullscreen></iframe>
         </div>
     </div>
 
     <script>
-        // Fixbettv84 verilerini simüle eden yapı (Gerçek site yapısına göre ayarlanmalı)
-        // Not: Gerçek bir siteden veri çekmek için CORS proxy veya backend gerekir.
-        // Burada kullanıcı deneyimi için örnek veri yapısı ve mantık kurulmuştur.
-        
-        const matchData = [
-            { time: "14:00", home: "Galatasaray", away: "Fenerbahçe", channel: "beIN Sports 1", url: "https://fixbettv84.com/embed/channel1" },
-            { time: "17:00", home: "Trabzonspor", away: "Beşiktaş", channel: "beIN Sports 2", url: "https://fixbettv84.com/embed/channel2" },
-            { time: "20:00", home: "Hazırlık Maçı", away: "Örnek Takım A", channel: "Fanatik TV", url: "https://fixbettv84.com/embed/friendly" },
-            { time: "21:45", home: "Real Madrid", away: "Barcelona", channel: "beIN Sports 3", url: "https://fixbettv84.com/embed/laliga" }
+        // Kanal Listesi (Ana Kanallar)
+        const channels = [
+            { name: "BeIN Sports 1", url: "https://www.fixbettv84.com/bein-sports-1-canli-izle" },
+            { name: "BeIN Sports 2", url: "https://www.fixbettv84.com/bein-sports-2-canli-izle" },
+            { name: "BeIN Sports 3", url: "https://www.fixbettv84.com/bein-sports-3-canli-izle" },
+            { name: "BeIN Sports 4K", url: "https://www.fixbettv84.com/bein-sports-4k-canli-izle" },
+            { name: "S Sport 1", url: "https://www.fixbettv84.com/s-sport-1-canli-izle" },
+            { name: "S Sport 2", url: "https://www.fixbettv84.com/s-sport-2-canli-izle" },
+            { name: "A Spor", url: "https://www.fixbettv84.com/a-spor-canli-izle" },
+            { name: "TRT Spor", url: "https://www.fixbettv84.com/trt-spor-canli-izle" },
+            { name: "Fanatik", url: "https://www.fixbettv84.com/fanatik-tv-canli-izle" },
+            { name: "TJK TV", url: "https://www.fixbettv84.com/tjk-tv-canli-izle" }
         ];
 
-        function loadMatches() {
-            const list = document.getElementById('matchList');
-            list.innerHTML = '<li class="loading">Maçlar yükleniyor...</li>';
+        // Sayfa Yüklendiğinde Ana Kanalları Getir
+        window.onload = function() {
+            const channelGrid = document.getElementById('channel-grid');
+            channelGrid.innerHTML = '';
+            
+            channels.forEach(ch => {
+                const div = document.createElement('div');
+                div.className = 'channel-item';
+                div.innerHTML = `<strong>${ch.name}</strong>`;
+                div.onclick = () => openPlayer(ch.url);
+                channelGrid.appendChild(div);
+            });
+        };
 
-            // Gerçek senaryoda burada fetch ile fixbettv84.com analiz edilirdi.
-            // Şimdilik demo veri ile çalışıyoruz.
-            setTimeout(() => {
-                list.innerHTML = '';
-                matchData.forEach(match => {
-                    const li = document.createElement('li');
-                    li.className = 'match-item';
-                    li.onclick = () => openPlayer(match.url);
-                    li.innerHTML = `
-                        <div class="match-info">
-                            <div class="match-time">⏰ ${match.time} - ${match.channel}</div>
-                            <div class="match-teams">${match.home} vs ${match.away}</div>
-                        </div>
-                        <div class="match-channel">▶️ İzle</div>
-                    `;
-                    list.appendChild(li);
-                });
-            }, 800);
+        // Bölüm Aç/Kapa
+        function toggleSection(id) {
+            const el = document.getElementById(id);
+            const isVisible = el.style.display === 'block';
+            // Diğerlerini kapat
+            document.querySelectorAll('.section-content').forEach(d => d.style.display = 'none');
+            document.getElementById('standings-container').style.display = 'none';
+            
+            if (!isVisible) {
+                el.style.display = 'block';
+            }
         }
 
+        // Puan Durumu Toggle
+        function toggleStandings() {
+            const container = document.getElementById('standings-container');
+            const isVisible = container.style.display === 'block';
+            
+            document.querySelectorAll('.section-content').forEach(d => d.style.display = 'none');
+            
+            if (!isVisible) {
+                container.style.display = 'block';
+                fetchStandings();
+            } else {
+                container.style.display = 'none';
+            }
+        }
+
+        // Puan Durumunu Çek (API veya Mock Data - Burada örnek veri kullanıyoruz çünkü CORS sorunu olabilir)
+        async function fetchStandings() {
+            const tbody = document.getElementById('standings-body');
+            const loading = document.getElementById('standings-loading');
+            
+            // Gerçek API yoksa örnek veri gösterelim (Kullanıcı isteğine göre burası güncellenebilir)
+            // Not: Fixbettv84'den puan durumunu çekmek için özel bir scraper gerekir, şimdilik statik yapıyoruz.
+            // İsterseniz bir API endpoint'i ekleyebiliriz.
+            
+            loading.style.display = 'none';
+            tbody.innerHTML = '';
+            
+            // Örnek Veri (Gerçek veriyi çekmek için backend gerekir, frontend CORS hatası verir)
+            const mockData = [
+                { rank: 1, team: "Galatasaray", p: 3, w: 3, d: 0, l: 0, pts: 9 },
+                { rank: 2, team: "Fenerbahçe", p: 3, w: 3, d: 0, l: 0, pts: 9 },
+                { rank: 3, team: "Beşiktaş", p: 3, w: 2, d: 1, l: 0, pts: 7 },
+                { rank: 4, team: "Trabzonspor", p: 3, w: 2, d: 0, l: 1, pts: 6 },
+                { rank: 5, team: "Başakşehir", p: 3, w: 1, d: 2, l: 0, pts: 5 },
+                { rank: 6, team: "Samsunspor", p: 3, w: 1, d: 1, l: 1, pts: 4 },
+                { rank: 7, team: "Göztepe", p: 3, w: 1, d: 1, l: 1, pts: 4 },
+                { rank: 8, team: "Kasımpaşa", p: 3, w: 1, d: 0, l: 2, pts: 3 },
+                { rank: 9, team: "Rizespor", p: 3, w: 1, d: 0, l: 2, pts: 3 },
+                { rank: 10, team: "Konyaspor", p: 3, w: 0, d: 2, l: 1, pts: 2 }
+            ];
+
+            mockData.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.rank}</td>
+                    <td><strong>${row.team}</strong></td>
+                    <td>${row.p}</td>
+                    <td>${row.w}</td>
+                    <td>${row.d}</td>
+                    <td>${row.l}</td>
+                    <td style="color:var(--primary-color); font-weight:bold;">${row.pts}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Günün Maçlarını Çek ve Listele
+        async function loadTodaysMatches() {
+            toggleSection('matches-section');
+            const matchGrid = document.getElementById('match-grid');
+            const loading = document.getElementById('matches-loading');
+            
+            matchGrid.innerHTML = '';
+            loading.style.display = 'block';
+
+            try {
+                // Fixbettv84 ana sayfasından maçları çekme simülasyonu
+                // Gerçek senaryoda bir proxy veya backend gerekir. 
+                // Burada kullanıcıya doğrudan linkleri sunuyoruz.
+                
+                // NOT: Frontend'den direkt fetch CORS hatası vereceği için, 
+                // bu örnekte manuel olarak tanımlanmış bugünün maçlarını gösteriyoruz.
+                // Botunuzun çektiği veriyi buraya JSON olarak aktarabilirsiniz.
+                
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                    
+                    // Örnek Maç Verisi (Botunuzdan gelen veri buraya gelecek)
+                    const todayMatches = [
+                        { home: "Galatasaray", away: "Fenerbahçe", time: "21:00", channelUrl: "https://www.fixbettv84.com/bein-sports-1-canli-izle" },
+                        { home: "Beşiktaş", away: "Trabzonspor", time: "19:30", channelUrl: "https://www.fixbettv84.com/bein-sports-2-canli-izle" },
+                        { home: "Hazırlık Maçı", away: "Liverpool - Milan", time: "22:00", channelUrl: "https://www.fixbettv84.com/s-sport-1-canli-izle" },
+                        { home: "İngiltere U21", away: "Almanya U21", time: "18:45", channelUrl: "https://www.fixbettv84.com/a-spor-canli-izle" }
+                    ];
+
+                    if(todayMatches.length === 0) {
+                        matchGrid.innerHTML = '<p>Bugün maç bulunamadı.</p>';
+                        return;
+                    }
+
+                    todayMatches.forEach(match => {
+                        const div = document.createElement('div');
+                        div.className = 'match-item';
+                        div.innerHTML = `
+                            <div style="font-weight:bold; font-size:1.1em;">${match.home} vs ${match.away}</div>
+                            <div class="match-time">⏰ Saat: ${match.time}</div>
+                            <div style="font-size:0.8em; color:var(--primary-color); margin-top:5px;">İzlemek için tıkla</div>
+                        `;
+                        div.onclick = () => openPlayer(match.channelUrl);
+                        matchGrid.appendChild(div);
+                    });
+                }, 1000);
+
+            } catch (error) {
+                console.error("Maçlar yüklenirken hata:", error);
+                loading.innerText = "Maçlar yüklenirken bir hata oluştu.";
+            }
+        }
+
+        // Player Modalını Aç ve Reklamı Gizle
         function openPlayer(url) {
-            const modal = document.getElementById('playerModal');
-            const iframe = document.getElementById('streamFrame');
+            const modal = document.getElementById('player-modal');
+            const iframe = document.getElementById('player-frame');
+            
+            // URL'i ayarla
             iframe.src = url;
             modal.style.display = 'flex';
-            
-            // Reklam engelleme simülasyonu (iframe yüklendikten sonra CSS injection gerekebilir ama cross-origin kısıtlaması vardır)
-            // Kullanıcıya daha temiz bir deneyim sunmak için iframe etrafına siyah çerçeve koyduk.
+
+            // Reklam gizleme işlemi (Iframe yüklendikten sonra)
+            iframe.onload = function() {
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    // Bet reklamlarını ve gereksiz elementleri gizle
+                    const styles = `
+                        <style>
+                            .banner, .ad, .advertisement, .promo, .bet-banner, 
+                            [class*="reklam"], [id*="reklam"], [class*="bet"], 
+                            .modal-overlay, .pop-up { 
+                                display: none !important; 
+                                visibility: hidden !important; 
+                            }
+                        </style>
+                    `;
+                    if(iframeDoc.head) {
+                        iframeDoc.head.insertAdjacentHTML('beforeend', styles);
+                    }
+                } catch (e) {
+                    console.log("Cross-origin policy nedeniyle iframe içine müdahale edilemedi.", e);
+                }
+            };
         }
 
         function closePlayer() {
-            const modal = document.getElementById('playerModal');
-            const iframe = document.getElementById('streamFrame');
-            iframe.src = '';
+            const modal = document.getElementById('player-modal');
+            const iframe = document.getElementById('player-frame');
+            iframe.src = "";
             modal.style.display = 'none';
-        }
-
-        async function toggleStandings() {
-            const modal = document.getElementById('standingsModal');
-            const container = document.getElementById('standingsTableContainer');
-            
-            if (modal.style.display === 'flex') {
-                modal.style.display = 'none';
-                return;
-            }
-
-            modal.style.display = 'flex';
-            container.innerHTML = 'Puan durumu yükleniyor...';
-
-            try {
-                // TFF veya benzeri bir kaynaktan veri çekme simülasyonu
-                // Gerçek API olmadığı için statik örnek tablo oluşturuyoruz
-                await new Promise(r => setTimeout(r, 1000));
-                
-                const standings = [
-                    { rank: 1, team: "Galatasaray", p: 10, w: 9, d: 1, l: 0, pts: 28 },
-                    { rank: 2, team: "Fenerbahçe", p: 10, w: 8, d: 2, l: 0, pts: 26 },
-                    { rank: 3, team: "Beşiktaş", p: 10, w: 6, d: 1, l: 3, pts: 19 },
-                    { rank: 4, team: "Trabzonspor", p: 10, w: 5, d: 2, l: 3, pts: 17 },
-                    { rank: 5, team: "Samsunspor", p: 10, w: 4, d: 3, l: 3, pts: 15 }
-                ];
-
-                let html = `<table>
-                    <thead>
-                        <tr>
-                            <th>#</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>P</th>
-                        </tr>
-                    </thead>
-                    <tbody>`;
-                
-                standings.forEach(row => {
-                    html += `<tr>
-                        <td>${row.rank}</td>
-                        <td style="font-weight:bold;">${row.team}</td>
-                        <td>${row.p}</td>
-                        <td>${row.w}</td>
-                        <td>${row.d}</td>
-                        <td>${row.l}</td>
-                        <td style="color:var(--primary-color); font-weight:bold;">${row.pts}</td>
-                    </tr>`;
-                });
-
-                html += `</tbody></table>`;
-                container.innerHTML = html;
-
-            } catch (error) {
-                container.innerHTML = 'Puan durumu yüklenirken hata oluştu.';
-                console.error(error);
-            }
         }
     </script>
 </body>
