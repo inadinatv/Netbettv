@@ -49,18 +49,22 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 <section class="toolbar" aria-label="Kanal araçları"><nav class="category-tabs" id="categoryTabs" aria-label="Kategori filtreleri"><button class="tab-button active" type="button" data-filter="all">Tümü</button></nav><label class="search-box" for="channelSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="channelSearch" type="search" placeholder="Kanal ara..." autocomplete="off"></label></section>
 
 <!-- GUNUN_MACLARI_BASLANGIC -->
-<section class="matches-panel" aria-labelledby="todayMatchesTitle">
-  <div class="section-heading">
-    <h3 id="todayMatchesTitle">Günün Maçları</h3>
-    <span>Canlı takip</span>
-  </div>
-  <div id="matchList" class="match-list" aria-live="polite"></div>
+<section class="toolbar matches-panel" style="margin-bottom: 20px; display: block;">
+    <div class="section-heading"><h3>📅 Günün Maçları</h3><span>13.08.2026</span></div>
+    <div class="match-list">
+        <button type="button" class="match-item" data-channel-id="bm1" onclick="openMatchById('bm1')" aria-label="🏀 01:00 - I.Swiatek vs E.Rybakina (WTA Toronto)"><span class="match-badge">🏀</span><span class="match-copy"><strong>01:00 - I.Swiatek vs E.Rybakina</strong><span>WTA Toronto</span></span><span class="match-arrow">→</span></button>
+        <button type="button" class="match-item" data-channel-id="zirve" onclick="openMatchById('zirve')" aria-label="🏀 21:30 - Galatasaray vs Çorum FK (Trendyol Süper Lig)"><span class="match-badge">🏀</span><span class="match-copy"><strong>21:30 - Galatasaray vs Çorum FK</strong><span>Trendyol Süper Lig</span></span><span class="match-arrow">→</span></button>
+        <button type="button" class="match-item" data-channel-id="trtspor" onclick="openMatchById('trtspor')" aria-label="🏀 21:30 - Esenler Erokspor vs Sarıyer (Trendyol 1. Lig)"><span class="match-badge">🏀</span><span class="match-copy"><strong>21:30 - Esenler Erokspor vs Sarıyer</strong><span>Trendyol 1. Lig</span></span><span class="match-arrow">→</span></button>
+        <button type="button" class="match-item" data-channel-id="b4" onclick="openMatchById('b4')" aria-label="🏀 21:45 - St. Etienne vs Clermont (Fransa Ligue 2)"><span class="match-badge">🏀</span><span class="match-copy"><strong>21:45 - St. Etienne vs Clermont</strong><span>Fransa Ligue 2</span></span><span class="match-arrow">→</span></button>
+        <button type="button" class="match-item" data-channel-id="b5" onclick="openMatchById('b5')" aria-label="🏀 21:45 - Reims vs Dunkerque HB (Fransa Ligue 2)"><span class="match-badge">🏀</span><span class="match-copy"><strong>21:45 - Reims vs Dunkerque HB</strong><span>Fransa Ligue 2</span></span><span class="match-arrow">→</span></button>
+        <button type="button" class="match-item" data-channel-id="b3" onclick="openMatchById('b3')" aria-label="🏀 22:15 - Sporting Lisbon vs Guimaraes (Portekiz Liga NOS)"><span class="match-badge">🏀</span><span class="match-copy"><strong>22:15 - Sporting Lisbon vs Guimaraes</strong><span>Portekiz Liga NOS</span></span><span class="match-arrow">→</span></button>
+    </div>
 </section>
 <!-- GUNUN_MACLARI_BITIS -->
 
 <!-- PUAN_DURUMU_BASLANGIC -->
 <section class="toolbar" style="margin-bottom: 20px; display: block;">
-    <button id="standingsToggle" type="button" class="standings-toggle">📊 Puan Durumu</button>
+    <button id="standingsToggle" type="button" class="standings-toggle" onclick="openStandingsModal()">📊 Puan Durumu</button>
 </section>
 <div id="standingsModal" class="standings-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="standingsModalTitle">
     <div class="standings-modal-backdrop" data-close-standings="true"></div>
@@ -69,7 +73,17 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
             <h3 id="standingsModalTitle">📊 Puan Durumu</h3>
             <button id="standingsClose" type="button" class="standings-close" aria-label="Pencereyi kapat">✕</button>
         </div>
-        <iframe frameborder="0" scrolling="no" width="100%" height="680" src="https://fixbettv84.com/puan.html" title="Puan durumu" style="border: none; background: transparent;" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <div class="standings-modal visible" aria-hidden="false" role="dialog" aria-modal="true" aria-labelledby="standingsModalTitle" style="position: static; visibility: visible; opacity: 1; pointer-events: auto; padding: 0;">
+            <div class="standings-modal-panel" style="width: 100%; max-height: none; border-radius: 12px;">
+                <div class="standings-modal-header">
+                    <h3 id="standingsModalTitle">📊 Puan Durumu</h3>
+                    <button type="button" class="standings-close" aria-label="Pencereyi kapat" style="display:none;">✕</button>
+                </div>
+                <iframe frameborder="0" scrolling="no" width="100%" height="680" src="https://fixbettv84.com/puan.html" title="Puan durumu" style="border: none; background: transparent; display: block;"></iframe>
+            </div>
+        </div>
+        
     </div>
 </div>
 <!-- PUAN_DURUMU_BITIS -->
