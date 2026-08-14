@@ -1,0 +1,32 @@
+[
+    {
+        "time": "21:30",
+        "title": "Galatasaray vs Çorum FK",
+        "type": "Trendyol Süper Lig",
+        "channel_id": "zirve"
+    },
+    {
+        "time": "21:30",
+        "title": "Esenler Erokspor vs Sarıyer",
+        "type": "Trendyol 1. Lig",
+        "channel_id": "trtspor"
+    },
+    {
+        "time": "21:45",
+        "title": "St. Etienne vs Clermont",
+        "type": "Fransa Ligue 2",
+        "channel_id": "b4"
+    },
+    {
+        "time": "21:45",
+        "title": "Reims vs Dunkerque HB",
+        "type": "Fransa Ligue 2",
+        "channel_id": "b5"
+    },
+    {
+        "time": "22:15",
+        "title": "Sporting Lisbon vs Guimaraes",
+        "type": "Portekiz Liga NOS",
+        "channel_id": "b3"
+    }
+]
