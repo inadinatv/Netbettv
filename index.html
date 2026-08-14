@@ -73,7 +73,6 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
         <h3>📅 Günün Maçları</h3>
         <span id="matchDateDisplay"></span>
     </div>
-    <!-- JSON'dan okunan maçlar buraya yerleşecek -->
     <div class="match-list" id="matchListContainer">
         <div style="text-align: center; color: var(--muted); padding: 10px;">Maç verileri aranıyor...</div>
     </div>
@@ -97,7 +96,7 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
             <span>Puan durumu yükleniyor...</span>
         </div>
         <!-- Iframe URL'si JS ile BASE_URL kullanılarak otomatik atanacak -->
-        <iframe id="standingsFrame" frameborder="0" scrolling="no" width="100%" height="680" title="Puan Durumu" style="border: none; background: transparent; display: none;"></iframe>
+        <iframe id="standingsFrame" frameborder="0" scrolling="yes" width="100%" height="680" title="Puan Durumu" style="border: none; background: transparent; display: none;"></iframe>
     </div>
 </div>
 
@@ -113,7 +112,8 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
                 <div class="spinner" aria-hidden="true"></div>
                 <span>Yayın açılıyor...</span>
             </div>
-            <iframe id="videoFrame" title="Canlı yayın" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <!-- Video oynatma izni için parametreler düzeltildi -->
+            <iframe id="videoFrame" title="Canlı yayın" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0;"></iframe>
         </div>
     </div>
 </div>
@@ -152,7 +152,6 @@ document.getElementById('matchDateDisplay').textContent = new Date().toLocaleDat
 async function loadLiveMatches() {
     const container = document.getElementById('matchListContainer');
     try {
-        // Cache sorununu önlemek için timestamp eklendi
         const response = await fetch('matches.json?t=' + new Date().getTime());
         if (!response.ok) throw new Error("Veri bulunamadı");
         
@@ -163,13 +162,12 @@ async function loadLiveMatches() {
             return;
         }
 
-        container.innerHTML = ''; // Loading metnini temizle
+        container.innerHTML = '';
         matches.forEach(match => {
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'match-item';
             
-            // Eğer kanal id'si varsa tıklanabilir yap, yoksa inaktif görünüm ver
             if (match.channel_id) {
                 btn.onclick = () => openMatchById(match.channel_id);
             } else {
@@ -177,7 +175,6 @@ async function loadLiveMatches() {
                 btn.style.opacity = '0.8';
             }
 
-            // Maç türüne göre ikon seçimi
             const icon = (match.type && (match.type.includes("Kupa") || match.type.includes("Hazırlık"))) ? "⚽" : "🏀";
             
             btn.innerHTML = `
@@ -208,7 +205,6 @@ function openStandingsModal() {
     standingsModal.setAttribute("aria-hidden","false");
     document.body.style.overflow="hidden";
     
-    // Iframe'i sadece Puan Durumu tıklandığında yükle (arka planda reklam/veri çekmesini engeller)
     if (!standingsFrame.src || standingsFrame.src === "about:blank" || standingsFrame.src === "") {
         standingsFrame.src = BASE_URL + "puan.html";
         standingsFrame.onload = () => {
@@ -237,21 +233,18 @@ const videoLoader=document.getElementById("videoLoader");
 
 function openMatchById(channelId){
     if(!channelId){return;}
-    const url=BASE_URL+"channel?id="+encodeURIComponent(channelId);
-    if(videoModal&&videoFrame){
-        videoFrame.src=url;
-        videoFrame.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen");
-        videoFrame.setAttribute("referrerpolicy","no-referrer-when-downgrade");
-        videoLoader&&videoLoader.classList.remove("hidden");
+    const url = BASE_URL + "channel?id=" + encodeURIComponent(channelId);
+    if(videoModal && videoFrame){
+        videoFrame.src = url;
+        videoLoader && videoLoader.classList.remove("hidden");
         videoModal.classList.add("visible");
         videoModal.setAttribute("aria-hidden","false");
         document.body.style.overflow="hidden";
+        
         clearTimeout(videoFallbackTimer);
         videoFallbackTimer=setTimeout(()=>{
-            if(videoFrame && videoFrame.src && videoFrame.src.includes('channel')){
-                videoFrame.src=fallbackVideoUrl;
-                videoLoader&&videoLoader.classList.add("hidden");
-            }
+            // Yüklenme takılırsa loader'ı zorla kaldır
+            videoLoader && videoLoader.classList.add("hidden");
         },9000);
         return;
     }
@@ -286,18 +279,23 @@ document.addEventListener("keydown",event=>{if(event.key==="Escape"){if(standing
 // Başlangıçta canlı maçları API(JSON)'dan yükle
 loadLiveMatches();
 
-// iframe reklam engelleme - bet afişlerini gizle
+// REKLAM ENGELLEYİCİ DÜZELTİLDİ
+// Hata burada oluşuyordu, ana sitenizin adında "bet" geçtiği için 
+// kendi oynatıcınızı da "reklam" zannedip gizliyordu.
+// Artık SADECE ana iframe'lerimiz haricindeki iframe'leri hedef alıyor.
 function hideIframeAds(){
-    const iframes=document.querySelectorAll('iframe');
-    iframes.forEach(iframe=>{
-        try{
-            const src=iframe.src.toLowerCase();
-            if(src.includes('bet')||src.includes('reklam')||src.includes('ad')){ iframe.style.display='none'; }
-        } catch(e){}
+    const iframes = document.querySelectorAll('iframe:not(#videoFrame):not(#standingsFrame)');
+    iframes.forEach(iframe => {
+        try {
+            const src = iframe.src.toLowerCase();
+            // Sadece linkin içinde açıkça "reklam" veya "/ad/" geçen yerleri gizle
+            if(src.includes('reklam') || src.includes('/ad/')){
+                iframe.style.display = 'none';
+            }
+        } catch(e) {}
     });
 }
-setInterval(hideIframeAds,500);
-hideIframeAds();
+setInterval(hideIframeAds, 1000);
 </script>
 </body>
 </html>
