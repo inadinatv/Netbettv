@@ -3,6 +3,12 @@
         "time": "21:30",
         "title": "Galatasaray vs Çorum FK",
         "type": "Trendyol Süper Lig",
+        "channel_id": "https://ff.8b9035807842a4e4dbe009f3f1478127.biz/hls/701.m3u8"
+    },
+    {
+        "time": "21:30",
+        "title": "Galatasaray vs Çorum FK 2",
+        "type": "Trendyol Süper Lig",
         "channel_id": "zirve"
     },
     {
