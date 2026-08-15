@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 from typing import List, Dict
 
-import requests
+import cloudscraper
 from bs4 import BeautifulSoup
 
 # Logging ayarları
@@ -14,7 +14,9 @@ logger = logging.getLogger(__name__)
 class Config:
     INDEX_HTML_PATH = Path('index.html')
     MATCHES_JSON_PATH = Path('matches.json')
+    DEBUG_HTML_PATH = Path('debug_html.txt') # Siteyi nasıl gördüğümüzü kaydettiğimiz dosya
     ENCODING = 'utf-8'
+    
     BASE_URL_PATTERN = re.compile(r'(// BASE_URL_START\nconst BASE_URL=")(.*?)(";)')
     DEFAULT_DOMAIN = "https://fixbettv84.com/"
     MASTER_URL = "https://t.me/s/fixbet"
@@ -23,22 +25,21 @@ class Config:
 class DomainFetcher:
     def __init__(self, master_url: str = Config.MASTER_URL):
         self.master_url = master_url
-        self.session = requests.Session()
-        # Gerçek bir tarayıcı taklidi (Cloudflare aşmak için)
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
-            'Upgrade-Insecure-Requests': '1'
+        # Cloudflare'i aşmak için cloudscraper kullanıyoruz
+        self.scraper = cloudscraper.create_scraper(browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
         })
     
     def fetch(self) -> str:
         try:
-            response = self.session.get(self.master_url, timeout=10)
+            response = self.scraper.get(self.master_url, timeout=15)
             response.raise_for_status()
             current_url = Config.DEFAULT_DOMAIN
-            found_urls = re.findall(r'https?://(?:www\.)?[a-zA-Z0-9-]*fixbettv[0-9]*\.[a-zA-Z]+/?', response.text)
             
+            # Telegram'dan güncel fixbettv linkini bul
+            found_urls = re.findall(r'https?://(?:www\.)?[a-zA-Z0-9-]*fixbettv[0-9]*\.[a-zA-Z]+/?', response.text)
             if found_urls:
                 unique_urls = list(dict.fromkeys(found_urls))
                 current_url = unique_urls[-1]
@@ -46,7 +47,7 @@ class DomainFetcher:
             if not current_url.endswith('/'):
                 current_url += '/'
             
-            logger.info(f"Güncel domain tespit edildi: {current_url}")
+            logger.info(f"Güncel domain Telegram'dan tespit edildi: {current_url}")
             return current_url
         except Exception as e:
             logger.error(f"Domain çekilirken hata: {e}. Varsayılan kullanılacak.")
@@ -55,146 +56,137 @@ class DomainFetcher:
 
 class MatchFetcher:
     def __init__(self, current_domain: str):
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
-            'Cache-Control': 'no-cache',
-            'Pragma': 'no-cache',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none'
-        })
         self.current_domain = current_domain
+        # Standart Requests yerine Cloudscraper ile siteye bağlanıyoruz
+        self.scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'desktop': True
+            }
+        )
+        # Bazen maçlar iframe veya özel API sayfalarında tutulur. Tüm olasılıkları ekliyoruz.
         self.sources = [
-            "https://data-reality.com/matches2.php",
-            self.current_domain
+            self.current_domain,
+            f"{self.current_domain}ajax/matches",
+            "https://data-reality.com/matches2.php"
         ]
 
     def _smart_extract_matches(self, html_content: str) -> List[Dict]:
         matches = []
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # 1. STANDART HTML KAZIMA (Genişletilmiş Regex ile)
-        possible_elements = soup.find_all(['a', 'div', 'li'])
-        for el in possible_elements:
-            href = el.get('href', '') if el.name == 'a' else ''
-            style = el.get('style', '').replace(' ', '').lower()
-            if 'display:none' in style:
-                continue
-
-            full_text = el.get_text(separator=' | ', strip=True)
-            if not full_text:
-                continue
-
-            # Saat formatı (21:00 veya 21.00) içeriyorsa maç olma ihtimali yüksektir
-            time_match = re.search(r'\d{2}[:.]\d{2}', full_text)
+        # Sitedeki TÜM linkleri (a etiketlerini) tarıyoruz. Sınıf adı ne olursa olsun affetmez.
+        for a_tag in soup.find_all('a', href=True):
+            # Elementin içindeki tüm yazıları aralarında boşluk bırakarak al
+            text = a_tag.get_text(separator=' ', strip=True)
+            
+            # Yazının içinde 19:00, 21.45 gibi SAAT formatı var mı?
+            time_match = re.search(r'\b([01]?[0-9]|2[0-3])[:.]([0-5][0-9])\b', text)
             if not time_match:
                 continue
-
-            title = ""
-            status = ""
-
-            name_div = el.find(class_=re.compile(r'name|title|team|mac|takim', re.I))
-            status_div = el.find(class_=re.compile(r'status|time|info|league|saat|lig', re.I))
+                
+            href = a_tag['href']
             
-            if name_div: title = name_div.get_text(separator=' ', strip=True)
-            if status_div: status = status_div.get_text(separator=' ', strip=True)
-
-            if not title or len(title) < 3:
-                texts = [t for t in el.stripped_strings if t]
-                if len(texts) >= 2:
-                    time_str = next((t for t in texts if re.search(r'\d{2}[:.]\d{2}', t)), None)
-                    # '-' veya 'vs' veya 'v' arama
-                    title_candidates = [t for t in texts if '-' in t or ' vs ' in t.lower() or ' v ' in t.lower()]
-                    title_str = title_candidates[0] if title_candidates else texts[0]
-                    
-                    if title_str:
-                        title = title_str
-                        other_texts = [t for t in texts if t != title_str and t != time_str]
-                        league_str = other_texts[0] if other_texts else "Futbol / Basketbol"
-                        status = f"{time_str} | {league_str}" if time_str else league_str
-
-            # Hala takımları belirleyemediysek atla
-            if not title or len(title) < 5:
+            # Linkin içinde id= veya kanal= gibi bir parametre var mı? Veya linkin sonu kanal ismi mi?
+            channel_id = ""
+            id_match = re.search(r'(?:id=|kanal=|channel=|yayin=|watch=|/izle/)([-a-zA-Z0-9_]+)', href)
+            
+            if id_match:
+                channel_id = id_match.group(1)
+            else:
+                # Örn: href="/bein-sports-1" formatı
+                parts = [p for p in href.split('/') if p and not p.startswith('#')]
+                if parts:
+                    channel_id = parts[-1]
+            
+            # Eğer onclick parametresi varsa id oradadır
+            if not channel_id or channel_id in ['#', 'javascript:void(0)']:
+                onclick = a_tag.get('onclick', '')
+                click_match = re.search(r'[\'"]([a-zA-Z0-9_-]+)[\'"]', onclick)
+                if click_match:
+                    channel_id = click_match.group(1)
+            
+            # Kanal idsini hala bulamadıysa bu maç linki değildir, geç
+            if not channel_id:
                 continue
 
-            # ID Ayıklama
-            channel_id = ""
-            if href:
-                match_id = re.search(r'(id=|channel=|yayin=|watch=|kanal=)([^&]+)', href)
-                if match_id:
-                    channel_id = match_id.group(2)
-                else:
-                    parts = [p for p in href.split('/') if p]
-                    if parts:
-                        channel_id = parts[-1]
+            time_str = time_match.group(0)
+            
+            # Başlık kısmından saati temizle
+            raw_title = text.replace(time_str, '').strip(' -|/>')
+            
+            # Başlığı ikiye bölmeye çalış (Takımlar ve Lig)
+            league = "Maç"
+            title = raw_title
+            
+            # İçinde Lig, Kupa, Series kelimeleri geçiyorsa ayır
+            league_match = re.search(r'(.*?)(Süper Lig|Lig|Kupa|Premier|La Liga|Serie A|Ligue 1|NBA|Euroleague|Champions|Şampiyonlar)(.*)', raw_title, re.IGNORECASE)
+            if league_match:
+                league = (league_match.group(2) + league_match.group(3)).strip(' -|')
+                title = league_match.group(1).strip(' -|')
+                
+            if not title:
+                title = raw_title
 
-            time_part = status.split('|')[0].strip() if '|' in status else status
-            type_part = status.split('|')[1].strip() if '|' in status else 'Maç'
+            # Eğer title çok kısaysa mantıksızdır, atla
+            if len(title) < 5:
+                continue
 
-            match_time_in_title = re.search(r'^(\d{2}[:.]\d{2})', title)
-            if match_time_in_title:
-                time_part = match_time_in_title.group(1)
-                title = title.replace(time_part, '').strip(' -|')
-
-            if not re.search(r'\d{2}[:.]\d{2}', time_part) and time_match:
-                time_part = time_match.group(0)
-
-            # Liste kontrolü (Aynı maçı iki kez eklememek için)
-            if not any(m['title'] == title and m['time'] == time_part for m in matches):
+            # Aynı maçı (aynı takım ve saat) iki defa ekleme
+            if not any(m['title'] == title and m['time'] == time_str for m in matches):
                 matches.append({
-                    'time': time_part,
+                    'time': time_str,
                     'title': title,
-                    'type': type_part,
+                    'type': league,
                     'channel_id': channel_id
                 })
-        
-        # 2. JSON JAVASCRIPT İÇİ ARAMA (Eğer maçları HTML yerine sayfaya kod olarak gizledilerse)
-        if not matches:
-            script_tags = soup.find_all('script')
-            for script in script_tags:
-                if script.string:
-                    # 'id', 'title', 'time' gibi verilerin geçtiği JSON yapısı ara
-                    if 'id=' in script.string or 'channel' in script.string:
-                        # Burada karmaşık JSON ayıklamaları yapılabilir.
-                        # Şimdilik standart HTML tarafı başarısız olursa Cloudflare engelini bildirelim.
-                        pass
         
         return matches
 
     def fetch_and_save(self) -> bool:
         matches = []
+        html_saved = False
+        
         for url in self.sources:
             try:
                 logger.info(f"Maçlar Aranıyor -> {url}")
-                response = self.session.get(url, timeout=12)
+                response = self.scraper.get(url, timeout=15)
                 
-                if "Just a moment..." in response.text or "Cloudflare" in response.text:
-                    logger.warning(f"[DİKKAT] {url} Cloudflare koruması altında! Bot engelleniyor.")
+                # Cloudflare veya Bot engel ekranına düştük mü kontrolü
+                if "Just a moment..." in response.text or "cf-browser-verification" in response.text:
+                    logger.warning(f"[ENGEL] {url} adresinde Cloudflare Captcha korumasına takıldık!")
                     continue
-                    
-                response.raise_for_status()
+                
+                # Sadece ilk girdiğimiz sayfanın HTML'ini debug için kaydedelim
+                if not html_saved:
+                    with open(Config.DEBUG_HTML_PATH, 'w', encoding=Config.ENCODING) as f:
+                        f.write(response.text)
+                    logger.info(f"Sitenin HTML kaynak kodu incelenmek üzere '{Config.DEBUG_HTML_PATH.name}' dosyasına kaydedildi.")
+                    html_saved = True
+
                 parsed_matches = self._smart_extract_matches(response.text)
                 
                 if parsed_matches:
                     matches = parsed_matches
-                    logger.info(f"Başarılı! {url} üzerinden {len(matches)} adet maç tespit edildi.")
-                    break
+                    logger.info(f"BAŞARILI! {url} üzerinden {len(matches)} adet maç çekildi.")
+                    break # Bulduysak diğer alternatif adreslere bakmaya gerek yok
                 else:
-                    logger.warning(f"Uyarı: {url} adresinde maç bulunamadı.")
+                    logger.warning(f"Uyarı: {url} adresinde saat formatına uyan maç bilgisi bulunamadı.")
             except Exception as e:
                 logger.error(f"{url} ulaşılamadı: {e}")
 
         if not matches:
-            logger.error("HİÇBİR KAYNAKTAN MAÇ VERİSİ ALINAMADI! (Muhtemel sebep: Cloudflare Bot Koruması veya Sitenin HTML yapısının tamamen JS'ye dönmesi)")
+            logger.error("HİÇBİR KAYNAKTAN MAÇ VERİSİ ALINAMADI! (debug_html.txt dosyasını kontrol edin, site tasarımı tamamen değişmiş olabilir.)")
+            # Yine de boş dizi yazdıralım ki eski günün maçları sitede kalmasın
+            with open(Config.MATCHES_JSON_PATH, 'w', encoding=Config.ENCODING) as f:
+                json.dump([], f, ensure_ascii=False, indent=4)
             return False
             
         try:
             with open(Config.MATCHES_JSON_PATH, 'w', encoding=Config.ENCODING) as f:
                 json.dump(matches, f, ensure_ascii=False, indent=4)
-            logger.info(f"Tüm maç verileri '{Config.MATCHES_JSON_PATH.name}' dosyasına güncellendi.")
+            logger.info(f"Tüm maç verileri '{Config.MATCHES_JSON_PATH.name}' dosyasına GÜNCELLENDİ.")
             return True
         except Exception as e:
             logger.error(f"JSON kayıt hatası: {e}")
@@ -207,7 +199,7 @@ class SystemUpdater:
         
     def update_base_url(self, new_domain: str):
         if not Config.INDEX_HTML_PATH.exists():
-            logger.error("index.html dosyası klasörde bulunamadı!")
+            logger.error("index.html dosyası bulunamadı!")
             return False
             
         try:
@@ -219,7 +211,7 @@ class SystemUpdater:
             with open(Config.INDEX_HTML_PATH, 'w', encoding=Config.ENCODING) as f:
                 f.write(updated_content)
             
-            logger.info(f"index.html içindeki Domain adresi ({new_domain}) ile değiştirildi.")
+            logger.info(f"index.html içindeki Domain adresi güncellendi: {new_domain}")
             return True
         except Exception as e:
             logger.error(f"index.html işlenirken hata oluştu: {e}")
