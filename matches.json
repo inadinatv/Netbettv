@@ -1,74 +1,74 @@
 [
     {
         "time": "21:30",
-        "title": "Gençlerbirliği vs Fenerbahçe",
-        "type": "Trendyol Süper Lig [Günün Maçı]",
+        "title": "Gençlerbirliği vs Fenerbahçe  | Trendyol",
+        "type": "Süper Lig [Günün Maçı]",
         "channel_id": "zirve"
     },
     {
         "time": "17:00",
-        "title": "Hull City vs Nice",
-        "type": "Hazırlık Maçı",
+        "title": "Hull City vs Nice  | Hazırlık Maçı",
+        "type": "Maç",
         "channel_id": "tv85"
     },
     {
         "time": "19:00",
-        "title": "Kasımpaşa vs Trabzonspor",
-        "type": "Trendyol Süper Lig",
+        "title": "Kasımpaşa vs Trabzonspor  | Trendyol",
+        "type": "Süper Lig",
         "channel_id": "zirve"
     },
     {
         "time": "19:00",
-        "title": "Konyaspor vs Ç.Rizespor",
-        "type": "Trendyol Süper Lig",
+        "title": "Konyaspor vs Ç.Rizespor  | Trendyol",
+        "type": "Süper Lig",
         "channel_id": "b2"
     },
     {
         "time": "19:00",
-        "title": "Karagümrük vs Ümraniyespor",
-        "type": "Trendyol 1. Lig",
+        "title": "Karagümrük vs Ümraniyespor  | Trendyol 1.",
+        "type": "Lig",
         "channel_id": "bm1"
     },
     {
         "time": "19:00",
-        "title": "İstanbulspor vs Bodrumspor",
-        "type": "Trendyol 1. Lig",
+        "title": "İstanbulspor vs Bodrumspor  | Trendyol 1.",
+        "type": "Lig",
         "channel_id": "trtspor"
     },
     {
         "time": "20:30",
-        "title": "Alaves vs Getafe",
-        "type": "İspanya La Liga",
+        "title": "Alaves vs Getafe  | İspanya",
+        "type": "La Liga",
         "channel_id": "ss"
     },
     {
         "time": "21:30",
-        "title": "Gaziantep FK vs Alanyaspor",
-        "type": "Trendyol Süper Lig",
+        "title": "Gaziantep FK vs Alanyaspor  | Trendyol",
+        "type": "Süper Lig",
         "channel_id": "b2"
     },
     {
         "time": "21:30",
-        "title": "Bursaspor vs Iğdırspor",
-        "type": "Trendyol 1. Lig",
+        "title": "Bursaspor vs Iğdırspor  | Trendyol 1.",
+        "type": "Lig",
         "channel_id": "trtspor"
     },
     {
         "time": "21:30",
-        "title": "Manisa FK vs Vanspor",
-        "type": "Trendyol 1. Lig",
+        "title": "Manisa FK vs Vanspor  | Trendyol 1.",
+        "type": "Lig",
         "channel_id": "bm2"
     },
     {
         "time": "22:30",
-        "title": "Sevilla vs Rayo Vallecano",
-        "type": "İspanya La Liga",
+        "title": "Sevilla vs Rayo Vallecano  | İspanya",
+        "type": "La Liga",
         "channel_id": "ss"
     },
     {
         "time": "22:30",
-        "title": "Rio Ave vs Porto",
-        "type": "Portekiz Liga NOS",
+        "title": "Rio Ave vs Porto  | Portekiz",
+        "type": "Liga NOS",
         "channel_id": "b3"
     }
 ]

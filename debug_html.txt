@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixbet TV | Canlı Maç izle, Beinsports izle</title>
+    <meta name="description" content="Fixbet TV online ve hd canlı maç izlemenin vazgeçilmez adresi. Fixbet TV ile tüm süper lig maçlarını kesintisiz bir şekilde hd ve donmadan izleyebilirsiniz." />
+    <meta name="keywords" content="Fixbettv, canlı maç izle, taraftarium24, maç izle" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .sayfa-arka {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: url(pageskin1.jpg) #000 no-repeat center top fixed;
+            background-size: cover;
+        }
+
+        @media screen and (max-width:900px) {
+            .ornekclass {
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .nomobile {
+                visibility: hidden;
+                clear: both;
+                float: right;
+                margin: 5px auto;
+                width: 22%;
+                height: auto;
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://tinyurl.com/4yccwdpj" target="_blank" rel="noopener" aria-label="Reklam">
+        <div class="sayfa-arka nomobile"></div>
+    </a>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Fixbet TV Logo">
+            </div>
+ 
+            <div class="nav-links">
+                <a href="https://tinyurl.com/4yccwdpj"><i class="fas fa-home"></i> <span class="text">Fixbet Giriş</span></a>
+                <a href="https://t.me/fixresmitg" rel="nofollow" target="_blank"><i class="fab fa-telegram"></i> <span class="text">Telegram</span></a>
+        </div>
+    </header>
+
+    <div align="center" style="margin-top: 0px;" class="ads-container">
+        <a href="https://tinyurl.com/4yccwdpj" rel="nofollow" target="_blank">
+            <img class="web-ad" src="reklam5.gif">
+            <img class="mobile-ad" src="reklam5.gif">
+        </a>
+        <a href="https://tinyurl.com/4yccwdpj" rel="nofollow" target="_blank">
+            <img class="web-ad" src="reklam4.gif">
+            <img class="mobile-ad" src="reklam4.gif">
+        </a>
+    </div>
+
+    <div style="margin-top: 0px;"></div>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <!-- Video Player -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <h1 class="channel-title">BEIN SPORTS 1</h1>
+                        <div>
+                            <button id="cinemaModeButton" class="cinema-mode-button">
+                                <i class="fas fa-expand"></i> Sinema Modu
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-container" id="mainVideoContainer">
+                        <iframe id="customIframe" class="player" src="/channel.html?id=zirve" scrolling="no" width="100%" height="450" frameborder="0" allowfullscreen="true" style="overflow: hidden; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;"></iframe>
+                    </div>
+                    
+                    <!-- yayin alti reklam reklam -->
+                    <div align="center" class="rnd-qwert">
+                        <a href="https://tinyurl.com/4yccwdpj" rel="nofollow" target="_blank">
+                            <img class="rnd-web" src="reklam3.gif">
+                            <img class="rnd-mobile" src="reklam3.gif">
+                        </a>
+                    </div>
+                    <!--  yayin alti reklam reklam -->
+                </div>
+                </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <div class="sources-tabs">
+                            <button class="tab-button active" data-tab="matches">Liste</button>
+                            <button class="tab-button" data-tab="24-7">7/24 Kanallar</button>
+                            <button class="tab-button" data-tab="multi-screen">Çoklu Ekran</button>
+                        </div>
+                    </div>
+                     
+                    <div class="search-container">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" id="searchInput" class="search-input" placeholder="Maç veya kanal ara...">
+                            <button type="submit" class="search-button">
+                                <i class="fas fa-search"></i> Ara
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Çoklu Ekran Kontrolleri -->
+                    <div id="multi-screen-controls" class="multi-screen-controls" style="display: none;">
+                        <button id="apply-multi-screen" class="multi-screen-button">
+                            <i class="fas fa-play"></i> Uygula
+                        </button>
+                        <button id="clear-multi-screen" class="multi-screen-button clear">
+                            <i class="fas fa-times"></i> Temizle
+                        </button>
+                    </div>
+
+                    <div class="channel-list" id="channelList">
+                        <div id="matches-tab" class="tab-content active">
+                            
+                        </div>
+                        
+                        <!-- 7/24 Kanallar -->
+                        <div id="24-7-tab" class="tab-content">
+                            <a href="/channel.html?id=zirve" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=b2" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=b3" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS 3</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=b4" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS 4</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=b5" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS 5</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=bm1" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS MAX 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=bm2" class="channel-item">
+                                <div class="channel-name">BEIN SPORTS MAX 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=ss" class="channel-item">
+                                <div class="channel-name">S SPORT</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=ss2" class="channel-item">
+                                <div class="channel-name">S SPORT 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=smarts" class="channel-item">
+                                <div class="channel-name">SMARTSPOR</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=sms2" class="channel-item">
+                                <div class="channel-name">SMARTSPOR 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=t1" class="channel-item">
+                                <div class="channel-name">TIVIBU SPOR 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=t2" class="channel-item">
+                                <div class="channel-name">TIVIBU SPOR 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=t3" class="channel-item">
+                                <div class="channel-name">TIVIBU SPOR 3</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=t4" class="channel-item">
+                                <div class="channel-name">TIVIBU SPOR 4</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=trtspor" class="channel-item">
+                                <div class="channel-name">TRT SPOR</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=trtspor2" class="channel-item">
+                                <div class="channel-name">TRT SPOR YILDIZ</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=trt1" class="channel-item">
+                                <div class="channel-name">TRT 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=as" class="channel-item">
+                                <div class="channel-name">A SPOR</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=atv" class="channel-item">
+                                <div class="channel-name">ATV</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=tv8" class="channel-item">
+                                <div class="channel-name">TV 8</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=tv85" class="channel-item">
+                                <div class="channel-name">TV 8,5</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=eu1" class="channel-item">
+                                <div class="channel-name">EURO SPORT 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                            <a href="/channel.html?id=eu2" class="channel-item">
+                                <div class="channel-name">EURO SPORT 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>
+                                <a href="/channel.html?id=ex7" class="channel-item">
+                                <div class="channel-name">TABII SPOR</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                <a href="/channel.html?id=ex1" class="channel-item">
+                                <div class="channel-name">TABII SPOR 1</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                <a href="/channel.html?id=ex2" class="channel-item">
+                                <div class="channel-name">TABII SPOR 2</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                <a href="/channel.html?id=ex3" class="channel-item">
+                                <div class="channel-name">TABII SPOR 3</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                 <a href="/channel.html?id=ex4" class="channel-item">
+                                <div class="channel-name">TABII SPOR 4</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                <a href="/channel.html?id=ex5" class="channel-item">
+                                <div class="channel-name">TABII SPOR 5</div>
+                                <div class="channel-status">7/24</div>
+                            </a>   
+                                <a href="/channel.html?id=ex6" class="channel-item">
+                                <div class="channel-name">TABII SPOR 6</div>
+                                <div class="channel-status">7/24</div>
+                            </a>                                                      
+                        </div>  
+                        <!-- 7/24 Kanallar -->
+                        
+                        <!-- Çoklu Ekran Sekmesi -->
+                        <div id="multi-screen-tab" class="tab-content">
+                            <p style="padding: 15px; color: var(--text-muted);">Çoklu ekran modunda izlemek istediğiniz maçları seçin ve "Uygula" butonuna basın.</p>                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="point-table"><center><iframe frameborder="0" scrolling="no" width="300" height="700" src="/puan.html" style="border: none; border-radius: 6px; display: block; margin: 0 auto;"></iframe></center><!--right box-->
+                </div> 
+            </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+fetch('https://data-reality.com/matches2.php')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('matches-tab').innerHTML = data;
+
+        // Burada yeni channel-item’lara click eventi bağlaman lazım
+        document.querySelectorAll("#matches-tab .channel-item").forEach(e => {
+            e.addEventListener("click", function(ev) {
+                ev.preventDefault(); // Yeni sekmeye gitmeyi engelle
+                let i = document.getElementById("customIframe");
+                if (i) {
+                    let href = this.getAttribute("href");
+                    i.src = href.includes("http") ? href : `${href}`;
+                }
+                let title = document.querySelector(".channel-title");
+                if (title) {
+                    title.textContent = this.querySelector(".channel-name").textContent;
+                }
+
+                // Mobilde tıklayınca yukarıya kaydır
+                if (window.innerWidth <= 768) {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+            });
+        });
+    })
+    .catch(error => console.error('Dosya yüklenirken hata oluştu:', error));
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    © 2025 Fixbet TV, Tüm Hakları Saklıdır. | Zirve Stream Altyapısı ile Güçlendirilmiştir.
+                </div>
+                <div class="footer-links">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="exitCinemaMode" class="exit-cinema-mode">
+        <i class="fas fa-compress"></i> Sinema Modundan Çık
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="theme.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4c0d5135d2dd4d8abb89503c1352f42f","r":1}' crossorigin="anonymous"></script>
+</body>
+    <div id="displayDivId" style="display: none;">
+        <iframe frameborder="0" height="29" scrolling="no" src="/sayac.html" width="91"></iframe>
+    </div>
+</html>
