@@ -1,37 +1,73 @@
 [
     {
         "time": "21:30",
-        "title": "Galatasaray vs Çorum FK",
-        "type": "Trendyol Süper Lig",
-        "channel_id": "https://ff.8b9035807842a4e4dbe009f3f1478127.biz/hls/701.m3u8"
+        "title": "Gençlerbirliği vs Fenerbahçe",
+        "type": "Trendyol Süper Lig [Günün Maçı]",
+        "channel_id": "zirve"
     },
     {
-        "time": "21:30",
-        "title": "Galatasaray vs Çorum FK 2",
+        "time": "17:00",
+        "title": "Hull City vs Nice",
+        "type": "Hazırlık Maçı",
+        "channel_id": "tv85"
+    },
+    {
+        "time": "19:00",
+        "title": "Kasımpaşa vs Trabzonspor",
         "type": "Trendyol Süper Lig",
         "channel_id": "zirve"
     },
     {
-        "time": "21:30",
-        "title": "Esenler Erokspor vs Sarıyer",
+        "time": "19:00",
+        "title": "Konyaspor vs Ç.Rizespor",
+        "type": "Trendyol Süper Lig",
+        "channel_id": "b2"
+    },
+    {
+        "time": "19:00",
+        "title": "Karagümrük vs Ümraniyespor",
+        "type": "Trendyol 1. Lig",
+        "channel_id": "bm1"
+    },
+    {
+        "time": "19:00",
+        "title": "İstanbulspor vs Bodrumspor",
         "type": "Trendyol 1. Lig",
         "channel_id": "trtspor"
     },
     {
-        "time": "21:45",
-        "title": "St. Etienne vs Clermont",
-        "type": "Fransa Ligue 2",
-        "channel_id": "b4"
+        "time": "20:30",
+        "title": "Alaves vs Getafe",
+        "type": "İspanya La Liga",
+        "channel_id": "ss"
     },
     {
-        "time": "21:45",
-        "title": "Reims vs Dunkerque HB",
-        "type": "Fransa Ligue 2",
-        "channel_id": "b5"
+        "time": "21:30",
+        "title": "Gaziantep FK vs Alanyaspor",
+        "type": "Trendyol Süper Lig",
+        "channel_id": "b2"
     },
     {
-        "time": "22:15",
-        "title": "Sporting Lisbon vs Guimaraes",
+        "time": "21:30",
+        "title": "Bursaspor vs Iğdırspor",
+        "type": "Trendyol 1. Lig",
+        "channel_id": "trtspor"
+    },
+    {
+        "time": "21:30",
+        "title": "Manisa FK vs Vanspor",
+        "type": "Trendyol 1. Lig",
+        "channel_id": "bm2"
+    },
+    {
+        "time": "22:30",
+        "title": "Sevilla vs Rayo Vallecano",
+        "type": "İspanya La Liga",
+        "channel_id": "ss"
+    },
+    {
+        "time": "22:30",
+        "title": "Rio Ave vs Porto",
         "type": "Portekiz Liga NOS",
         "channel_id": "b3"
     }
