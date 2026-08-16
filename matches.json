@@ -6,36 +6,6 @@
         "channel_id": "zirve"
     },
     {
-        "time": "02:00",
-        "title": "P.Stearns vs C.Tauson  | WTA Cincinnati",
-        "type": "Maç",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "03:00",
-        "title": "Sao Paulo vs Coritiba  | Brezilya",
-        "type": "Serie A",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "03:15",
-        "title": "CA Platense vs Boca Juniors  | Arjantin",
-        "type": "Kupasi",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "03:30",
-        "title": "L.Boisson vs B.Bencic  | WTA Cincinnati",
-        "type": "Maç",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "05:30",
-        "title": "I.Makhachev vs I.Garry  | UFC Dövüş Serisi",
-        "type": "Maç",
-        "channel_id": "yayinss"
-    },
-    {
         "time": "17:00",
         "title": "Arsenal vs Manchester City  | FA Community Shield",
         "type": "Maç",
