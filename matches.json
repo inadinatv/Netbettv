@@ -1,80 +1,50 @@
 [
     {
-        "time": "21:30",
-        "title": "Beşiktaş vs Eyüpspor  | Trendyol",
-        "type": "Süper Lig [Günün Maçı]",
-        "channel_id": "zirve"
-    },
-    {
-        "time": "17:00",
-        "title": "Arsenal vs Manchester City  | FA Community Shield",
+        "time": "02:00",
+        "title": "C.Gauff vs L.Samsonova  | WTA Cincinnati",
         "type": "Maç",
-        "channel_id": "ex7"
+        "channel_id": "yayinss"
     },
     {
-        "time": "18:00",
-        "title": "Racing Santander vs Villarreal  | İspanya",
-        "type": "La Liga",
-        "channel_id": "ss"
+        "time": "03:30",
+        "title": "T.Valentova vs E.Svitolina  | WTA Cincinnati",
+        "type": "Maç",
+        "channel_id": "yayinss"
     },
     {
-        "time": "19:00",
-        "title": "İstanbul Başakşehir vs Kocaelispor  | Trendyol",
+        "time": "03:30",
+        "title": "Mirassol vs Flamengo  | Brezilya",
+        "type": "Serie A",
+        "channel_id": "yayinss"
+    },
+    {
+        "time": "21:30",
+        "title": "Samsunspor vs Göztepe  | Trendyol",
         "type": "Süper Lig",
         "channel_id": "zirve"
     },
     {
-        "time": "19:00",
-        "title": "Keçiörengücü vs Pendikspor  | Trendyol 1.",
-        "type": "Lig",
-        "channel_id": "bm1"
-    },
-    {
-        "time": "19:00",
-        "title": "Kayserispor vs Sivasspor  | Trendyol 1.",
+        "time": "21:30",
+        "title": "Batman Petrol vs Boluspor  | Trendyol 1.",
         "type": "Lig",
         "channel_id": "trtspor"
-    },
-    {
-        "time": "20:00",
-        "title": "Espanyol vs Levante  | İspanya",
-        "type": "La Liga",
-        "channel_id": "ss"
-    },
-    {
-        "time": "20:00",
-        "title": "Girona vs Leganes  | İspanya",
-        "type": "La Liga 2",
-        "channel_id": "ss2"
-    },
-    {
-        "time": "21:30",
-        "title": "amedspor vs Erzurumspor  | Trendyol",
-        "type": "Süper Lig",
-        "channel_id": "b2"
-    },
-    {
-        "time": "21:30",
-        "title": "Mardin 1969 vs Antalyaspor  | Trendyol 1.",
-        "type": "Lig",
-        "channel_id": "trtspor"
-    },
-    {
-        "time": "21:30",
-        "title": "Muğlaspor vs Bandırmaspor  | Trendyol 1.",
-        "type": "Lig",
-        "channel_id": "bm1"
     },
     {
         "time": "21:45",
-        "title": "Lens vs PSG  | Fransa Süper",
+        "title": "Cremonese vs Sampdoria  | İtalya",
         "type": "Kupası",
-        "channel_id": "b3"
+        "channel_id": "ex7"
+    },
+    {
+        "time": "22:00",
+        "title": "Deportivo vs Elche  | İspanya",
+        "type": "La Liga",
+        "channel_id": "ss"
     },
     {
         "time": "22:15",
-        "title": "Lazio vs Mantova  | İtalya",
-        "type": "Kupası",
-        "channel_id": "ex7"
+        "title": "Casa Pia vs Benfica  | Portekiz",
+        "type": "Liga NOS",
+        "channel_id": "b3"
     }
 ]
