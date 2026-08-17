@@ -163,6 +163,7 @@ class MatchFetcher:
     def _parse_matches(self, html_content: str, base_url: str = Config.DEFAULT_DOMAIN) -> str:
         """
         API'den gelen HTML içeriğini parse eder ve temizler.
+        data-reality.com/matches2.php formatına uygun olarak parse eder.
         
         Args:
             html_content: API'den gelen ham HTML içeriği
@@ -174,7 +175,13 @@ class MatchFetcher:
         soup = BeautifulSoup(html_content, 'html.parser')
         matches = []
         
-        for link in soup.find_all('a', class_='channel-item'):
+        # Örnek HTML formatına göre: div id="matches-tab" içindeki channel-item linklerini çek
+        matches_tab = soup.find('div', id='matches-tab')
+        if not matches_tab:
+            # Eğer matches-tab yoksa tüm body'de ara
+            matches_tab = soup
+        
+        for link in matches_tab.find_all('a', class_='channel-item'):
             # style="display:none;" olanları atla (gizli maçlar)
             if 'style' in link.attrs and 'display:none' in link['style']:
                 continue
@@ -212,15 +219,15 @@ class MatchFetcher:
         ]
         
         for match in matches:
-            icon = "⚽" if "Hazırlık" in match['type'] or "Kupa" in match['type'] else "🏀"
+            icon = "⚽" if "Hazırlık" in match['type'] or "Kupa" in match['type'] or "Lig" in match['type'] else "🏀"
             # Tıklanabilir link oluştur - channel_id ile
             if match['channel_id']:
                 html_parts.append(
-                    f'        <li><a href="{base_url}channel?id={match["channel_id"]}" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">{icon} {match["time"]} - {match["title"]} ({match["type"]})</a></li>'
+                    f'        <li><a href="{base_url}channel?id={match["channel_id"]}" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">{icon} {match["time"]} | {match["title"]} ({match["type"]})</a></li>'
                 )
             else:
                 html_parts.append(
-                    f'        <li>{icon} {match["time"]} - {match["title"]} ({match["type"]})</li>'
+                    f'        <li>{icon} {match["time"]} | {match["title"]} ({match["type"]})</li>'
                 )
         
         html_parts.extend([
