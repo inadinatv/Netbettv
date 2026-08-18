@@ -18,13 +18,7 @@ __pycache__/
 .vscode/
 .idea/
 
-# Build artifacts
-dist/
-build/
-*.o
-*.obj
-*.so
-*.a
-*.dll
-*.exe
+# OS
+.DS_Store
+Thumbs.db
 ```

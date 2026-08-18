@@ -53,27 +53,31 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 
 <!-- GUNUN_MACLARI_BASLANGIC -->
 <section class="toolbar" style="margin-bottom: 20px; display: block;">
-    <h3 style="color: var(--cyan); margin-bottom: 10px; font-size: 1rem;">📅 Günün Maçları (17.08.2026)</h3>
-    <ul style="list-style: none; font-size: 0.85rem; color: var(--text); line-height: 1.8;">
-        <li><a href="https://fixbettv84.com/channel?id=zirve" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 21:30 | Samsunspor vs Göztepe (Trendyol Süper Lig)</a></li>
-        <li><a href="https://fixbettv84.com/channel?id=trtspor" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 21:30 | Batman Petrol vs Boluspor (Trendyol 1. Lig)</a></li>
-        <li><a href="https://fixbettv84.com/channel?id=ex7" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 21:45 | Cremonese vs Sampdoria (İtalya Kupası)</a></li>
-        <li><a href="https://fixbettv84.com/channel?id=ss" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 22:00 | Deportivo vs Elche (İspanya La Liga)</a></li>
-        <li><a href="https://fixbettv84.com/channel?id=b3" target="_blank" rel="noopener" style="color: var(--text); text-decoration: none;">⚽ 22:15 | Casa Pia vs Benfica (Portekiz Liga NOS)</a></li>
-    </ul>
+    <div class="accordion-item" id="matchesAccordion">
+        <div class="accordion-header" onclick="toggleMatchesAccordion()">
+            <h3>⚽ Günün Maçları</h3>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="accordion-content">
+            <ul class="match-list" style="list-style: none; padding: 0;">
+                <li><a href="https://fixbettv84.com/channel?id=zirve" target="_blank" rel="noopener" class="match-card"><span class="team"><span class="team-logo">S</span> Samsunspor</span><span class="score">- : -</span><span class="team"><span class="team-logo">G</span> Göztepe</span></a><div class="match-time">21:30 · Trendyol Süper Lig</div></li>
+                <li><a href="https://fixbettv84.com/channel?id=trtspor" target="_blank" rel="noopener" class="match-card"><span class="team"><span class="team-logo">B</span> Batman Petrol</span><span class="score">- : -</span><span class="team"><span class="team-logo">B</span> Boluspor</span></a><div class="match-time">21:30 · Trendyol 1. Lig</div></li>
+                <li><a href="https://fixbettv84.com/channel?id=ex7" target="_blank" rel="noopener" class="match-card"><span class="team"><span class="team-logo">C</span> Cremonese</span><span class="score">- : -</span><span class="team"><span class="team-logo">S</span> Sampdoria</span></a><div class="match-time">21:45 · İtalya Kupası</div></li>
+                <li><a href="https://fixbettv84.com/channel?id=ss" target="_blank" rel="noopener" class="match-card"><span class="team"><span class="team-logo">D</span> Deportivo</span><span class="score">- : -</span><span class="team"><span class="team-logo">E</span> Elche</span></a><div class="match-time">22:00 · İspanya La Liga</div></li>
+                <li><a href="https://fixbettv84.com/channel?id=b3" target="_blank" rel="noopener" class="match-card"><span class="team"><span class="team-logo">C</span> Casa Pia</span><span class="score">- : -</span><span class="team"><span class="team-logo">B</span> Benfica</span></a><div class="match-time">22:15 · Portekiz Liga NOS</div></li>
+            </ul>
+        </div>
+    </div>
 </section>
 <!-- GUNUN_MACLARI_BITIS -->
 
 <!-- PUAN_DURUMU_BASLANGIC -->
 <section class="toolbar" style="margin-bottom: 20px; display: block;">
-    <button id="standingsToggle" onclick="document.getElementById('standingsContent').style.display = document.getElementById('standingsContent').style.display === 'none' ? 'block' : 'none'" style="width: 100%; padding: 12px; background: rgba(76, 244, 255, 0.1); border: 1px solid rgba(76, 244, 255, 0.3); border-radius: 12px; color: var(--cyan); font-weight: 700; cursor: pointer; font-size: 0.9rem;">📊 Puan Durumu</button>
-    <div id="standingsContent" style="display: none; margin-top: 15px; overflow-x: auto;">
-        
+    <div class="table-container">
         <iframe frameborder="0" scrolling="no" width="100%" height="600" 
                 src="https://fixbettv84.com/puan.html" 
-                style="border: none; border-radius: 8px; background: transparent;">
+                style="border: none; background: transparent; min-width: 600px;">
         </iframe>
-        
     </div>
 </section>
 <!-- PUAN_DURUMU_BITIS -->
@@ -259,6 +263,12 @@ searchInput.addEventListener("input",e=>{
     searchQuery=e.target.value.trim();
     debounceTimer=setTimeout(()=>requestAnimationFrame(renderCategories),150);
 });
+
+// Accordion toggle fonksiyonu - Günün Maçları için
+function toggleMatchesAccordion(){
+    const accordion=document.getElementById('matchesAccordion');
+    accordion.classList.toggle('active');
+}
 
 // Başlangıç verilerini ayarla
 totalChannelsElement.textContent=categories.reduce((sum,cat)=>sum+cat.channels.length,0);
