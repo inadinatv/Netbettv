@@ -1,50 +1,20 @@
 [
     {
-        "time": "02:00",
-        "title": "C.Gauff vs L.Samsonova  | WTA Cincinnati",
-        "type": "Maç",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "03:30",
-        "title": "T.Valentova vs E.Svitolina  | WTA Cincinnati",
-        "type": "Maç",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "03:30",
-        "title": "Mirassol vs Flamengo  | Brezilya",
-        "type": "Serie A",
-        "channel_id": "yayinss"
-    },
-    {
-        "time": "21:30",
-        "title": "Samsunspor vs Göztepe  | Trendyol",
-        "type": "Süper Lig",
-        "channel_id": "zirve"
-    },
-    {
-        "time": "21:30",
-        "title": "Batman Petrol vs Boluspor  | Trendyol 1.",
-        "type": "Lig",
-        "channel_id": "trtspor"
-    },
-    {
-        "time": "21:45",
-        "title": "Cremonese vs Sampdoria  | İtalya",
-        "type": "Kupası",
-        "channel_id": "ex7"
+        "time": "22:00",
+        "title": "Fenerbahçe vs Lyon  | UEFA",
+        "type": "Şampiyonlar Ligi Play-Off",
+        "channel_id": "trt1"
     },
     {
         "time": "22:00",
-        "title": "Deportivo vs Elche  | İspanya",
-        "type": "La Liga",
-        "channel_id": "ss"
+        "title": "Dinamo Zagreb vs Viking  | UEFA",
+        "type": "Şampiyonlar Ligi Play-Off",
+        "channel_id": "ex1"
     },
     {
-        "time": "22:15",
-        "title": "Casa Pia vs Benfica  | Portekiz",
-        "type": "Liga NOS",
-        "channel_id": "b3"
+        "time": "22:00",
+        "title": "Levski Sofya vs AEK  | UEFA",
+        "type": "Şampiyonlar Ligi Play-Off",
+        "channel_id": "ex7"
     }
 ]
