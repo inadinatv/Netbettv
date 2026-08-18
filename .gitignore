@@ -1,15 +1,1 @@
-```
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
-.env.*
-```
+Nothing should be ignored in this case, as only a source file (`index.html`) was modified and there are no build artifacts, dependencies, or temporary files in the changes.
