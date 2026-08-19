@@ -1,20 +1,32 @@
 [
     {
-        "time": "22:00",
-        "title": "Fenerbahçe vs Lyon  | UEFA",
-        "type": "Şampiyonlar Ligi Play-Off",
-        "channel_id": "trt1"
+        "time": "02:00",
+        "title": "A.Sabalenka vs X.Wang  | WTA Cincinnati",
+        "type": "Maç",
+        "channel_id": "yayinss"
     },
     {
         "time": "22:00",
-        "title": "Dinamo Zagreb vs Viking  | UEFA",
+        "title": "Atletico Madrid vs Malaga  | İspanya",
+        "type": "La Liga",
+        "channel_id": "ss"
+    },
+    {
+        "time": "22:00",
+        "title": "Celtic vs LASK Linz  | UEFA",
         "type": "Şampiyonlar Ligi Play-Off",
         "channel_id": "ex1"
     },
     {
         "time": "22:00",
-        "title": "Levski Sofya vs AEK  | UEFA",
+        "title": "NEC Nijmegen vs Bodo Glimt  | UEFA",
         "type": "Şampiyonlar Ligi Play-Off",
         "channel_id": "ex7"
+    },
+    {
+        "time": "22:00",
+        "title": "Slovan Bratislava vs NK Celje  | UEFA",
+        "type": "Şampiyonlar Ligi Play-Off",
+        "channel_id": "ex2"
     }
 ]
