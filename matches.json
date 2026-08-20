@@ -1,26 +1,26 @@
 [
     {
-        "time": "22:00",
-        "title": "Atletico Madrid vs Malaga  | İspanya",
-        "type": "La Liga",
+        "time": "18:00",
+        "title": "Kuzey Makedonya vs Türkiye  | Akdeniz Oyunları",
+        "type": "Maç",
+        "channel_id": "trtspor2"
+    },
+    {
+        "time": "20:00",
+        "title": "Beşiktaş vs Kauno Zalgiris  | UEFA Avrupa",
+        "type": "Ligi Play-Off",
         "channel_id": "ss"
     },
     {
-        "time": "22:00",
-        "title": "Celtic vs LASK Linz  | UEFA",
-        "type": "Şampiyonlar Ligi Play-Off",
-        "channel_id": "ex1"
+        "time": "20:00",
+        "title": "Trabzonspor vs Ferencvaros  | UEFA Avrupa",
+        "type": "Ligi Play-Off",
+        "channel_id": "atv"
     },
     {
         "time": "22:00",
-        "title": "NEC Nijmegen vs Bodo Glimt  | UEFA",
-        "type": "Şampiyonlar Ligi Play-Off",
-        "channel_id": "ex7"
-    },
-    {
-        "time": "22:00",
-        "title": "Slovan Bratislava vs NK Celje  | UEFA",
-        "type": "Şampiyonlar Ligi Play-Off",
-        "channel_id": "ex2"
+        "title": "Rayo Vallecano vs Alaves  | İspanya",
+        "type": "La Liga",
+        "channel_id": "ss"
     }
 ]
