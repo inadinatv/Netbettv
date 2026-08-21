@@ -2,6 +2,7 @@ import re
 import json
 import logging
 import random
+import time
 from pathlib import Path
 from typing import List, Dict
 from bs4 import BeautifulSoup
@@ -21,6 +22,7 @@ class Config:
     MATCHES_JSON_PATH = Path('matches.json')
     DEBUG_HTML_PATH = Path('debug_html.txt')
     ENCODING = 'utf-8'
+    UPDATE_INTERVAL = 600  # 10 dakika (saniye cinsinden)
     
     BASE_URL_PATTERN = re.compile(r'(// BASE_URL_START\nconst BASE_URL=")(.*?)(";)')
     DEFAULT_DOMAIN = "https://fixbettv84.com/"
@@ -145,7 +147,7 @@ class MatchFetcher:
 
             time_str = time_match.group(0)
             
-            # YENİ NESİL AYRIŞTIRMA: "Takım vs Takım 18:00 | Lig Adı" formatı
+            # "Takım vs Takım 18:00 | Lig Adı" formatını ayrıştır
             raw_text = text.replace(time_str, '', 1).strip()
             
             title = ""
@@ -256,7 +258,12 @@ class SystemUpdater:
         match_fetcher.fetch_and_save()
 
 if __name__ == "__main__":
-    logger.info("BOT BAŞLATILIYOR...")
+    logger.info("BOT BAŞLATILIYOR... (OTOMATİK MOD: 10 dakikada bir günceller)")
     updater = SystemUpdater()
-    updater.run()
-    logger.info("Bot bitti.")
+    while True:
+        try:
+            updater.run()
+        except Exception as e:
+            logger.error(f"Döngü hatası: {e}")
+        logger.info(f"{Config.UPDATE_INTERVAL // 60} dakika bekleniyor... Bot açık kalsın.")
+        time.sleep(Config.UPDATE_INTERVAL)
