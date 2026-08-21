@@ -15,20 +15,34 @@ jobs:
       - name: Depoyu indir
         uses: actions/checkout@v4
 
+      - name: Dosyaları listele
+        run: ls -la
+
       - name: Python kur
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Kütüphaneleri kur
-        run: pip install cloudscraper beautifulsoup4
+        run: |
+          pip install --upgrade pip
+          pip install cloudscraper beautifulsoup4 requests
 
       - name: Botu çalıştır
         run: RUN_ONCE=1 python bot.py
+        continue-on-error: true
+
+      - name: Sonuçları göster
+        run: |
+          echo "=== matches.json içeriği ==="
+          cat matches.json 2>/dev/null || echo "matches.json yok"
+          echo ""
+          echo "=== debug_html.txt (ilk 50 satır) ==="
+          head -n 50 debug_html.txt 2>/dev/null || echo "debug_html.txt yok"
 
       - name: Değişiklikleri yükle
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add matches.json index.html
+          git add matches.json index.html debug_html.txt || true
           git diff --staged --quiet || (git commit -m "🤖 Maç verileri güncellendi" && git push)
