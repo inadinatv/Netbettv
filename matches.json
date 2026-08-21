@@ -1,26 +1,44 @@
 [
     {
-        "time": "18:00",
-        "title": "Kuzey Makedonya vs Türkiye  | Akdeniz Oyunları",
-        "type": "Maç",
-        "channel_id": "trtspor2"
+        "time": "21:30",
+        "title": "Erzurumspor vs Galatasaray",
+        "type": "Trendyol Süper Lig [Günün Maçı]",
+        "channel_id": "zirve"
     },
     {
-        "time": "20:00",
-        "title": "Beşiktaş vs Kauno Zalgiris  | UEFA Avrupa",
-        "type": "Ligi Play-Off",
+        "time": "02:00",
+        "title": "I.Swiatek vs E.Rybakina",
+        "type": "WTA Cincinnati",
+        "channel_id": "yayinss"
+    },
+    {
+        "time": "18:45",
+        "title": "Hırvatistan vs Türkiye",
+        "type": "Basketbol DBB Super Cup",
         "channel_id": "ss"
     },
     {
-        "time": "20:00",
-        "title": "Trabzonspor vs Ferencvaros  | UEFA Avrupa",
-        "type": "Ligi Play-Off",
-        "channel_id": "atv"
+        "time": "19:00",
+        "title": "Türkiye vs Letonya",
+        "type": "CEV Kadınlar Avrupa Şampiyonası",
+        "channel_id": "trt1"
+    },
+    {
+        "time": "21:30",
+        "title": "Karagümrük vs Bursaspor",
+        "type": "Trendyol 1. Lig",
+        "channel_id": "trtspor"
+    },
+    {
+        "time": "21:30",
+        "title": "Almanya vs Çekya",
+        "type": "Basketbol DBB Super Cup",
+        "channel_id": "ss2"
     },
     {
         "time": "22:00",
-        "title": "Rayo Vallecano vs Alaves  | İspanya",
-        "type": "La Liga",
+        "title": "Real Betis vs Real Sociedad",
+        "type": "İspanya La Liga",
         "channel_id": "ss"
     }
 ]
