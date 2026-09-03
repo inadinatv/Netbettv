@@ -162,6 +162,10 @@ const categories=[
 {title:"DİĞER SPOR",icon:"✺",channels:[{id:"as",name:"Bir Spor"},{id:"eu1",name:"Euro Sport 1"},{id:"eu2",name:"Euro Sport 2"}]}
 ];
 
+// Kanal id -> okunabilir ad eşlemesi (örn. "trtspor" -> "TRT Spor")
+const channelNameById=(()=>{const map={};categories.forEach(cat=>cat.channels.forEach(ch=>{map[ch.id]=ch.name}));return map;})();
+const channelLabel=id=>channelNameById[id]||id||null;
+
 const contentGrid=document.getElementById("contentGrid"),categoryTabs=document.getElementById("categoryTabs"),searchInput=document.getElementById("channelSearch");
 const matchesPanel=document.getElementById("matchesPanel"),standingsPanel=document.getElementById("standingsPanel");
 let activeFilter="all";
@@ -197,7 +201,8 @@ function renderMatches(matches,updatedAt){
         return ta-tb;
     });
 
-    document.getElementById('matchCount').textContent='· '+sorted.length+' maç';
+    const upcoming=sorted.filter(m=>!(m.hidden===true||m.hidden==="true")).length;
+    document.getElementById('matchCount').textContent='· '+upcoming+' maç';
 
     sorted.forEach(match=>{
         const btn=document.createElement('button');
@@ -205,8 +210,9 @@ function renderMatches(matches,updatedAt){
         btn.className='match-item';
 
         const start=timeToMinutes(match.time);
-        const isLive=start!==null&&nowMinutes>=start&&(nowMinutes-start)<=180;
-        const isPast=start!==null&&(nowMinutes-start)>180;
+        const isHidden=match.hidden===true||match.hidden==="true";
+        const isLive=!isHidden&&start!==null&&nowMinutes>=start&&(nowMinutes-start)<=180;
+        const isPast=isHidden||(start!==null&&(nowMinutes-start)>180);
         if(isLive)btn.classList.add('is-live');
         if(isPast)btn.classList.add('is-past');
 
@@ -224,13 +230,16 @@ function renderMatches(matches,updatedAt){
         const title=document.createElement('strong');
         title.textContent=match.title||'Maç';
         const meta=document.createElement('span');
-        meta.textContent=[match.type,match.channel_id?('Yayın: '+match.channel_id):null].filter(Boolean).join(' · ');
+        meta.textContent=[match.type,channelLabel(match.channel_id)?('Yayın: '+channelLabel(match.channel_id)):null].filter(Boolean).join(' · ');
         copy.append(title,meta);
 
         const chip=document.createElement('span');
         if(isLive){
             chip.className='match-chip live';
             chip.textContent='Canlı';
+        }else if(isHidden){
+            chip.className='match-chip time';
+            chip.textContent='Bitti';
         }else{
             chip.className='match-chip time';
             chip.textContent=match.time||'--:--';

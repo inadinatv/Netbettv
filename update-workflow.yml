@@ -1,17 +1,27 @@
 # ============================================================
-# KURULUM: Bu dosyayi GitHub'da ".github/workflows/update.yml"
-# yoluna kaydedin (Add file -> dosya adi olarak yolu yazin).
-# Sonrasinda otomasyon 15 dakikada bir kendiliginden calisir.
+# KURULUM (tek seferlik):
+#   Bu dosyayı GitHub'da ".github/workflows/update.yml" yoluna
+#   kaydedin (Add file -> dosya adı olarak tam yolu yazın).
+#   Sonrasında otomasyon her 15 dakikada bir kendiliğinden çalışır
+#   ve günün maçlarını matches.json'a işleyip siteyi günceller.
+# ============================================================
+# Otomatik Güncelleme
+#
+# Yayın sitesinin kullandığı maç listesi kaynağından
+# (data-reality.com/matches2.php) günün maçlarını çeker,
+# matches.json dosyasını günceller ve site domainini tazeler.
+#
+# GitHub Pages "main" dal kökünden yayın yaptığı için her push
+# otomatik olarak yayınlanır.
 # ============================================================
 name: Otomatik Güncelleme
-
-# Sitedeki domain ve canlı maç listesini güncel tutar.
-# GitHub Pages "main" dal kökünden yayın yaptığı için her push otomatik yayınlanır.
 
 on:
   schedule:
     - cron: "*/15 * * * *" # 15 dakikada bir
-  workflow_dispatch: # elle tetikleme imkânı
+  workflow_dispatch:        # elle tetikleme imkânı
+  push:
+    branches: [main]        # ana dala push olunca da hemen güncelle
 
 permissions:
   contents: write
@@ -46,6 +56,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Değişiklik yok — commit atlanıyor."
           else
-            git commit -m "chore: otomatik guncelleme - domain ve mac listesi [skip ci]"
+            git commit -m "chore: otomatik guncelleme - mac listesi ve domain [skip ci]"
             git push
           fi
