@@ -6,14 +6,20 @@ Görevleri:
   1. Telegram duyuru kanalından güncel yayın domainini bulur.
   2. index.html içindeki BASE_URL değerini güncel domain ile değiştirir
      (aynı domaini config.json dosyasına da yazar; frontend önce orayı okur).
-  3. Yayın sitesinden günün canlı maç programını çeker ve matches.json'a yazar.
+  3. Yayın sitesinin kullandığı maç veri kaynağını çeker ve matches.json'a yazar.
+
+Yayın sitesi (fixbettvXX) maç listesini sayfa içindeki bir
+``fetch('https://data-reality.com/matches2.php')`` çağrısı ile yükler. Bu uç
+nokta doğrudan HTML döndürdüğü için (JS çalıştırmadan) çekilebilir. Bot önce ana
+sayfadan bu kaynağı kendisi keşfeder; site kaynağını değiştirirse otomatik uyum
+sağlar, bulamazsa bilinen varsayılan kaynakları dener.
 
 Kullanım:
   python bot.py --once    # tek çalıştırma (GitHub Actions için varsayılan)
   python bot.py --loop    # sürekli döngü (yerel kullanım, UPDATE_INTERVAL ile)
 
 Ortam değişkenleri:
-  MASTER_URLS      : virgülle ayrılmış duyuru kaynağı (varsayılan: t.me/s/fixbet)
+  MASTER_URLS      : virgülle ayrılmış duyuru kaynağı (varsayılan: t.me/s/fixresmitg,t.me/s/fixbet)
   DEFAULT_DOMAIN   : hiçbir kaynak çalışmazsa kullanılacak domain
   UPDATE_INTERVAL  : --loop modunda bekleme süresi (saniye, varsayılan 600)
 """
@@ -63,7 +69,7 @@ class Config:
     MASTER_URLS = [
         u.strip() for u in os.environ.get(
             "MASTER_URLS",
-            "https://t.me/s/fixbet",
+            "https://t.me/s/fixresmitg,https://t.me/s/fixbet",
         ).split(",") if u.strip()
     ]
     UPDATE_INTERVAL = int(os.environ.get("UPDATE_INTERVAL", "600"))
@@ -178,7 +184,36 @@ class DomainFetcher:
 # Maç verisi toplayıcı
 # ---------------------------------------------------------------------------
 class MatchFetcher:
-    """Yayın sitesinin maç/fikstür sayfalarından günün maç programını çıkarır."""
+    """Yayın sitesinin maç listesini, sitenin kullandığı veri kaynağından çıkarır.
+
+    Site maç listesini şu şekilde yükler::
+
+        fetch('https://data-reality.com/matches2.php')
+            .then(r => r.text())
+            .then(html => { document.getElementById('matches-tab').innerHTML = html })
+
+    Bu uç nokta aşağıdaki biçimde HTML döndürür::
+
+        <a href="channel?id=trt1" class="channel-item [hidden]">
+            <div class="channel-name">Almanya vs Türkiye</div>
+            <div class="channel-status">19:00 | CEV Kadınlar Avrupa Şampiyonası</div>
+        </a>
+
+    ``hidden`` sınıfı geçmiş (bitmiş) maçları işaretler; site bunları gizler.
+    """
+
+    # Site değişse de genellikle sabit kalan bilinen veri kaynakları
+    DEFAULT_ENDPOINTS = [
+        "https://data-reality.com/matches2.php",
+        "https://data-reality.com/matches.php",
+    ]
+
+    # Ana sayfadan veri kaynağını bulan desenler
+    ENDPOINT_RE = re.compile(r"fetch\s*\(\s*['\"]([^'\"]+)['\"]\s*\)", re.IGNORECASE)
+    LOAD_RE = re.compile(r"\.load\s*\(\s*['\"]([^'\"]+)['\"]\s*\)", re.IGNORECASE)
+
+    # <a href="channel?id=xxx"> içindeki id
+    CHANNEL_ITEM_ID_RE = re.compile(r"[?&]id=([^&#\"']+)")
 
     ID_RE = re.compile(r"(?:id=|kanal=|channel=|yayin=|watch=|/izle/)([-a-zA-Z0-9_]+)")
     TIME_RE = re.compile(r"\b([01]?[0-9]|2[0-3])[:.]([0-5][0-9])\b")
@@ -195,17 +230,73 @@ class MatchFetcher:
     def __init__(self, current_domain: str):
         self.current_domain = current_domain
         self.scraper = new_scraper()
-        self.sources = [
-            current_domain,
-            f"{current_domain}mac",
-            f"{current_domain}canli",
-            f"{current_domain}fikstur",
-            f"{current_domain}matches",
-            f"{current_domain}ajax/matches",
-            f"{current_domain}api/matches",
-        ]
+        self.scraper.headers.update({"User-Agent": random.choice(USER_AGENTS)})
+        self.scraper.headers.update({"Referer": current_domain})
 
-    # -- çıkarma yöntemleri -------------------------------------------------
+    # -- uç nokta keşfi ------------------------------------------------------
+    def _discover_endpoints(self, html: str) -> List[str]:
+        """Ana sayfadan, maç listesinin yüklendiği veri kaynaklarını bulur."""
+        endpoints: List[str] = []
+        for pattern in (self.ENDPOINT_RE, self.LOAD_RE):
+            for m in pattern.finditer(html):
+                url = m.group(1).strip()
+                if url.startswith("http") and url not in endpoints:
+                    endpoints.append(url)
+        return endpoints
+
+    # -- ana çıkarma yöntemi -------------------------------------------------
+    def _parse_matches_html(self, html: str) -> List[Dict[str, str]]:
+        """data-reality benzeri kaynağın döndürdüğü HTML'den maçları çıkarır."""
+        matches: List[Dict[str, str]] = []
+        soup = BeautifulSoup(html, "html.parser")
+
+        for a_tag in soup.find_all("a", class_="channel-item"):
+            href = a_tag.get("href", "")
+            id_match = self.CHANNEL_ITEM_ID_RE.search(href)
+            channel_id = id_match.group(1) if id_match else ""
+            if not channel_id:
+                continue
+
+            name_el = a_tag.find(class_="channel-name")
+            status_el = a_tag.find(class_="channel-status")
+            title = name_el.get_text(" ", strip=True) if name_el else ""
+            status = status_el.get_text(" ", strip=True) if status_el else ""
+
+            # "13:00 | Premier Padel" -> time + league
+            time_str, league = "", ""
+            if "|" in status:
+                left, _, right = status.partition("|")
+                time_str = left.strip()
+                league = right.strip()
+            else:
+                league = status
+
+            classes = a_tag.get("class") or []
+            is_hidden = "hidden" in classes
+
+            if not time_str:
+                t_match = self.TIME_RE.search(title)
+                if t_match:
+                    time_str = t_match.group(0)
+            if not time_str:
+                continue
+
+            if not title:
+                title = league or "Maç"
+
+            matches.append(
+                {
+                    "time": time_str,
+                    "title": title,
+                    "type": league or "Maç",
+                    "channel_id": channel_id,
+                    "hidden": is_hidden,
+                }
+            )
+
+        return matches
+
+    # -- yedek yöntemler -----------------------------------------------------
     def _extract_from_script_json(self, html: str) -> List[Dict[str, str]]:
         matches: List[Dict[str, str]] = []
         soup = BeautifulSoup(html, "html.parser")
@@ -229,7 +320,8 @@ class MatchFetcher:
                 channel_id = str(m.get("channel_id", m.get("kanal", m.get("id", "")))).strip()
                 if time_str and title:
                     matches.append(
-                        {"time": time_str, "title": title, "type": league, "channel_id": channel_id}
+                        {"time": time_str, "title": title, "type": league,
+                         "channel_id": channel_id, "hidden": False}
                     )
             if matches:
                 logger.info("Maçlar script içindeki JSON'dan çıkarıldı.")
@@ -283,7 +375,8 @@ class MatchFetcher:
 
             if not any(m["title"] == title and m["time"] == time_str for m in matches):
                 matches.append(
-                    {"time": time_str, "title": title, "type": league, "channel_id": channel_id}
+                    {"time": time_str, "title": title, "type": league,
+                     "channel_id": channel_id, "hidden": False}
                 )
         return matches
 
@@ -305,29 +398,46 @@ class MatchFetcher:
 
     # -- ana akış ------------------------------------------------------------
     def fetch(self) -> List[Dict[str, str]]:
-        self.scraper.headers.update({"User-Agent": random.choice(USER_AGENTS)})
-        self.scraper.headers.update({"Referer": self.current_domain})
+        endpoints = list(self.DEFAULT_ENDPOINTS)
 
-        for url in self.sources:
+        # 1) Ana sayfadan güncel veri kaynağını keşfet (site kaynağını değiştirirse uyum sağla)
+        try:
+            logger.info(f"Veri kaynağı aranıyor -> {self.current_domain}")
+            response = self.scraper.get(self.current_domain, timeout=Config.TIMEOUT)
+            discovered = self._discover_endpoints(response.text)
+            if discovered:
+                logger.info(f"Keşfedilen veri kaynakları: {discovered}")
+                for ep in discovered:
+                    if ep not in endpoints:
+                        endpoints.append(ep)
+        except Exception as e:
+            logger.warning(f"Ana sayfa okunamadı, varsayılan kaynaklar kullanılacak: {e}")
+
+        # 2) Kaynakları dene ve ilk başarılı olanı kullan
+        for url in endpoints:
             try:
                 logger.info(f"Maçlar aranıyor -> {url}")
                 response = self.scraper.get(url, timeout=Config.TIMEOUT)
-
-                lowered = response.text[:4000].lower()
-                if "just a moment" in lowered or "cf-browser-verification" in lowered:
-                    logger.warning(f"[ENGEL] {url} Cloudflare korumasına takıldı.")
-                    continue
-
-                parsed = self._extract_from_script_json(response.text)
-                if not parsed:
-                    parsed = self._extract_from_links(response.text)
-
+                parsed = self._parse_matches_html(response.text)
                 if parsed:
                     logger.info(f"BAŞARILI: {url} üzerinden {len(parsed)} maç bulundu.")
                     return self._dedupe(parsed)
                 logger.warning(f"{url} içinde maç bulunamadı.")
             except Exception as e:
                 logger.error(f"{url} ulaşılamadı: {e}")
+
+        # 3) Yedek: ana sayfa bağlantıları / script JSON
+        try:
+            response = self.scraper.get(self.current_domain, timeout=Config.TIMEOUT)
+            for parsed in (
+                self._extract_from_script_json(response.text),
+                self._extract_from_links(response.text),
+            ):
+                if parsed:
+                    logger.info(f"Yedek yöntemle {len(parsed)} maç bulundu.")
+                    return self._dedupe(parsed)
+        except Exception as e:
+            logger.error(f"Yedek yöntem başarısız: {e}")
 
         logger.error("HİÇBİR KAYNAKTAN MAÇ VERİSİ ALINAMADI.")
         return []
@@ -384,8 +494,15 @@ class SystemUpdater:
 
         match_fetcher = MatchFetcher(current_domain=new_domain)
         matches = match_fetcher.fetch()
-        self.save_matches(matches, new_domain)
-        logger.info(f"Tur tamamlandı — {len(matches)} maç, domain: {new_domain}")
+        if matches:
+            self.save_matches(matches, new_domain)
+            logger.info(f"Tur tamamlandı — {len(matches)} maç, domain: {new_domain}")
+        else:
+            # Geçici aksaklıkta son geçerli veriyi ezme; mevcut matches.json kalsın.
+            logger.warning(
+                "Maç verisi alınamadı; mevcut matches.json korunuyor "
+                "(son geçerli liste ekranda kalır)."
+            )
 
 
 # ---------------------------------------------------------------------------

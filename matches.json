@@ -1,7 +1,71 @@
 {
-  "updated_at": "2026-09-03T17:35:29Z",
-  "updated_at_display": "03.09.2026 17:35",
-  "source": "https://fixbettv84.com/",
-  "count": 0,
-  "matches": []
+  "updated_at": "2026-09-03T16:37:48Z",
+  "updated_at_display": "03.09.2026 16:37",
+  "source": "https://data-reality.com/matches2.php",
+  "count": 9,
+  "matches": [
+    {
+      "time": "13:00",
+      "title": "Stupaczuk/Sanz vs Casas/Arroyo",
+      "type": "Premier Padel",
+      "channel_id": "yayinss",
+      "hidden": true
+    },
+    {
+      "time": "14:30",
+      "title": "Collombon/Sharifova vs Martin/Fernandez",
+      "type": "Premier Padel",
+      "channel_id": "yayinss",
+      "hidden": true
+    },
+    {
+      "time": "17:00",
+      "title": "Iğdırspor vs Manisa FK",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "yayinss",
+      "hidden": true
+    },
+    {
+      "time": "17:00",
+      "title": "Esbri/Gutierrez vs Chingotto/Galan",
+      "type": "Premier Padel",
+      "channel_id": "yayinss",
+      "hidden": true
+    },
+    {
+      "time": "19:00",
+      "title": "Almanya vs Türkiye",
+      "type": "CEV Kadınlar Avrupa Şampiyonası",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Bursaspor vs İstanbulspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Bodrumspor vs Esenler Erokspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Real Sociedad vs Celta Vigo",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Cagliari vs Verona",
+      "type": "İtalya Kupası",
+      "channel_id": "trtspor",
+      "hidden": false
+    }
+  ]
 }
