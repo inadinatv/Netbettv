@@ -26,7 +26,59 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 .category-header{display:flex;align-items:center;gap:12px;padding:19px 20px 16px;border-bottom:1px solid var(--line)}.category-icon{display:grid;flex:0 0 39px;width:39px;height:39px;place-items:center;border:1px solid rgba(76,244,255,.22);border-radius:12px;color:var(--cyan);background:linear-gradient(135deg,rgba(76,244,255,.18),rgba(167,117,255,.18));box-shadow:0 0 20px rgba(76,244,255,.1),inset 0 0 14px rgba(76,244,255,.08);font-size:1.1rem}.category-heading{min-width:0}.category-title{overflow:hidden;color:#fff;font-size:.82rem;font-weight:850;letter-spacing:.12em;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}.category-subtitle{margin-top:4px;color:var(--muted);font-size:.72rem}.category-count{margin-left:auto;border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 9px;color:var(--muted-light);background:rgba(255,255,255,.04);font-size:.69rem;font-weight:800;white-space:nowrap}
 .channel-list{list-style:none;padding:7px 9px 10px}.channel-item{border-bottom:1px solid rgba(157,164,255,.09)}.channel-item:last-child{border-bottom:0}.channel-link{display:flex;align-items:center;gap:12px;min-height:58px;border-radius:13px;padding:9px 10px;color:var(--text);text-decoration:none;transition:180ms ease}.channel-link:hover,.channel-link:focus-visible{outline:none;background:linear-gradient(90deg,rgba(76,244,255,.11),rgba(167,117,255,.08));box-shadow:inset 3px 0 0 var(--cyan),0 0 22px rgba(76,244,255,.06);transform:translateX(4px)}.channel-number{display:grid;flex:0 0 27px;width:27px;height:27px;place-items:center;border:1px solid rgba(255,255,255,.09);border-radius:9px;color:#8991b7;background:rgba(255,255,255,.04);font-size:.68rem;font-weight:800}.channel-live{flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(169,255,181,.055),0 0 12px var(--green)}.channel-name{overflow:hidden;color:#eef0ff;font-size:.93rem;font-weight:650;text-overflow:ellipsis;white-space:nowrap}.channel-meta{margin-left:auto;color:#727a9f;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.channel-arrow{flex:0 0 auto;width:18px;height:18px;color:#7780a6;transition:180ms ease}.channel-link:hover .channel-arrow,.channel-link:focus-visible .channel-arrow{color:var(--cyan);transform:translateX(3px)}
 .empty-state{grid-column:1/-1;padding:48px 24px;border:1px dashed rgba(157,164,255,.25);border-radius:var(--radius-lg);color:var(--muted);text-align:center;background:rgba(17,20,43,.45)}.empty-state strong{display:block;margin-bottom:8px;color:var(--text);font-size:1.1rem}
-.matches-panel{padding:16px;border:1px solid rgba(157,164,255,.15);border-radius:16px;background:rgba(13,17,35,.9);box-shadow:0 20px 50px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.03)}
+.matches-panel{padding:20px;border-radius:20px;background:linear-gradient(145deg,rgba(13,17,35,.95),rgba(10,12,24,.85));box-shadow:0 25px 60px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04);border:1px solid rgba(157,164,255,.18);margin-bottom: 30px;position:relative;overflow:hidden}
+.matches-panel::before{
+    position:absolute;
+    top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));
+    content:'';
+    opacity:.5;
+}
+.matches-panel .section-heading{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line);
+}
+.matches-panel .section-heading h3{
+    color:var(--cyan);font-size:1rem;letter-spacing:.04em;position:relative;
+}
+.matches-panel .section-heading h3::after{
+    content:'';position:absolute;right:0;bottom:-8px;width:24px;height:2px;background:var(--cyan);
+}
+.matches-panel .match-list{
+    gap:14px;padding-top:8px;
+}
+.matches-panel .match-item{
+    padding:14px 16px;border-radius:12px;margin-bottom:8px;background:rgba(37,43,56,.8);border:1px solid rgba(157,164,255,.12);
+    transition:all .25s cubic-bezier(.22,.61,.36,1);
+}
+.matches-panel .match-item:hover,.matches-panel .match-item:focus-visible{
+    outline:none;background:rgba(76,244,255,.08);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.3),0 0 20px rgba(76,244,255,.1);
+}
+.matches-panel .match-item.is-live{
+    border-color:rgba(255,91,107,.5);background:rgba(255,91,107,.05);
+}
+.matches-panel .match-item.is-live:hover{
+    box-shadow:0 0 30px rgba(255,91,107,.4);
+}
+.matches-panel .match-item.is-past{
+    opacity:.6;background:rgba(128,128,128,.1);
+}
+.matches-panel .match-updated{
+    margin-top:12px;color:var(--muted);font-size:.75rem;letter-spacing:.04em;text-align:right;display:none;
+}
+.matches-panel .match-chip{
+    flex:0 0 auto;border-radius:999px;padding:5px 10px;font-size:.65rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;
+}
+.matches-panel .match-chip.time{
+    border:1px solid rgba(157,164,255,.22);color:var(--muted-light);background:rgba(255,255,255,.03);
+}
+.matches-panel .match-chip.live{
+    border:1px solid rgba(255,91,107,.4);color:#ff8b9a;background:rgba(255,91,107,.1);
+    animation:livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse{0%,100%{opacity:1;box-shadow:0 0 0 4px rgba(255,91,107,.08),0 0 15px rgba(255,91,107,.05)}50%{opacity:.7;box-shadow:0 0 0 4px rgba(255,91,107,.15),0 0 25px rgba(255,91,107,.1)}}
+.matches-panel .section-heading span{
+    color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+}
 .section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.section-heading h3{color:var(--cyan);font-size:1rem;letter-spacing:.04em}.section-heading span{color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 .match-list{display:flex;flex-direction:column;gap:12px;max-height:380px;overflow-y:auto;padding:2px;scrollbar-width:thin;scrollbar-color:var(--cyan) transparent}
 .match-list::-webkit-scrollbar{width:4px}
@@ -162,6 +214,10 @@ const categories=[
 {title:"DİĞER SPOR",icon:"✺",channels:[{id:"as",name:"Bir Spor"},{id:"eu1",name:"Euro Sport 1"},{id:"eu2",name:"Euro Sport 2"}]}
 ];
 
+// Kanal id -> okunabilir ad eşlemesi (örn. "trtspor" -> "TRT Spor")
+const channelNameById=(()=>{const map={};categories.forEach(cat=>cat.channels.forEach(ch=>{map[ch.id]=ch.name}));return map;})();
+const channelLabel=id=>channelNameById[id]||id||null;
+
 const contentGrid=document.getElementById("contentGrid"),categoryTabs=document.getElementById("categoryTabs"),searchInput=document.getElementById("channelSearch");
 const matchesPanel=document.getElementById("matchesPanel"),standingsPanel=document.getElementById("standingsPanel");
 let activeFilter="all";
@@ -169,7 +225,11 @@ const arrowIcon='<svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stro
 const normalize=value=>value.toLocaleLowerCase("tr-TR");
 let videoFallbackTimer=null;
 
-document.getElementById('matchDateDisplay').textContent = new Date().toLocaleDateString('tr-TR');
+// İstanbul (UTC+3) timezone ile tarih/saat gösterimi
+const nowDisplay = new Date();
+document.getElementById('matchDateDisplay').textContent =
+    nowDisplay.toLocaleDateString('tr-TR', { timeZone: 'Europe/Istanbul', day: '2-digit', month: '2-digit', year: 'numeric' }) +
+    ' ' + nowDisplay.toLocaleTimeString('tr-TR', { timeZone: 'Europe/Istanbul', hour12: false });
 
 function timeToMinutes(value){
     const match=/^(\d{1,2})[:.](\d{2})$/.exec(String(value||"").trim());
@@ -197,7 +257,8 @@ function renderMatches(matches,updatedAt){
         return ta-tb;
     });
 
-    document.getElementById('matchCount').textContent='· '+sorted.length+' maç';
+    const upcoming=sorted.filter(m=>!(m.hidden===true||m.hidden==="true")).length;
+    document.getElementById('matchCount').textContent='· '+upcoming+' maç';
 
     sorted.forEach(match=>{
         const btn=document.createElement('button');
@@ -205,8 +266,9 @@ function renderMatches(matches,updatedAt){
         btn.className='match-item';
 
         const start=timeToMinutes(match.time);
-        const isLive=start!==null&&nowMinutes>=start&&(nowMinutes-start)<=180;
-        const isPast=start!==null&&(nowMinutes-start)>180;
+        const isHidden=match.hidden===true||match.hidden==="true";
+        const isLive=!isHidden&&start!==null&&nowMinutes>=start&&(nowMinutes-start)<=180;
+        const isPast=isHidden||(start!==null&&(nowMinutes-start)>180);
         if(isLive)btn.classList.add('is-live');
         if(isPast)btn.classList.add('is-past');
 
@@ -224,16 +286,22 @@ function renderMatches(matches,updatedAt){
         const title=document.createElement('strong');
         title.textContent=match.title||'Maç';
         const meta=document.createElement('span');
-        meta.textContent=[match.type,match.channel_id?('Yayın: '+match.channel_id):null].filter(Boolean).join(' · ');
+        meta.textContent=[match.type,channelLabel(match.channel_id)?('Yayın: '+channelLabel(match.channel_id)):null].filter(Boolean).join(' · ');
         copy.append(title,meta);
 
+        // Zamanı Istanbul timezone ile gösteren chip
         const chip=document.createElement('span');
         if(isLive){
             chip.className='match-chip live';
             chip.textContent='Canlı';
-        }else{
+        }else if(isHidden){
             chip.className='match-chip time';
-            chip.textContent=match.time||'--:--';
+            chip.textContent='Bitti';
+        }else{
+            // Saat bilgisini Istanbul timezone formatında göster
+            const formattedTime = formatTimeWithTimezone(match.time);
+            chip.className='match-chip time';
+            chip.textContent=formattedTime||'--:--';
         }
 
         top.append(copy,chip);
@@ -265,6 +333,29 @@ async function loadLiveMatches() {
         container.innerHTML = '<div style="text-align: center; color: var(--pink); padding: 14px;">Maç verileri alınamadı, kısa süre içinde tekrar denenecek.</div>';
     }
 }
+
+// Zaman formatı yardımcı fonksiyonu - bot verilerindeki saatler zaten İstanbul (UTC+3) yerel saatidir
+function formatTimeWithTimezone(timeString){
+    if(!timeString) return '--:--';
+    const match = /^(\d{1,2})[:.](\d{2})$/.exec(String(timeString).trim());
+    if(!match) return timeString;
+    const hour = Number(match[1]);
+    const minute = Number(match[2]);
+    if(hour > 23 || minute > 59) return timeString;
+    const formattedHour = hour.toString().padStart(2, '0');
+    const formattedMinute = minute.toString().padStart(2, '0');
+    return `${formattedHour}:${formattedMinute}`;
+}
+
+// Günün maçlarındaki saat bilgilerini göster - İstanbul yerel saatiyle
+function renderMatchesTimes(){
+    const info = document.getElementById('matchUpdated');
+    if(!info) return;
+    const now = new Date();
+    info.style.display = 'block';
+    info.textContent = 'Güncelleme: ' + now.toLocaleDateString('tr-TR') + ' ' + now.toLocaleTimeString('tr-TR', {hour12: false});
+}
+renderMatchesTimes();
 
 // YENİ: Kategoriye göre maç ve puan durumu panelini göster/gizle
 function updateLayout(){
@@ -355,7 +446,7 @@ if(videoFrame) videoFrame.addEventListener("load", () => { if(videoLoader) video
 // Kategori butonları: tıklayınca maçlar gizlenir, sadece o kategori görünür
 function renderTabs(){categories.forEach(category=>{const button=document.createElement("button");button.type="button";button.className="tab-button";button.dataset.filter=category.title;button.textContent=category.title;button.addEventListener("click",()=>{activeFilter=category.title;document.querySelectorAll(".tab-button").forEach(tab=>tab.classList.toggle("active",tab===button));updateLayout()});categoryTabs.appendChild(button)})}
 
-function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=BASE_URL+"channel?id="+encodeURIComponent(channel.id);link.target="_self";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.addEventListener("click",event=>{event.preventDefault();openMatchById(channel.id);});link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
+function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=baseUrl()+"channel?id="+encodeURIComponent(channel.id);link.target="_self";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.addEventListener("click",event=>{event.preventDefault();openMatchById(channel.id);});link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
 
 renderTabs();
 updateLayout();
