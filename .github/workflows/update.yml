@@ -1,18 +1,7 @@
 # ============================================================
-# KURULUM (tek seferlik):
-#   Bu dosyayı GitHub'da ".github/workflows/update.yml" yoluna
-#   kaydedin (Add file -> dosya adı olarak tam yolu yazın).
-#   Sonrasında otomasyon her 15 dakikada bir kendiliğinden çalışır
-#   ve günün maçlarını matches.json'a işleyip siteyi günceller.
-# ============================================================
 # Otomatik Güncelleme
-#
-# Yayın sitesinin kullandığı maç listesi kaynağından
-# (data-reality.com/matches2.php) günün maçlarını çeker,
-# matches.json dosyasını günceller ve site domainini tazeler.
-#
-# GitHub Pages "main" dal kökünden yayın yaptığı için her push
-# otomatik olarak yayınlanır.
+# Yayın sitesinin maç listesi kaynağından (data-reality.com/matches2.php)
+# günün maçlarını çeker, matches.json'u günceller, domaini tazeler.
 # ============================================================
 name: Otomatik Güncelleme
 
