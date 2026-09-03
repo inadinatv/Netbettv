@@ -33,6 +33,14 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 .match-list::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:4px}
 .match-item{display:block;width:100%;padding:16px 18px;border:none;border-radius:12px;background:#252b38;color:var(--text);text-align:left;cursor:pointer;transition:180ms ease}
 .match-item:hover,.match-item:focus-visible{outline:none;background:#2e3546;transform:translateY(-1px)}
+.match-item.is-past{opacity:.5}
+.match-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.match-chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 10px;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.match-chip.time{border:1px solid rgba(157,164,255,.22);color:var(--muted-light);background:rgba(255,255,255,.04)}
+.match-chip.live{border:1px solid rgba(255,91,107,.4);color:#ff8b9a;background:rgba(255,91,107,.1)}
+.match-chip.live:before{width:7px;height:7px;content:"";border-radius:50%;background:#ff5b6b;box-shadow:0 0 10px #ff5b6b;animation:live-blink 1.2s ease-in-out infinite}
+@keyframes live-blink{0%,100%{opacity:1}50%{opacity:.35}}
+.match-updated{margin-top:12px;color:var(--muted);font-size:.7rem;letter-spacing:.04em;text-align:right}
 .match-copy{display:flex;flex-direction:column;gap:6px;overflow:hidden}
 .match-copy strong{font-size:1.05rem;font-weight:600;line-height:1.3;color:#f2f4fa;white-space:normal}
 .match-copy span{color:#8f96ab;font-size:.84rem;letter-spacing:.02em}
@@ -72,12 +80,13 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 <!-- MAÇ LİSTESİ: KATEGORİ SEÇİLİNCE GİZLENİR -->
 <section class="toolbar matches-panel" id="matchesPanel" style="margin-bottom: 20px; display: block;">
     <div class="section-heading">
-        <h3>📅 Günün Maçları</h3>
+        <h3>📅 Günün Maçları <span id="matchCount" style="color:var(--green);font-size:.8rem"></span></h3>
         <span id="matchDateDisplay"></span>
     </div>
     <div class="match-list" id="matchListContainer">
         <div style="text-align: center; color: var(--muted); padding: 14px;">Maç verileri aranıyor...</div>
     </div>
+    <p class="match-updated" id="matchUpdated" style="display:none"></p>
 </section>
 
 <!-- PUAN DURUMU: KATEGORİ SEÇİLİNCE GİZLENİR -->
@@ -127,6 +136,21 @@ button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.app-
 const BASE_URL="https://fixbettv84.com/";
 // BASE_URL_END
 
+// Bot, güncel domaini config.json dosyasına da yazar; o varsa öncelikli olarak okunur.
+let runtimeBaseUrl=null;
+async function refreshBaseUrl(){
+    try{
+        const response=await fetch("config.json?t="+Date.now(),{cache:"no-store"});
+        if(!response.ok)return;
+        const config=await response.json();
+        if(config&&typeof config.base_url==="string"&&/^https:\/\//i.test(config.base_url)&&config.base_url!==runtimeBaseUrl){
+            runtimeBaseUrl=config.base_url;
+            renderCategories();
+        }
+    }catch(error){/* config.json yoksa index.html içindeki BASE_URL kullanılır */}
+}
+const baseUrl=()=>runtimeBaseUrl||BASE_URL;
+
 const categories=[
 {title:"BEIN SPORTS",icon:"▰",channels:[{id:"zirve",name:"Bein Sports 1"},{id:"b2",name:"Bein Sports 2"},{id:"b3",name:"Bein Sports 3"},{id:"b4",name:"Bein Sports 4"},{id:"b5",name:"Bein Sports 5"},{id:"bm1",name:"Bein Sports Max 1"},{id:"bm2",name:"Bein Sports Max 2"},{id:"bh",name:"Bein Sports Haber"}]},
 {title:"S SPORT",icon:"✦",channels:[{id:"ss",name:"S Sport"},{id:"ss2",name:"S Sport 2"}]},
@@ -147,42 +171,98 @@ let videoFallbackTimer=null;
 
 document.getElementById('matchDateDisplay').textContent = new Date().toLocaleDateString('tr-TR');
 
-async function loadLiveMatches() {
-    const container = document.getElementById('matchListContainer');
-    try {
-        const response = await fetch('matches.json?t=' + new Date().getTime());
-        if (!response.ok) throw new Error("Veri bulunamadı");
-        
-        const matches = await response.json();
-        
-        if (!matches || matches.length === 0) {
-            container.innerHTML = '<div style="text-align: center; color: var(--muted); padding: 14px;">Şu an aktif güncel maç bulunmuyor.</div>';
-            return;
+function timeToMinutes(value){
+    const match=/^(\d{1,2})[:.](\d{2})$/.exec(String(value||"").trim());
+    if(!match)return null;
+    const hour=Number(match[1]),minute=Number(match[2]);
+    return(hour>23||minute>59)?null:hour*60+minute;
+}
+
+function renderMatches(matches,updatedAt){
+    const container=document.getElementById('matchListContainer');
+    container.innerHTML='';
+    if(!Array.isArray(matches)||matches.length===0){
+        container.innerHTML='<div style="text-align: center; color: var(--muted); padding: 14px;">Şu an aktif güncel maç bulunmuyor.</div>';
+        document.getElementById('matchCount').textContent='';
+        return;
+    }
+
+    const now=new Date();
+    const nowMinutes=now.getHours()*60+now.getMinutes();
+    const sorted=matches.slice().sort((a,b)=>{
+        const ta=timeToMinutes(a.time),tb=timeToMinutes(b.time);
+        if(ta===null&&tb===null)return 0;
+        if(ta===null)return 1;
+        if(tb===null)return -1;
+        return ta-tb;
+    });
+
+    document.getElementById('matchCount').textContent='· '+sorted.length+' maç';
+
+    sorted.forEach(match=>{
+        const btn=document.createElement('button');
+        btn.type='button';
+        btn.className='match-item';
+
+        const start=timeToMinutes(match.time);
+        const isLive=start!==null&&nowMinutes>=start&&(nowMinutes-start)<=180;
+        const isPast=start!==null&&(nowMinutes-start)>180;
+        if(isLive)btn.classList.add('is-live');
+        if(isPast)btn.classList.add('is-past');
+
+        if(match.channel_id){
+            btn.addEventListener('click',()=>openMatchById(match.channel_id));
+        }else{
+            btn.style.cursor='default';
         }
 
-        container.innerHTML = '';
-        matches.forEach(match => {
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'match-item';
-            
-            if (match.channel_id) {
-                btn.onclick = () => openMatchById(match.channel_id);
-            } else {
-                btn.style.cursor = 'default';
-            }
+        const top=document.createElement('span');
+        top.className='match-top';
 
-            btn.innerHTML = `
-                <span class="match-copy">
-                    <strong>${match.title}</strong>
-                    <span>${match.time} | ${match.type}</span>
-                </span>
-            `;
-            container.appendChild(btn);
-        });
+        const copy=document.createElement('span');
+        copy.className='match-copy';
+        const title=document.createElement('strong');
+        title.textContent=match.title||'Maç';
+        const meta=document.createElement('span');
+        meta.textContent=[match.type,match.channel_id?('Yayın: '+match.channel_id):null].filter(Boolean).join(' · ');
+        copy.append(title,meta);
+
+        const chip=document.createElement('span');
+        if(isLive){
+            chip.className='match-chip live';
+            chip.textContent='Canlı';
+        }else{
+            chip.className='match-chip time';
+            chip.textContent=match.time||'--:--';
+        }
+
+        top.append(copy,chip);
+        btn.appendChild(top);
+        container.appendChild(btn);
+    });
+
+    if(updatedAt){
+        const info=document.getElementById('matchUpdated');
+        info.style.display='block';
+        info.textContent='Son güncelleme: '+updatedAt;
+    }
+}
+
+async function loadLiveMatches() {
+    try {
+        const response = await fetch('matches.json?t=' + new Date().getTime(), {cache: 'no-store'});
+        if (!response.ok) throw new Error("Veri bulunamadı");
+
+        const data = await response.json();
+        const matches = Array.isArray(data) ? data : (data && Array.isArray(data.matches) ? data.matches : null);
+        if (matches === null) throw new Error("Veri formatı geçersiz");
+        const updatedAt = Array.isArray(data) ? '' : (data.updated_at_display || '');
+
+        renderMatches(matches, updatedAt);
     } catch (error) {
         console.error("Maçlar yüklenirken hata:", error);
-        container.innerHTML = '<div style="text-align: center; color: var(--pink); padding: 14px;">Maç verileri alınamadı.</div>';
+        const container = document.getElementById('matchListContainer');
+        container.innerHTML = '<div style="text-align: center; color: var(--pink); padding: 14px;">Maç verileri alınamadı, kısa süre içinde tekrar denenecek.</div>';
     }
 }
 
@@ -216,7 +296,7 @@ function openStandingsModal() {
     document.body.style.overflow="hidden";
     
     if (!standingsFrame.src || standingsFrame.src === "about:blank" || standingsFrame.src === "") {
-        standingsFrame.src = BASE_URL + "puan.html";
+        standingsFrame.src = baseUrl() + "puan.html";
         standingsFrame.onload = () => {
             if (standingsLoader) standingsLoader.style.display = "none";
             standingsFrame.style.display = "block";
@@ -241,7 +321,7 @@ const videoLoader=document.getElementById("videoLoader");
 
 function openMatchById(channelId){
     if(!channelId){return;}
-    const url = BASE_URL + "channel?id=" + encodeURIComponent(channelId);
+    const url = baseUrl() + "channel?id=" + encodeURIComponent(channelId);
     if(videoModal && videoFrame){
         videoFrame.src = url;
         videoLoader && videoLoader.classList.remove("hidden");
@@ -283,8 +363,10 @@ searchInput.addEventListener("input",renderCategories);
 
 document.addEventListener("keydown",event=>{if(event.key==="Escape"){if(standingsModal&&standingsModal.classList.contains("visible")) closeStandingsModal(); if(videoModal&&videoModal.classList.contains("visible")) closeVideoModal();}});
 
+refreshBaseUrl();
 loadLiveMatches();
 setInterval(loadLiveMatches, 30000);
+setInterval(refreshBaseUrl, 300000);
 
 function hideIframeAds(){
     const iframes = document.querySelectorAll('iframe:not(#videoFrame):not(#standingsFrame)');

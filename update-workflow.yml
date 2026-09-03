@@ -1,0 +1,51 @@
+# ============================================================
+# KURULUM: Bu dosyayi GitHub'da ".github/workflows/update.yml"
+# yoluna kaydedin (Add file -> dosya adi olarak yolu yazin).
+# Sonrasinda otomasyon 15 dakikada bir kendiliginden calisir.
+# ============================================================
+name: Otomatik Güncelleme
+
+# Sitedeki domain ve canlı maç listesini güncel tutar.
+# GitHub Pages "main" dal kökünden yayın yaptığı için her push otomatik yayınlanır.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *" # 15 dakikada bir
+  workflow_dispatch: # elle tetikleme imkânı
+
+permissions:
+  contents: write
+
+concurrency:
+  group: netbettv-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu çek
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bağımlılıkları kur
+        run: pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Botu çalıştır (domain + maçlar)
+        run: python bot.py --once
+
+      - name: Değişiklikleri commit'le ve push et
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html matches.json config.json
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok — commit atlanıyor."
+          else
+            git commit -m "chore: otomatik guncelleme - domain ve mac listesi [skip ci]"
+            git push
+          fi

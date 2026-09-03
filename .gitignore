@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Bot çalışma artıkları
+debug_html.txt
+*.tmp
+
+# Yerel sunucu / build çıktıları
+_site/
+.DS_Store
