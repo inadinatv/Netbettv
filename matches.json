@@ -1,23 +1,9 @@
 {
-  "updated_at": "2026-09-04T13:41:23Z",
-  "updated_at_display": "04.09.2026 13:41",
+  "updated_at": "2026-09-04T17:06:39Z",
+  "updated_at_display": "04.09.2026 17:06",
   "source": "https://fixbettv84.com/",
-  "count": 10,
+  "count": 8,
   "matches": [
-    {
-      "time": "12:30",
-      "title": "Avustralya vs Porto Riko",
-      "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "15:15",
-      "title": "ABD vs Çin",
-      "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "ss",
-      "hidden": false
-    },
     {
       "time": "18:30",
       "title": "Olimpia Milano vs Kızılyıldız",
