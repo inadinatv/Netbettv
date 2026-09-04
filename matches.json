@@ -1,70 +1,77 @@
 {
-  "updated_at": "2026-09-03T22:35:11Z",
-  "updated_at_display": "03.09.2026 22:35",
+  "updated_at": "2026-09-04T00:25:47Z",
+  "updated_at_display": "04.09.2026 00:25",
   "source": "https://fixbettv84.com/",
-  "count": 9,
+  "count": 10,
   "matches": [
     {
-      "time": "13:00",
-      "title": "Stupaczuk/Sanz vs Casas/Arroyo",
-      "type": "Premier Padel",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "14:30",
-      "title": "Collombon/Sharifova vs Martin/Fernandez",
-      "type": "Premier Padel",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Iğdırspor vs Manisa FK",
-      "type": "Trendyol 1. Lig",
+      "time": "12:30",
+      "title": "Avustralya vs Porto Riko",
+      "type": "FIBA Kadınlar Dünya Kupası",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "17:00",
-      "title": "Esbri/Gutierrez vs Chingotto/Galan",
-      "type": "Premier Padel",
-      "channel_id": "bm2",
+      "time": "15:15",
+      "title": "ABD vs Çin",
+      "type": "FIBA Kadınlar Dünya Kupası",
+      "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Almanya vs Türkiye",
-      "type": "CEV Kadınlar Avrupa Şampiyonası",
-      "channel_id": "trt1",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Bursaspor vs İstanbulspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
+      "time": "18:30",
+      "title": "Olimpia Milano vs Kızılyıldız",
+      "type": "Girit Basketbol Turnuvası",
+      "channel_id": "ss2",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Bodrumspor vs Esenler Erokspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
+      "title": "İstanbul Başakşehir vs Galatasaray",
+      "type": "Trendyol Süper Lig [Günün Maçı]",
+      "channel_id": "zirve",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Lyon vs Auxerre",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b2",
+      "hidden": false
+    },
+    {
+      "time": "21:00",
+      "title": "Olimpiakos vs Fenerbahçe Tarfin",
+      "type": "Girit Basketbol Turnuvası",
+      "channel_id": "ss2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Real Sociedad vs Celta Vigo",
+      "title": "Ipswich Town vs Liverpool",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Real Betis vs Real Madrid",
       "type": "İspanya La Liga",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Cagliari vs Verona",
-      "type": "İtalya Kupası",
-      "channel_id": "trtspor",
+      "time": "22:05",
+      "title": "PSG vs Monaco",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b2",
+      "hidden": false
+    },
+    {
+      "time": "22:15",
+      "title": "Porto vs Moreirense",
+      "type": "Portekiz Liga NOS",
+      "channel_id": "b4",
       "hidden": false
     }
   ]
