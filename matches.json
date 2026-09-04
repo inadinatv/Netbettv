@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-04T09:24:34Z",
-  "updated_at_display": "04.09.2026 09:24",
+  "updated_at": "2026-09-04T12:47:00Z",
+  "updated_at_display": "04.09.2026 12:47",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "12:30",
       "title": "Avustralya vs Porto Riko",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:15",
