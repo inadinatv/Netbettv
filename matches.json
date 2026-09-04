@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-04T17:06:39Z",
-  "updated_at_display": "04.09.2026 17:06",
+  "updated_at": "2026-09-04T19:36:06Z",
+  "updated_at_display": "04.09.2026 19:36",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "18:30",
       "title": "Olimpia Milano vs Kızılyıldız",
       "type": "Girit Basketbol Turnuvası",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "İstanbul Başakşehir vs Galatasaray",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Lyon vs Auxerre",
       "type": "Fransa Ligue 1",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:00",
