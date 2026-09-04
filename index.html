@@ -225,10 +225,11 @@ const arrowIcon='<svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stro
 const normalize=value=>value.toLocaleLowerCase("tr-TR");
 let videoFallbackTimer=null;
 
-// İstanbul timezone (UTC+3) date display
-const istanbulDate = new Date();
-istanbulDate.setUTCMinutes(istanbulDate.getUTCMinutes() + 3 * 60);
-document.getElementById('matchDateDisplay').textContent = istanbulDate.toLocaleDateString('tr-TR') + ' ' + istanbulDate.toLocaleTimeString('tr-TR', {hour12: false});
+// İstanbul (UTC+3) timezone ile tarih/saat gösterimi
+const nowDisplay = new Date();
+document.getElementById('matchDateDisplay').textContent =
+    nowDisplay.toLocaleDateString('tr-TR', { timeZone: 'Europe/Istanbul', day: '2-digit', month: '2-digit', year: 'numeric' }) +
+    ' ' + nowDisplay.toLocaleTimeString('tr-TR', { timeZone: 'Europe/Istanbul', hour12: false });
 
 function timeToMinutes(value){
     const match=/^(\d{1,2})[:.](\d{2})$/.exec(String(value||"").trim());
@@ -333,32 +334,31 @@ async function loadLiveMatches() {
     }
 }
 
-// Zaman formatı yardımcı fonksiyonu - UTC'yi Istanbul'e çevir
+// Zaman formatı yardımcı fonksiyonu - bot verilerindeki saatler zaten İstanbul (UTC+3) yerel saatidir
 function formatTimeWithTimezone(timeString){
     if(!timeString) return '--:--';
-    const match = /^(\\d{1,2})[:.](\\d{2})$/.exec(String(timeString).trim());
+    const match = /^(\d{1,2})[:.](\d{2})$/.exec(String(timeString).trim());
     if(!match) return timeString;
-    let hour = Number(match[1]);
-    let minute = Number(match[2]);
-    // Istanbul is UTC+3
-    hour = hour + 3; // UTC -> Istanbul
-    if(hour >= 24) { hour -= 24; }
+    const hour = Number(match[1]);
+    const minute = Number(match[2]);
+    if(hour > 23 || minute > 59) return timeString;
     const formattedHour = hour.toString().padStart(2, '0');
     const formattedMinute = minute.toString().padStart(2, '0');
     return `${formattedHour}:${formattedMinute}`;
 }
 
-// Günün maçlarındaki saat bilgilerini göster - Istanbul timezone eklendi
+// Günün maçlarındaki saat bilgilerini göster - İstanbul yerel saatiyle
 function renderMatchesTimes(){
-    const container = document.getElementById('matchListContainer');
-    // Zaman bilgisini gösteren başlık güncelleme
+    const info = document.getElementById('matchUpdated');
+    if(!info) return;
     const now = new Date();
-    const istanbulNow = new Date(now.getTime() + 3 * 60 * 60 * 1000);
-    const formattedTime = istanbulNow.toLocaleTimeString('tr-TR', {hour12: false});
-    document.getElementById('matchUpdated').style.display = 'block';
-    document.getElementById('matchUpdated').textContent = 'Güncelleme: ' + istanbulNow.toLocaleDateString('tr-TR') + ' ' + formattedTime;
+    info.style.display = 'block';
+    info.textContent = 'Güncelleme: ' + now.toLocaleDateString('tr-TR') + ' ' + now.toLocaleTimeString('tr-TR', {hour12: false});
 }
 renderMatchesTimes();
+
+// YENİ: Kategoriye göre maç ve puan durumu panelini göster/gizle
+function updateLayout(){
     const isAll = (activeFilter === "all");
     if (matchesPanel) matchesPanel.style.display = isAll ? "block" : "none";
     if (standingsPanel) standingsPanel.style.display = isAll ? "block" : "none";
@@ -446,7 +446,7 @@ if(videoFrame) videoFrame.addEventListener("load", () => { if(videoLoader) video
 // Kategori butonları: tıklayınca maçlar gizlenir, sadece o kategori görünür
 function renderTabs(){categories.forEach(category=>{const button=document.createElement("button");button.type="button";button.className="tab-button";button.dataset.filter=category.title;button.textContent=category.title;button.addEventListener("click",()=>{activeFilter=category.title;document.querySelectorAll(".tab-button").forEach(tab=>tab.classList.toggle("active",tab===button));updateLayout()});categoryTabs.appendChild(button)})}
 
-function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=BASE_URL+"channel?id="+encodeURIComponent(channel.id);link.target="_self";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.addEventListener("click",event=>{event.preventDefault();openMatchById(channel.id);});link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
+function renderCategories(){const query=normalize(searchInput.value.trim());contentGrid.innerHTML="";let visibleCount=0;categories.forEach((category,categoryIndex)=>{if(activeFilter!=="all"&&activeFilter!==category.title)return;const matchingChannels=category.channels.filter(channel=>normalize(channel.name).includes(query));if(!matchingChannels.length)return;visibleCount+=matchingChannels.length;const categoryElement=document.createElement("article");categoryElement.className="category";categoryElement.style.animationDelay=Math.min(categoryIndex*55,360)+"ms";const header=document.createElement("header");header.className="category-header";header.innerHTML='<span class="category-icon" aria-hidden="true">'+category.icon+'</span><div class="category-heading"><div class="category-title">'+category.title+'</div><div class="category-subtitle">Canlı yayın kanalları</div></div><span class="category-count">'+matchingChannels.length+' kanal</span>';categoryElement.appendChild(header);const list=document.createElement("ul");list.className="channel-list";matchingChannels.forEach((channel,channelIndex)=>{const item=document.createElement("li");item.className="channel-item";const link=document.createElement("a");link.className="channel-link";link.href=baseUrl()+"channel?id="+encodeURIComponent(channel.id);link.target="_self";link.rel="noopener";link.setAttribute("aria-label",channel.name+" kanalını aç");link.addEventListener("click",event=>{event.preventDefault();openMatchById(channel.id);});link.innerHTML='<span class="channel-number">'+String(channelIndex+1).padStart(2,"0")+'</span><span class="channel-live" aria-label="Canlı"></span><span class="channel-name"></span><span class="channel-meta">HD</span>'+arrowIcon;link.querySelector(".channel-name").textContent=channel.name;item.appendChild(link);list.appendChild(item)});categoryElement.appendChild(list);contentGrid.appendChild(categoryElement)});if(!visibleCount)contentGrid.innerHTML='<div class="empty-state"><strong>Kanal bulunamadı</strong><span>Arama kelimenizi veya kategori filtresini değiştirerek tekrar deneyin.</span></div>'}
 
 renderTabs();
 updateLayout();
