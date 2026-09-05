@@ -1,79 +1,9 @@
 {
-  "updated_at": "2026-09-05T16:49:33Z",
-  "updated_at_display": "05.09.2026 16:49",
+  "updated_at": "2026-09-05T18:48:52Z",
+  "updated_at_display": "05.09.2026 18:48",
   "source": "https://fixbettv84.com/",
-  "count": 25,
+  "count": 15,
   "matches": [
-    {
-      "time": "14:30",
-      "title": "Newcastle vs Bournemouth",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Fiorentina vs Torino",
-      "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Bandırmaspor vs Boluspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Türkiye vs Sırbistan",
-      "type": "CEV Kadınlar Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "17:00",
-      "title": "Brighton vs Leeds United",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "bm1",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Fulham vs Crystal Palace",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Manchester City vs Coventry",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Nottingham Forest vs Tottenham",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Erzurumspor vs Konyaspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "17:15",
-      "title": "Athletic Bilbao vs Atletico Madrid",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
     {
       "time": "19:00",
       "title": "Inter vs Napoli",
