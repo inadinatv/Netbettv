@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-05T14:00:40Z",
-  "updated_at_display": "05.09.2026 14:00",
+  "updated_at": "2026-09-05T16:49:33Z",
+  "updated_at_display": "05.09.2026 16:49",
   "source": "https://fixbettv84.com/",
   "count": 25,
   "matches": [
@@ -8,29 +8,29 @@
       "time": "14:30",
       "title": "Newcastle vs Bournemouth",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Fiorentina vs Torino",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Bandırmaspor vs Boluspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Türkiye vs Sırbistan",
       "type": "CEV Kadınlar Avrupa Şampiyonası",
-      "channel_id": "trt1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
