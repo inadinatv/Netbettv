@@ -1,65 +1,9 @@
 {
-  "updated_at": "2026-09-05T18:48:52Z",
-  "updated_at_display": "05.09.2026 18:48",
+  "updated_at": "2026-09-05T20:57:04Z",
+  "updated_at_display": "05.09.2026 20:57",
   "source": "https://fixbettv84.com/",
-  "count": 15,
+  "count": 7,
   "matches": [
-    {
-      "time": "19:00",
-      "title": "Inter vs Napoli",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Polonya vs İtalya",
-      "type": "CEV Kadınlar Avrupa Şampiyonası",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
-    {
-      "time": "19:30",
-      "title": "Hull City vs Aston Villa",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "19:30",
-      "title": "Rayo Vallecano vs Racing Santander",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Fenerbahçe vs Beşiktaş",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Maritimo vs Benfica",
-      "type": "Portekiz Liga NOS",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Keçiörengücü vs Sarıyer",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Pendikspor vs Ümraniyespor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
-    },
     {
       "time": "21:00",
       "title": "St. Etienne vs Montpellier",
