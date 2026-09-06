@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-06T12:53:12Z",
-  "updated_at_display": "06.09.2026 12:53",
+  "updated_at": "2026-09-06T16:00:20Z",
+  "updated_at_display": "06.09.2026 16:00",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -22,29 +22,29 @@
       "time": "16:00",
       "title": "Troyes vs Strasbourg",
       "type": "Fransa Ligue 1",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Frosinone vs Venezia",
       "type": "İtalya Serie A",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Parma vs Monza",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Everton vs Manchester Utd",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
