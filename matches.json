@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-06T18:18:07Z",
-  "updated_at_display": "06.09.2026 18:18",
+  "updated_at": "2026-09-06T20:40:11Z",
+  "updated_at_display": "06.09.2026 20:40",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -99,50 +99,50 @@
       "time": "19:30",
       "title": "Alaves vs Osasuna",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Trabzonspor vs Gençlerbirliği",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Kocaelispor vs Samsunspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Antalyaspor vs Sivasspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Batman Petrol vs Karagümrük",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Muğlaspor vs Vanspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:45",
       "title": "Rosario Central vs Newell's Old Boys",
       "type": "Arjantin Primera Division",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
