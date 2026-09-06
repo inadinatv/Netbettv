@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-06T16:00:20Z",
-  "updated_at_display": "06.09.2026 16:00",
+  "updated_at": "2026-09-06T18:18:07Z",
+  "updated_at_display": "06.09.2026 18:18",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -50,50 +50,50 @@
       "time": "17:00",
       "title": "Kasımpaşa vs Amedspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Çorum FK vs Eyüpspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:15",
       "title": "Valencia vs Barcelona",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Olimpia Milano vs Fenerbahçe Tarfin",
       "type": "Girit Basketbol Turnuvası",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:30",
       "title": "Arsenal vs Chelsea",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Bologna vs Sassuolo",
       "type": "İtalya Serie A",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "İtalya vs Türkiye",
       "type": "CEV Kadınlar Avrupa Şampiyonası",
-      "channel_id": "trt1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
