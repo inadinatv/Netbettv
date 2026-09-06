@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-06T09:10:34Z",
-  "updated_at_display": "06.09.2026 09:10",
+  "updated_at": "2026-09-06T12:53:12Z",
+  "updated_at_display": "06.09.2026 12:53",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -15,8 +15,8 @@
       "time": "12:30",
       "title": "Türkiye vs Avustralya",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
