@@ -1,105 +1,63 @@
 {
-  "updated_at": "2026-09-07T19:24:19Z",
-  "updated_at_display": "07.09.2026 19:24",
+  "updated_at": "2026-09-07T22:12:08Z",
+  "updated_at_display": "07.09.2026 22:12",
   "source": "https://fixbettv84.com/",
-  "count": 14,
+  "count": 8,
   "matches": [
     {
-      "time": "01:15",
-      "title": "River Plate vs I. Rivadavia",
-      "type": "Arjantin Primera Division",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "12:30",
-      "title": "Porto Riko vs Türkiye",
+      "time": "18:45",
+      "title": "Macaristan vs Japonya",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "15:30",
-      "title": "Nijerya vs Fransa",
-      "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "17:00",
-      "title": "Esenler Erokspor vs Kayserispor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "17:00",
-      "title": "İstanbulspor vs Iğdırspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:30",
-      "title": "Cagliari vs Lecce",
-      "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Mardin 1969 vs Bodrumspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Manisa FK vs Bursaspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Göztepe vs Gaziantep FK",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Ç.Rizespor vs Alanyaspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Getafe vs Celta Vigo",
-      "type": "İspanya La Liga",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Udinese vs Lazio",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
+      "time": "19:45",
+      "title": "AEK vs LASK Linz",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Club Brugge vs Aston Villa",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Nantes vs Nancy",
-      "type": "Fransa Ligue 2",
-      "channel_id": "b4",
-      "hidden": false
-    },
-    {
-      "time": "22:30",
-      "title": "Elche vs Real Sociedad",
-      "type": "İspanya La Liga",
+      "title": "Almanya vs Güney Kore",
+      "type": "FIBA Kadınlar Dünya Kupası",
       "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Borussia Dortmund vs Villarreal",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Porto vs Manchester City",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Lille vs Real Betis",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Real Madrid vs Inter",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
       "hidden": false
     }
   ]
