@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-07T15:43:45Z",
-  "updated_at_display": "07.09.2026 15:43",
+  "updated_at": "2026-09-07T19:24:19Z",
+  "updated_at_display": "07.09.2026 19:24",
   "source": "https://fixbettv84.com/",
   "count": 14,
   "matches": [
@@ -29,22 +29,22 @@
       "time": "17:00",
       "title": "Esenler Erokspor vs Kayserispor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "İstanbulspor vs Iğdırspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Cagliari vs Lecce",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
