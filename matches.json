@@ -1,40 +1,61 @@
 {
-  "updated_at": "2026-09-08T20:48:08Z",
-  "updated_at_display": "08.09.2026 20:48",
+  "updated_at": "2026-09-08T23:13:30Z",
+  "updated_at_display": "08.09.2026 23:13",
   "source": "https://fixbettv84.com/",
-  "count": 5,
+  "count": 8,
   "matches": [
     {
-      "time": "21:45",
-      "title": "Almanya vs Güney Kore",
+      "time": "18:45",
+      "title": "Porto Riko vs Çin",
       "type": "FIBA Kadınlar Dünya Kupası",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Borussia Dortmund vs Villarreal",
+      "time": "19:45",
+      "title": "Barcelona vs Feyenoord",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex2",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Stuttgart vs Viking",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "İtalya vs Avustralya",
+      "type": "FIBA Kadınlar Dünya Kupası",
+      "channel_id": "trtspor2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Porto vs Manchester City",
+      "title": "Sporting Lisbon vs Galatasaray",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "PSG vs Slovan Bratislava",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Lille vs Real Betis",
+      "title": "Napoli vs Arsenal",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex3",
+      "channel_id": "ex2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Real Madrid vs Inter",
+      "title": "Liverpool vs Atletico Madrid",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex7",
       "hidden": false
