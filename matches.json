@@ -1,63 +1,91 @@
 {
-  "updated_at": "2026-09-09T23:31:05Z",
-  "updated_at_display": "09.09.2026 23:31",
+  "updated_at": "2026-09-10T01:28:43Z",
+  "updated_at_display": "10.09.2026 01:28",
   "source": "https://fixbettv84.com/",
-  "count": 8,
+  "count": 12,
   "matches": [
     {
+      "time": "12:30",
+      "title": "ABD vs Macaristan",
+      "type": "FIBA Kadınlar Dünya Kupası",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "15:30",
+      "title": "Çin vs Fransa",
+      "type": "FIBA Kadınlar Dünya Kupası",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
       "time": "18:45",
-      "title": "Porto Riko vs Çin",
+      "title": "Belçika vs Almanya",
       "type": "FIBA Kadınlar Dünya Kupası",
       "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "19:45",
-      "title": "Barcelona vs Feyenoord",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Stuttgart vs Viking",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "İtalya vs Avustralya",
-      "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Sporting Lisbon vs Galatasaray",
+      "title": "Fenerbahçe vs Roma",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "trt1",
       "hidden": false
     },
     {
+      "time": "19:45",
+      "title": "PSV vs Shakhtar Donetsk",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Türkiye vs Almanya",
+      "type": "CEV Erkekler Avrupa Şampiyonası",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Avustralya vs İspanya",
+      "type": "FIBA Kadınlar Dünya Kupası",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
       "time": "22:00",
-      "title": "PSG vs Slovan Bratislava",
+      "title": "Slavia Prag vs Lens",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Manchester Utd vs Sabah Bakü",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Napoli vs Arsenal",
+      "title": "Como vs Leipzig",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Liverpool vs Atletico Madrid",
+      "title": "Bayern Münih vs Bodo Glimt",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:15",
+      "title": "Estrela vs Braga",
+      "type": "Portekiz Liga NOS",
+      "channel_id": "b4",
       "hidden": false
     }
   ]
