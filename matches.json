@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-10T06:35:55Z",
-  "updated_at_display": "10.09.2026 06:35",
+  "updated_at": "2026-09-10T11:51:03Z",
+  "updated_at_display": "10.09.2026 11:51",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "12:30",
       "title": "ABD vs Macaristan",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
