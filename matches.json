@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-10T15:56:05Z",
-  "updated_at_display": "10.09.2026 15:56",
+  "updated_at": "2026-09-10T19:00:19Z",
+  "updated_at_display": "10.09.2026 19:00",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -15,15 +15,15 @@
       "time": "15:30",
       "title": "Çin vs Fransa",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:45",
       "title": "Belçika vs Almanya",
       "type": "FIBA Kadınlar Dünya Kupası",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
