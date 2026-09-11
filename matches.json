@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-11T11:42:48Z",
-  "updated_at_display": "11.09.2026 11:42",
+  "updated_at": "2026-09-11T15:14:39Z",
+  "updated_at_display": "11.09.2026 15:14",
   "source": "https://fixbettv84.com/",
   "count": 9,
   "matches": [
@@ -8,15 +8,15 @@
       "time": "14:00",
       "title": "Gallego/Araujo vs Martin/Fernandez",
       "type": "Premier Padel",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Coello/Tapia vs Leal/Guerrero",
       "type": "Premier Padel",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
