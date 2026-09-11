@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-11T21:19:57Z",
-  "updated_at_display": "11.09.2026 21:19",
+  "updated_at": "2026-09-11T23:29:01Z",
+  "updated_at_display": "11.09.2026 23:29",
   "source": "https://fixbettv84.com/",
   "count": 9,
   "matches": [
@@ -8,36 +8,36 @@
       "time": "14:00",
       "title": "Gallego/Araujo vs Martin/Fernandez",
       "type": "Premier Padel",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "16:00",
       "title": "Coello/Tapia vs Leal/Guerrero",
       "type": "Premier Padel",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Senesi/Pons vs Orsi/Zielinski",
       "type": "Premier Padel",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Beşiktaş vs Erzurumspor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Sarıyer vs Bandırmaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "21:00",
