@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-11T18:38:26Z",
-  "updated_at_display": "11.09.2026 18:38",
+  "updated_at": "2026-09-11T21:19:57Z",
+  "updated_at_display": "11.09.2026 21:19",
   "source": "https://fixbettv84.com/",
   "count": 9,
   "matches": [
@@ -22,22 +22,22 @@
       "time": "19:00",
       "title": "Senesi/Pons vs Orsi/Zielinski",
       "type": "Premier Padel",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Beşiktaş vs Erzurumspor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Sarıyer vs Bandırmaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:00",
