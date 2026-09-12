@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-12T14:08:35Z",
-  "updated_at_display": "12.09.2026 14:08",
+  "updated_at": "2026-09-12T17:10:34Z",
+  "updated_at_display": "12.09.2026 17:10",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -8,71 +8,71 @@
       "time": "16:00",
       "title": "Genoa vs Frosinone",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Boluspor vs Pendikspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Vanspor vs Keçiörengücü",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Fransa vs Türkiye",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Aston Villa vs Nottingham Forest",
       "type": "İngiltere Premier Lig",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Chelsea vs Hull City",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Liverpool vs Fulham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Eyüpspor vs Ç.Rizespor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Samsunspor vs Çorum FK",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:15",
       "title": "Osasuna vs Espanyol",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
