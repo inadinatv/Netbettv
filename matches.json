@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-12T17:10:34Z",
-  "updated_at_display": "12.09.2026 17:10",
+  "updated_at": "2026-09-12T19:22:37Z",
+  "updated_at_display": "12.09.2026 19:22",
   "source": "https://fixbettv84.com/",
   "count": 24,
   "matches": [
@@ -78,64 +78,64 @@
       "time": "19:00",
       "title": "Lazio vs Milan",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Adana Demirspor vs Elazığspor",
       "type": "TFF 2. Lig",
-      "channel_id": "t1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Athletic Bilbao vs Elche",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Tottenham vs Everton",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Konyaspor vs Trabzonspor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Ümraniyespor vs Antalyaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Bodrumspor vs Batman Petrol",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Alanyaspor vs Göztepe",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Casa Pia vs Porto",
       "type": "Portekiz Liga NOS",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
