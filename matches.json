@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-13T12:18:30Z",
-  "updated_at_display": "13.09.2026 12:18",
+  "updated_at": "2026-09-13T16:33:43Z",
+  "updated_at_display": "13.09.2026 16:33",
   "source": "https://fixbettv84.com/",
   "count": 21,
   "matches": [
@@ -8,57 +8,57 @@
       "time": "16:00",
       "title": "Lille vs Troyes",
       "type": "Fransa Ligue 1",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Lecce vs Monza",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Coventry vs Brighton",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Iğdırspor vs Mardin 1969",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Sivasspor vs Muğlaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "İsviçre vs Türkiye",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Gençlerbirliği vs Kasımpaşa",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:15",
       "title": "Levante vs Barcelona",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:30",
