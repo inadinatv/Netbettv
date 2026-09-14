@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-09-14T18:53:36Z",
-  "updated_at_display": "14.09.2026 18:53",
+  "updated_at": "2026-09-14T22:17:27Z",
+  "updated_at_display": "14.09.2026 22:17",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
     {
-      "time": "19:30",
-      "title": "Torino vs Roma",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
+      "time": "02:00",
+      "title": "Zeynep Sönmez vs I.Shymanovich",
+      "type": "WTA Guadalajara",
+      "channel_id": "bm1",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Gaziantep FK vs Fenerbahçe",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
+      "time": "03:15",
+      "title": "Instituto AC vs Estudiantes",
+      "type": "Arjantin Primera Division",
+      "channel_id": "smarts",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Kayserispor vs İstanbulspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
+      "time": "17:00",
+      "title": "Afyonkarahisarspor vs Ürgüp Spor",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Romanya vs Türkiye",
+      "time": "17:00",
+      "title": "Letonya vs İsviçre",
       "type": "CEV Erkekler Avrupa Şampiyonası",
       "channel_id": "trtspor2",
       "hidden": false
     },
     {
-      "time": "21:15",
-      "title": "Al Ahli vs Pakhtakor",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
+      "time": "20:00",
+      "title": "Altay vs Sökespor",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
       "hidden": false
     },
     {
-      "time": "21:15",
-      "title": "Al Qadsiah vs Al Wasl",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
+      "time": "20:00",
+      "title": "Rayo Vallecano vs Espanyol",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Inter vs Udinese",
-      "type": "İtalya Serie A",
+      "time": "20:00",
+      "title": "Fransa vs Almanya",
+      "type": "CEV Erkekler Avrupa Şampiyonası",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "21:00",
+      "title": "Alaves vs Valencia",
+      "type": "İspanya La Liga",
       "channel_id": "ss2",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Red Star vs Metz",
-      "type": "Fransa Ligue 2",
-      "channel_id": "b4",
+      "time": "22:00",
+      "title": "Fiorentina vs Pisa",
+      "type": "İtalya Kupası",
+      "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Leeds United vs Newcastle",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Villarreal vs Real Betis",
+      "time": "22:30",
+      "title": "Elche vs Real Madrid",
       "type": "İspanya La Liga",
       "channel_id": "ss",
       "hidden": false
