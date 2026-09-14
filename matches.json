@@ -1,44 +1,9 @@
 {
-  "updated_at": "2026-09-14T13:41:55Z",
-  "updated_at_display": "14.09.2026 13:41",
+  "updated_at": "2026-09-14T18:53:36Z",
+  "updated_at_display": "14.09.2026 18:53",
   "source": "https://fixbettv84.com/",
-  "count": 15,
+  "count": 10,
   "matches": [
-    {
-      "time": "03:30",
-      "title": "CA Huracan vs Racing Club",
-      "type": "Arjantin Primera Division",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:45",
-      "title": "Neftchi Fargona vs Al Quwa Al Jawiya",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Almanya vs İsviçre",
-      "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "18:00",
-      "title": "Shakhtar Donetsk vs Odesa",
-      "type": "Ukrayna Premier Ligi",
-      "channel_id": "t1",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Al Ahli Dubai vs Tractor Sazi",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
-      "hidden": false
-    },
     {
       "time": "19:30",
       "title": "Torino vs Roma",
