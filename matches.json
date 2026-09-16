@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-16T14:59:44Z",
-  "updated_at_display": "16.09.2026 14:59",
+  "updated_at": "2026-09-16T18:49:44Z",
+  "updated_at_display": "16.09.2026 18:49",
   "source": "https://fixbettv84.com/",
   "count": 17,
   "matches": [
@@ -29,15 +29,15 @@
       "time": "17:00",
       "title": "Türkiye vs Letonya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Bucaspor vs Gaziemirspor",
       "type": "Ziraat Türkiye Kupası",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
