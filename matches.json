@@ -1,77 +1,126 @@
 {
-  "updated_at": "2026-09-15T22:17:22Z",
-  "updated_at_display": "15.09.2026 22:17",
+  "updated_at": "2026-09-16T00:40:40Z",
+  "updated_at_display": "16.09.2026 00:40",
   "source": "https://fixbettv84.com/",
-  "count": 10,
+  "count": 17,
   "matches": [
     {
-      "time": "02:00",
-      "title": "Zeynep Sönmez vs I.Shymanovich",
-      "type": "WTA Guadalajara",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "13:00",
+      "title": "Jeonbuk vs Kashiwa Reysol",
+      "type": "AFC Şampiyonlar Ligi",
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
-      "time": "03:15",
-      "title": "Instituto AC vs Estudiantes",
-      "type": "Arjantin Primera Division",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "14:00",
+      "title": "Sinopspor vs Arit Kayadibi",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "15:15",
+      "title": "Port FC vs Vissel Kobe",
+      "type": "AFC Şampiyonlar Ligi",
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "17:00",
-      "title": "Afyonkarahisarspor vs Ürgüp Spor",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "17:00",
-      "title": "Letonya vs İsviçre",
+      "title": "Türkiye vs Letonya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Altay vs Sökespor",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Rayo Vallecano vs Espanyol",
-      "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Fransa vs Almanya",
-      "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:00",
-      "title": "Alaves vs Valencia",
-      "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "22:00",
-      "title": "Fiorentina vs Pisa",
-      "type": "İtalya Kupası",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "22:30",
-      "title": "Elche vs Real Madrid",
+      "time": "17:00",
+      "title": "Bucaspor vs Gaziemirspor",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Ararat vs Sparta Prag",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Omonia vs Celta Vigo",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Mersin İY vs Bucak Belediye",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Deportivo vs Sevilla",
+      "type": "İspanya La Liga",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Atletico Madrid vs Osasuna",
       "type": "İspanya La Liga",
       "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Sunderland vs AZ Alkmaar",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Sturm Graz vs Rennes",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex4",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Bayer Leverkusen vs NK Celje",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Anderlecht vs Lyon",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Milan vs Benfica",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:30",
+      "title": "Barcelona vs Racing Santander",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "22:30",
+      "title": "Levante vs Athletic Bilbao",
+      "type": "İspanya La Liga",
+      "channel_id": "ss2",
       "hidden": false
     }
   ]
