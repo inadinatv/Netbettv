@@ -1,126 +1,98 @@
 {
-  "updated_at": "2026-09-16T21:55:21Z",
-  "updated_at_display": "16.09.2026 21:55",
+  "updated_at": "2026-09-17T00:10:09Z",
+  "updated_at_display": "17.09.2026 00:10",
   "source": "https://fixbettv84.com/",
-  "count": 17,
+  "count": 13,
   "matches": [
     {
-      "time": "13:00",
-      "title": "Jeonbuk vs Kashiwa Reysol",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "14:00",
-      "title": "Sinopspor vs Arit Kayadibi",
+      "time": "14:30",
+      "title": "Y.Amasyaspor vs Çankırıgücü",
       "type": "Ziraat Türkiye Kupası",
       "channel_id": "as",
       "hidden": false
     },
     {
-      "time": "15:15",
-      "title": "Port FC vs Vissel Kobe",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Türkiye vs Letonya",
-      "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Bucaspor vs Gaziemirspor",
+      "time": "19:00",
+      "title": "Orduspor vs Torul Gençlik",
       "type": "Ziraat Türkiye Kupası",
       "channel_id": "as",
       "hidden": false
     },
     {
       "time": "19:45",
-      "title": "Ararat vs Sparta Prag",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Omonia vs Celta Vigo",
+      "title": "OFI Crete vs Hoffenheim",
       "type": "UEFA Avrupa Ligi",
       "channel_id": "ex7",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Mersin İY vs Bucak Belediye",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "as",
+      "time": "19:45",
+      "title": "Levski Sofya vs Salzburg",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Deportivo vs Sevilla",
-      "type": "İspanya La Liga",
-      "channel_id": "ss2",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Atletico Madrid vs Osasuna",
+      "title": "Real Betis vs Getafe",
       "type": "İspanya La Liga",
       "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Sunderland vs AZ Alkmaar",
+      "title": "Beşiktaş vs Marsilya",
+      "type": "UEFA Avrupa Ligi [Günün Maçı]",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Juventus vs NEC Nijmegen",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Real Sociedad vs Bournemouth",
       "type": "UEFA Avrupa Ligi",
       "channel_id": "ex3",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Sturm Graz vs Rennes",
+      "title": "Viktoria Plzen vs St.Gilloise",
       "type": "UEFA Avrupa Ligi",
       "channel_id": "ex4",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Bayer Leverkusen vs NK Celje",
+      "title": "Lilleström vs Torreense",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
+      "channel_id": "ex5",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Anderlecht vs Lyon",
+      "title": "Crystal Palace vs Lech Poznan",
       "type": "UEFA Avrupa Ligi",
       "channel_id": "ex2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Milan vs Benfica",
+      "title": "Celtic vs Ferencvaros",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex7",
+      "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "22:30",
-      "title": "Barcelona vs Racing Santander",
+      "title": "Malaga vs Villarreal",
       "type": "İspanya La Liga",
       "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "22:30",
-      "title": "Levante vs Athletic Bilbao",
-      "type": "İspanya La Liga",
-      "channel_id": "ss2",
       "hidden": false
     }
   ]
