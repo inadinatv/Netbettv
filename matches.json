@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-18T19:36:42Z",
-  "updated_at_display": "18.09.2026 19:36",
+  "updated_at": "2026-09-18T21:53:22Z",
+  "updated_at_display": "18.09.2026 21:53",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -8,36 +8,36 @@
       "time": "16:00",
       "title": "Bandırmaspor vs Ümraniyespor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Fenerbahçe Tarfin vs Olympiakos",
       "type": "Euroleague Süper Kupa",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Muğlaspor vs Iğdırspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Dubai Basket vs Real Madrid",
       "type": "Euroleague Süper Kupa",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Kasımpaşa vs Konyaspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "21:00",
