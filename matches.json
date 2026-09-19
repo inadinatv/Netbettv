@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-19T16:05:08Z",
-  "updated_at_display": "19.09.2026 16:05",
+  "updated_at": "2026-09-19T18:36:59Z",
+  "updated_at_display": "19.09.2026 18:36",
   "source": "https://fixbettv84.com/",
   "count": 23,
   "matches": [
@@ -85,8 +85,8 @@
       "time": "19:00",
       "title": "Roma vs Inter",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
