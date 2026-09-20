@@ -1,119 +1,14 @@
 {
-  "updated_at": "2026-09-20T20:49:24Z",
-  "updated_at_display": "20.09.2026 20:49",
+  "updated_at": "2026-09-20T23:02:15Z",
+  "updated_at_display": "20.09.2026 23:02",
   "source": "https://fixbettv84.com/",
-  "count": 16,
+  "count": 1,
   "matches": [
     {
-      "time": "17:15",
-      "title": "Atletico Madrid vs Real Madrid",
-      "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "18:00",
-      "title": "Shakhtar Donetsk vs LNZ Cherkasy",
-      "type": "Ukrayna Premier Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "18:15",
-      "title": "Nice vs Lille",
-      "type": "Fransa Ligue 1",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "18:30",
-      "title": "Fulham vs Manchester Utd",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:00",
-      "title": "Juventus vs Atalanta",
-      "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:30",
-      "title": "Villarreal vs Levante",
-      "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Amedspor vs Beşiktaş",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Antalyaspor vs Vanspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Mardin 1969 vs Kayserispor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Göztepe vs Ç.Rizespor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Santa Clara vs Braga",
-      "type": "Portekiz Liga NOS",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Joventut Badalona vs Barcelona",
-      "type": "İspanya Basketbol Süper Kupa",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:45",
-      "title": "Milan vs Lecce",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Marsilya vs PSG",
-      "type": "Fransa Ligue 1",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Valencia vs Real Sociedad",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "22:30",
-      "title": "Porto vs Benfica",
-      "type": "Portekiz Liga NOS",
-      "channel_id": "b4",
+      "time": "01:30",
+      "title": "Atletico PR vs Bahia",
+      "type": "Brezilya Serie A",
+      "channel_id": "smarts",
       "hidden": false
     }
   ]
