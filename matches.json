@@ -1,168 +1,196 @@
 {
-  "updated_at": "2026-09-19T23:05:49Z",
-  "updated_at_display": "19.09.2026 23:05",
+  "updated_at": "2026-09-20T01:09:46Z",
+  "updated_at_display": "20.09.2026 01:09",
   "source": "https://fixbettv84.com/",
-  "count": 23,
+  "count": 27,
   "matches": [
     {
-      "time": "03:15",
-      "title": "Racing Club vs CA Sarmiento",
-      "type": "Arjantin Primera Division",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "14:30",
-      "title": "Tottenham vs Aston Villa",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "15:00",
-      "title": "Osasuna vs Rayo Vallecano",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "16:00",
-      "title": "Bologna vs Torino",
+      "time": "13:30",
+      "title": "Fiorentina vs Napoli",
       "type": "İtalya Serie A",
       "channel_id": "ss2",
       "hidden": false
     },
     {
+      "time": "16:00",
+      "title": "Frosinone vs Como",
+      "type": "İtalya Serie A",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "Bournemouth vs Liverpool",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b4",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "Leeds United vs Crystal Palace",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "Manchester City vs Sunderland",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b3",
+      "hidden": false
+    },
+    {
       "time": "17:00",
-      "title": "Keçiörengücü vs Sivasspor",
+      "title": "Fenerbahçe vs Eyüpspor",
+      "type": "Trendyol Süper Lig [Günün Maçı]",
+      "channel_id": "zirve",
+      "hidden": false
+    },
+    {
+      "time": "17:00",
+      "title": "Pendikspor vs Bodrumspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "17:00",
+      "title": "Manisa FK vs İstanbulspor",
       "type": "Trendyol 1. Lig",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
       "time": "17:00",
-      "title": "Sarıyer vs Boluspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Brighton vs Arsenal",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Everton vs Ipswich Town",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Newcastle vs Hull City",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b4",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Çorum FK vs Alanyaspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "bm1",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Kocaelispor vs Gaziantep FK",
+      "title": "Erzurumspor vs Samsunspor",
       "type": "Trendyol Süper Lig",
       "channel_id": "b2",
       "hidden": false
     },
     {
+      "time": "17:00",
+      "title": "Finlandiya vs Yunanistan",
+      "type": "CEV Erkekler Avrupa Şampiyonası",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "17:00",
+      "title": "Gremio vs Palmeiras",
+      "type": "Brezilya Serie A",
+      "channel_id": "smarts",
+      "hidden": false
+    },
+    {
+      "time": "17:15",
+      "title": "Atletico Madrid vs Real Madrid",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "18:00",
+      "title": "Shakhtar Donetsk vs LNZ Cherkasy",
+      "type": "Ukrayna Premier Ligi",
+      "channel_id": "t1",
+      "hidden": false
+    },
+    {
+      "time": "18:15",
+      "title": "Nice vs Lille",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b4",
+      "hidden": false
+    },
+    {
+      "time": "18:30",
+      "title": "Fulham vs Manchester Utd",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b3",
+      "hidden": false
+    },
+    {
       "time": "19:00",
-      "title": "Roma vs Inter",
+      "title": "Juventus vs Atalanta",
       "type": "İtalya Serie A",
       "channel_id": "ss2",
       "hidden": false
     },
     {
       "time": "19:30",
-      "title": "Nottingham Forest vs Coventry",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
+      "title": "Villarreal vs Levante",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Trabzonspor vs Galatasaray",
+      "title": "Amedspor vs Beşiktaş",
       "type": "Trendyol Süper Lig [Günün Maçı]",
       "channel_id": "zirve",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Esenler Erokspor vs Karagümrük",
+      "title": "Antalyaspor vs Vanspor",
       "type": "Trendyol 1. Lig",
       "channel_id": "bm2",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Batman Petrol vs Bursaspor",
+      "title": "Mardin 1969 vs Kayserispor",
       "type": "Trendyol 1. Lig",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "İstanbul Başakşehir vs Gençlerbirliği",
+      "title": "Göztepe vs Ç.Rizespor",
       "type": "Trendyol Süper Lig",
       "channel_id": "b2",
       "hidden": false
     },
     {
+      "time": "20:00",
+      "title": "Santa Clara vs Braga",
+      "type": "Portekiz Liga NOS",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Joventut Badalona vs Barcelona",
+      "type": "İspanya Basketbol Süper Kupa",
+      "channel_id": "sms2",
+      "hidden": false
+    },
+    {
       "time": "21:45",
-      "title": "Venezia vs Lazio",
+      "title": "Milan vs Lecce",
       "type": "İtalya Serie A",
       "channel_id": "ss2",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Angers vs Troyes",
-      "type": "Fransa Ligue 1",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Lyon vs Rennes",
+      "title": "Marsilya vs PSG",
       "type": "Fransa Ligue 1",
       "channel_id": "b3",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Toulouse vs Le Havre",
-      "type": "Fransa Ligue 1",
-      "channel_id": "b4",
-      "hidden": false
-    },
-    {
       "time": "22:00",
-      "title": "Sevilla vs Barcelona",
+      "title": "Valencia vs Real Sociedad",
       "type": "İspanya La Liga",
       "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "22:30",
-      "title": "Sporting Lisbon vs Arouca",
+      "title": "Porto vs Benfica",
       "type": "Portekiz Liga NOS",
-      "channel_id": "b2",
+      "channel_id": "b4",
       "hidden": false
     }
   ]
