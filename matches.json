@@ -1,14 +1,28 @@
 {
-  "updated_at": "2026-09-21T18:42:38Z",
-  "updated_at_display": "21.09.2026 18:42",
+  "updated_at": "2026-09-21T22:17:01Z",
+  "updated_at_display": "21.09.2026 22:17",
   "source": "https://fixbettv84.com/",
-  "count": 1,
+  "count": 3,
   "matches": [
     {
-      "time": "22:00",
-      "title": "Slovenya vs Sırbistan",
+      "time": "16:00",
+      "title": "Fransa vs Romanya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
       "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Polonya vs Almanya",
+      "type": "CEV Erkekler Avrupa Şampiyonası",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Fenerbahçe Tarfin vs Beşiktaş",
+      "type": "Cumhurbaşkanlığı Kupası",
+      "channel_id": "trt1",
       "hidden": false
     }
   ]
