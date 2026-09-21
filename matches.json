@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-21T06:21:12Z",
-  "updated_at_display": "21.09.2026 06:21",
+  "updated_at": "2026-09-21T13:10:13Z",
+  "updated_at_display": "21.09.2026 13:10",
   "source": "https://fixbettv84.com/",
   "count": 1,
   "matches": [
     {
-      "time": "01:30",
-      "title": "Atletico PR vs Bahia",
-      "type": "Brezilya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "22:00",
+      "title": "Slovenya vs Sırbistan",
+      "type": "CEV Erkekler Avrupa Şampiyonası",
+      "channel_id": "trtspor2",
+      "hidden": false
     }
   ]
 }
