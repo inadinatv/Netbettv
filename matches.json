@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-21T01:05:53Z",
-  "updated_at_display": "21.09.2026 01:05",
+  "updated_at": "2026-09-21T06:21:12Z",
+  "updated_at_display": "21.09.2026 06:21",
   "source": "https://fixbettv84.com/",
   "count": 1,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "01:30",
       "title": "Atletico PR vs Bahia",
       "type": "Brezilya Serie A",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     }
   ]
 }
