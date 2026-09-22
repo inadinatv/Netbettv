@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-22T19:49:36Z",
-  "updated_at_display": "22.09.2026 19:49",
+  "updated_at": "2026-09-22T22:45:31Z",
+  "updated_at_display": "22.09.2026 22:45",
   "source": "https://fixbettv84.com/",
   "count": 3,
   "matches": [
@@ -8,15 +8,15 @@
       "time": "16:00",
       "title": "Fransa vs Romanya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Polonya vs Almanya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "20:00",
