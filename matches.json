@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-24T11:13:53Z",
-  "updated_at_display": "24.09.2026 11:13",
+  "updated_at": "2026-09-24T15:50:10Z",
+  "updated_at_display": "24.09.2026 15:50",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "13:30",
       "title": "T.Prozorova vs A.Eala",
       "type": "WTA Singapur",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
