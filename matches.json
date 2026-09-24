@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-24T19:49:42Z",
-  "updated_at_display": "24.09.2026 19:49",
+  "updated_at": "2026-09-24T23:02:48Z",
+  "updated_at_display": "24.09.2026 23:02",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "13:30",
       "title": "T.Prozorova vs A.Eala",
       "type": "WTA Singapur",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Dubai Basket vs Real Madrid",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Hapoel Tel Aviv vs Bayern Münih",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "21:15",
