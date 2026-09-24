@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-24T15:50:10Z",
-  "updated_at_display": "24.09.2026 15:50",
+  "updated_at": "2026-09-24T19:49:42Z",
+  "updated_at_display": "24.09.2026 19:49",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -15,15 +15,15 @@
       "time": "19:00",
       "title": "Dubai Basket vs Real Madrid",
       "type": "Euroleague",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Hapoel Tel Aviv vs Bayern Münih",
       "type": "Euroleague",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:15",
