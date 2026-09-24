@@ -1,35 +1,63 @@
 {
-  "updated_at": "2026-09-23T22:44:18Z",
-  "updated_at_display": "23.09.2026 22:44",
+  "updated_at": "2026-09-24T00:55:07Z",
+  "updated_at_display": "24.09.2026 00:55",
   "source": "https://fixbettv84.com/",
-  "count": 4,
+  "count": 8,
   "matches": [
     {
       "time": "13:30",
-      "title": "M.Andreeva vs A.Sasnovich",
+      "title": "T.Prozorova vs A.Eala",
       "type": "WTA Singapur",
       "channel_id": "bm1",
       "hidden": false
     },
     {
-      "time": "17:00",
-      "title": "Belçika vs Slovenya",
-      "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor",
+      "time": "19:00",
+      "title": "Dubai Basket vs Real Madrid",
+      "type": "Euroleague",
+      "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Barcelona vs Paris FC",
-      "type": "UEFA Kadınlar Şampiyonlar Ligi",
-      "channel_id": "trtspor",
+      "time": "19:00",
+      "title": "Hapoel Tel Aviv vs Bayern Münih",
+      "type": "Euroleague",
+      "channel_id": "ss2",
       "hidden": false
     },
     {
-      "time": "22:05",
-      "title": "İtalya vs Finlandiya",
-      "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor2",
+      "time": "21:15",
+      "title": "Panathinaikos vs Paris",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "21:30",
+      "title": "Barcelona vs Anadolu Efes",
+      "type": "Euroleague",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Hollanda vs Almanya",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Portekiz vs Galler",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Norveç vs Danimarka",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "ex1",
       "hidden": false
     }
   ]
