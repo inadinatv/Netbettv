@@ -1,68 +1,75 @@
 {
-  "updated_at": "2026-09-25T20:39:51Z",
-  "updated_at_display": "25.09.2026 20:39",
+  "updated_at": "2026-09-25T23:34:50Z",
+  "updated_at_display": "25.09.2026 23:34",
   "source": "https://fixbettv84.com/",
-  "count": 9,
+  "count": 10,
   "matches": [
     {
+      "time": "13:00",
+      "title": "Türk Telekom vs Karşıyaka",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "15:30",
+      "title": "Petkimspor vs Denizli Basket",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "Slovenya vs İskoçya",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
       "time": "18:00",
-      "title": "Slovenya vs Polonya",
+      "title": "Galatasaray MCT vs Çayırova Bld.",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "18:00",
+      "title": "Finlandiya vs Slovenya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Tofaş vs Bandırma Bordo",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Beşiktaş vs Valencia Basket",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:45",
-      "title": "Fenerbahçe Tarfin vs Virtus Bologna",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:45",
-      "title": "Türkiye vs Fransa",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "atv",
+      "title": "Bilbao Basket vs Manresa",
+      "type": "İspanya Basketbol Ligi",
+      "channel_id": "sms2",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "İsveç vs Romanya",
+      "title": "Çekya vs Hırvatistan",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "as",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "İtalya vs Belçika",
+      "title": "İngiltere vs İspanya",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "ex2",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Partizan vs Olimpia Milano",
-      "type": "Euroleague",
-      "channel_id": "ss",
+      "time": "22:00",
+      "title": "Barcelona vs Leyma Coruna",
+      "type": "İspanya Basketbol Ligi",
+      "channel_id": "smarts",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Finlandiya vs Fransa",
+      "title": "Fransa vs Polonya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
       "channel_id": "trtspor",
       "hidden": false
