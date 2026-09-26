@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-26T12:28:48Z",
-  "updated_at_display": "26.09.2026 12:28",
+  "updated_at": "2026-09-26T16:41:13Z",
+  "updated_at_display": "26.09.2026 16:41",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "13:00",
       "title": "Türk Telekom vs Karşıyaka",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
       "title": "Petkimspor vs Denizli Basket",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Slovenya vs İskoçya",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
