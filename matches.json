@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-26T16:41:13Z",
-  "updated_at_display": "26.09.2026 16:41",
+  "updated_at": "2026-09-26T19:25:21Z",
+  "updated_at_display": "26.09.2026 19:25",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -29,22 +29,22 @@
       "time": "18:00",
       "title": "Galatasaray MCT vs Çayırova Bld.",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Finlandiya vs Slovenya",
       "type": "CEV Erkekler Avrupa Şampiyonası",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Bilbao Basket vs Manresa",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
