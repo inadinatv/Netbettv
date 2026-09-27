@@ -1,70 +1,56 @@
 {
-  "updated_at": "2026-09-27T19:34:37Z",
-  "updated_at_display": "27.09.2026 19:34",
+  "updated_at": "2026-09-27T22:33:34Z",
+  "updated_at_display": "27.09.2026 22:33",
   "source": "https://fixbettv84.com/",
-  "count": 9,
+  "count": 7,
   "matches": [
     {
-      "time": "18:00",
-      "title": "Bahçeşehir Klj vs Fenerbahçe Tarfin",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:00",
-      "title": "Sırbistan vs Hollanda",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:00",
-      "title": "Nilüfer Bld. vs Beşiktaş",
+      "time": "16:00",
+      "title": "Manisa BB vs THY",
       "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Valencia Basket vs Lleida",
-      "type": "İspanya Basketbol Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Real Madrid vs Unicaja Malaga",
-      "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "20:30",
-      "title": "Anadolu Efes vs Beşiktaş",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Almanya vs Yunanistan",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Norveç vs Portekiz",
+      "title": "Gürcistan vs Ukrayna",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "as",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Real Oviedo vs Sporting Gijon",
+      "time": "19:00",
+      "title": "Körfez Basket vs Esenler Erokspor",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "İlbank vs Aras Kargo",
+      "type": "TVF Kadınlar Kupa Voley",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "21:30",
+      "title": "Leganes vs Castellon",
       "type": "İspanya La Liga 2",
       "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Türkiye vs İtalya",
+      "type": "UEFA Uluslar Ligi [Günün Maçı]",
+      "channel_id": "atv",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Belçika vs Fransa",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
       "hidden": false
     }
   ]
