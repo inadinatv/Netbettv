@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-27T11:32:11Z",
-  "updated_at_display": "27.09.2026 11:32",
+  "updated_at": "2026-09-27T15:47:57Z",
+  "updated_at_display": "27.09.2026 15:47",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "14:00",
       "title": "Iberostar Tenerife vs Zaragoza",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
