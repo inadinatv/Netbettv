@@ -1,57 +1,50 @@
 {
-  "updated_at": "2026-09-28T21:14:57Z",
-  "updated_at_display": "28.09.2026 21:14",
+  "updated_at": "2026-09-29T01:02:55Z",
+  "updated_at_display": "29.09.2026 01:02",
   "source": "https://fixbettv84.com/",
-  "count": 7,
+  "count": 6,
   "matches": [
     {
       "time": "16:00",
-      "title": "Manisa BB vs THY",
+      "title": "Kuzeyboru vs Manisa BB",
       "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Gürcistan vs Ukrayna",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:00",
-      "title": "Körfez Basket vs Esenler Erokspor",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:00",
-      "title": "İlbank vs Aras Kargo",
+      "title": "Beşiktaş vs Afyon Bld.",
       "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
-      "time": "21:30",
-      "title": "Leganes vs Castellon",
-      "type": "İspanya La Liga 2",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "20:00",
+      "title": "Anadolu Efes vs Real Madrid",
+      "type": "Euroleague",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Tofaş vs Chemnitz",
+      "type": "Eurocup",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "20:45",
+      "title": "Fenerbahçe Tarfin vs Bayern Münih",
+      "type": "Euroleague",
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Türkiye vs İtalya",
-      "type": "UEFA Uluslar Ligi [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:45",
-      "title": "Belçika vs Fransa",
+      "title": "Çekya vs İngiltere",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "as",
+      "hidden": false
     }
   ]
 }
