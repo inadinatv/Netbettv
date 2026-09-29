@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-29T13:47:29Z",
-  "updated_at_display": "29.09.2026 13:47",
+  "updated_at": "2026-09-29T19:08:27Z",
+  "updated_at_display": "29.09.2026 19:08",
   "source": "https://fixbettv84.com/",
   "count": 6,
   "matches": [
@@ -8,15 +8,15 @@
       "time": "16:00",
       "title": "Kuzeyboru vs Manisa BB",
       "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Afyon Bld.",
       "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
