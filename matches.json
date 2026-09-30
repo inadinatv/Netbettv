@@ -1,49 +1,63 @@
 {
-  "updated_at": "2026-09-30T19:54:54Z",
-  "updated_at_display": "30.09.2026 19:54",
+  "updated_at": "2026-09-30T23:31:16Z",
+  "updated_at_display": "30.09.2026 23:31",
   "source": "https://fixbettv84.com/",
-  "count": 6,
+  "count": 8,
   "matches": [
     {
-      "time": "09:00",
-      "title": "M.Inglis vs Zeynep Sönmez",
-      "type": "WTA Pekin",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
       "time": "19:00",
-      "title": "Bahçeşehir Klj vs BC Roma",
-      "type": "Eurocup",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:00",
-      "title": "Konyaspor vs Filistin",
-      "type": "Dostluk Maçı",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:05",
-      "title": "Maccabi Fox vs Beşiktaş",
+      "title": "Hapoel Tel Aviv vs Real Madrid",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:15",
-      "title": "Panathinaikos vs Asvel Villeurbanne",
+      "time": "19:00",
+      "title": "Trabzonspor vs Drogheda",
+      "type": "Hazırlık Maçı",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "21:00",
+      "title": "Kızılyıldız vs Anadolu Efes",
       "type": "Euroleague",
       "channel_id": "ss2",
       "hidden": false
     },
     {
+      "time": "21:30",
+      "title": "Virtus Bologna vs Olympiakos",
+      "type": "Euroleague",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Yunanistan vs Hollanda",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Danimarka vs Portekiz",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Almanya vs Sırbistan",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
       "time": "22:00",
-      "title": "Iberostar Tenerife vs Türk Telekom",
-      "type": "Eurocup",
-      "channel_id": "trtspor2",
+      "title": "Manchester City vs Real Madrid",
+      "type": "UEFA Kadınlar Şampiyonlar Ligi",
+      "channel_id": "trtspor",
       "hidden": false
     }
   ]
