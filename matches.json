@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-30T14:57:34Z",
-  "updated_at_display": "30.09.2026 14:57",
+  "updated_at": "2026-09-30T19:54:54Z",
+  "updated_at_display": "30.09.2026 19:54",
   "source": "https://fixbettv84.com/",
   "count": 6,
   "matches": [
@@ -15,15 +15,15 @@
       "time": "19:00",
       "title": "Bahçeşehir Klj vs BC Roma",
       "type": "Eurocup",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Konyaspor vs Filistin",
       "type": "Dostluk Maçı",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:05",
