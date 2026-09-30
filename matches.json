@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-09-29T22:57:38Z",
-  "updated_at_display": "29.09.2026 22:57",
+  "updated_at": "2026-09-30T01:56:51Z",
+  "updated_at_display": "30.09.2026 01:56",
   "source": "https://fixbettv84.com/",
   "count": 6,
   "matches": [
     {
-      "time": "16:00",
-      "title": "Kuzeyboru vs Manisa BB",
-      "type": "TVF Kadınlar Kupa Voley",
-      "channel_id": "trtspor2",
+      "time": "09:00",
+      "title": "M.Inglis vs Zeynep Sönmez",
+      "type": "WTA Pekin",
+      "channel_id": "bm1",
       "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Beşiktaş vs Afyon Bld.",
-      "type": "TVF Kadınlar Kupa Voley",
+      "title": "Bahçeşehir Klj vs BC Roma",
+      "type": "Eurocup",
       "channel_id": "trtspor2",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Anadolu Efes vs Real Madrid",
-      "type": "Euroleague",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Tofaş vs Chemnitz",
-      "type": "Eurocup",
+      "title": "Konyaspor vs Filistin",
+      "type": "Dostluk Maçı",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "20:45",
-      "title": "Fenerbahçe Tarfin vs Bayern Münih",
+      "time": "21:05",
+      "title": "Maccabi Fox vs Beşiktaş",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Çekya vs İngiltere",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "as",
+      "time": "21:15",
+      "title": "Panathinaikos vs Asvel Villeurbanne",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Iberostar Tenerife vs Türk Telekom",
+      "type": "Eurocup",
+      "channel_id": "trtspor2",
       "hidden": false
     }
   ]
