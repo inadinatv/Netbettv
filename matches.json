@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-01T16:38:36Z",
-  "updated_at_display": "01.10.2026 16:38",
+  "updated_at": "2026-10-01T21:23:22Z",
+  "updated_at_display": "01.10.2026 21:23",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -8,29 +8,29 @@
       "time": "19:00",
       "title": "Hapoel Tel Aviv vs Real Madrid",
       "type": "Euroleague",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Trabzonspor vs Drogheda",
       "type": "Hazırlık Maçı",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:00",
       "title": "Kızılyıldız vs Anadolu Efes",
       "type": "Euroleague",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:30",
       "title": "Virtus Bologna vs Olympiakos",
       "type": "Euroleague",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
