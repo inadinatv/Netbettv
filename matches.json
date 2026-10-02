@@ -1,63 +1,42 @@
 {
-  "updated_at": "2026-10-01T21:23:22Z",
-  "updated_at_display": "01.10.2026 21:23",
+  "updated_at": "2026-10-02T01:01:19Z",
+  "updated_at_display": "02.10.2026 01:01",
   "source": "https://fixbettv84.com/",
-  "count": 8,
+  "count": 5,
   "matches": [
     {
       "time": "19:00",
-      "title": "Hapoel Tel Aviv vs Real Madrid",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Karşıyaka vs Galatasaray MCT",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Trabzonspor vs Drogheda",
-      "type": "Hazırlık Maçı",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "20:00",
+      "title": "Beşiktaş vs Barcelona",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
-      "time": "21:00",
-      "title": "Kızılyıldız vs Anadolu Efes",
+      "time": "20:45",
+      "title": "Fenerbahçe Tarfin vs Dubai Basket",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "21:30",
-      "title": "Virtus Bologna vs Olympiakos",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Yunanistan vs Hollanda",
+      "title": "Belçika vs Türkiye",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "atv",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Fransa vs İtalya",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "as",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Danimarka vs Portekiz",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Almanya vs Sırbistan",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Manchester City vs Real Madrid",
-      "type": "UEFA Kadınlar Şampiyonlar Ligi",
-      "channel_id": "trtspor",
       "hidden": false
     }
   ]
