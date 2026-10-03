@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T07:41:17Z",
-  "updated_at_display": "03.10.2026 07:41",
+  "updated_at": "2026-10-03T12:44:55Z",
+  "updated_at_display": "03.10.2026 12:44",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "13:00",
       "title": "Denizli Basket vs Tofaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:00",
