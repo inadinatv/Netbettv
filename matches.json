@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T12:44:55Z",
-  "updated_at_display": "03.10.2026 12:44",
+  "updated_at": "2026-10-03T16:46:36Z",
+  "updated_at_display": "03.10.2026 16:46",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
@@ -15,22 +15,22 @@
       "time": "14:00",
       "title": "Vakıfbank vs Beşiktaş",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
       "title": "Bursaspor vs Türk Telekom",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Finlandiya vs Arnavutluk",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
