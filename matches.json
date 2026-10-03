@@ -1,40 +1,82 @@
 {
-  "updated_at": "2026-10-02T22:57:48Z",
-  "updated_at_display": "02.10.2026 22:57",
+  "updated_at": "2026-10-03T01:51:20Z",
+  "updated_at_display": "03.10.2026 01:51",
   "source": "https://fixbettv84.com/",
-  "count": 5,
+  "count": 11,
   "matches": [
     {
-      "time": "19:00",
-      "title": "Karşıyaka vs Galatasaray MCT",
+      "time": "13:00",
+      "title": "Denizli Basket vs Tofaş",
       "type": "Basketbol Süper Ligi",
       "channel_id": "b5",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Beşiktaş vs Barcelona",
-      "type": "Euroleague",
-      "channel_id": "ss2",
+      "time": "14:00",
+      "title": "Vakıfbank vs Beşiktaş",
+      "type": "TVF Sultanlar Ligi",
+      "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "20:45",
-      "title": "Fenerbahçe Tarfin vs Dubai Basket",
-      "type": "Euroleague",
+      "time": "15:30",
+      "title": "Bursaspor vs Türk Telekom",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "Finlandiya vs Arnavutluk",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "18:00",
+      "title": "Esenler Erokspor vs Petkimspor",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Turan vs Fenerbahçe",
+      "type": "Hazırlık Maçı",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Hırvatistan vs İngiltere",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Gençlerbirliği vs Keçiörengücü",
+      "type": "TSYD Ankara Futbol Turnuvasi",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "19:30",
+      "title": "Cadiz vs Leganes",
+      "type": "İspanya La Liga 2",
       "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Belçika vs Türkiye",
+      "title": "İspanya vs Çekya",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "atv",
+      "channel_id": "ex2",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Fransa vs İtalya",
+      "title": "İsviçre vs Slovenya",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "as",
       "hidden": false
