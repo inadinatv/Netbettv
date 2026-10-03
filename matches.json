@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T16:46:36Z",
-  "updated_at_display": "03.10.2026 16:46",
+  "updated_at": "2026-10-03T19:41:08Z",
+  "updated_at_display": "03.10.2026 19:41",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
@@ -36,36 +36,36 @@
       "time": "18:00",
       "title": "Esenler Erokspor vs Petkimspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Turan vs Fenerbahçe",
       "type": "Hazırlık Maçı",
-      "channel_id": "ex7",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Hırvatistan vs İngiltere",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Gençlerbirliği vs Keçiörengücü",
       "type": "TSYD Ankara Futbol Turnuvasi",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Cadiz vs Leganes",
       "type": "İspanya La Liga 2",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
