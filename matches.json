@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-04T13:44:40Z",
-  "updated_at_display": "04.10.2026 13:44",
+  "updated_at": "2026-10-04T17:51:55Z",
+  "updated_at_display": "04.10.2026 17:51",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
@@ -22,8 +22,8 @@
       "time": "15:30",
       "title": "Fenerbahçe Tarfin vs Körfez Basket",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
