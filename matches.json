@@ -1,84 +1,84 @@
 {
-  "updated_at": "2026-10-03T22:26:34Z",
-  "updated_at_display": "03.10.2026 22:26",
+  "updated_at": "2026-10-04T01:54:41Z",
+  "updated_at_display": "04.10.2026 01:54",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
     {
       "time": "13:00",
-      "title": "Denizli Basket vs Tofaş",
+      "title": "Çayırova Bld. vs Bahçeşehir Klj",
       "type": "Basketbol Süper Ligi",
       "channel_id": "b5",
       "hidden": false
     },
     {
-      "time": "14:00",
-      "title": "Vakıfbank vs Beşiktaş",
+      "time": "13:30",
+      "title": "Obradoiro CAB vs Real Madrid",
+      "type": "İspanya Basketbol Ligi",
+      "channel_id": "smarts",
+      "hidden": false
+    },
+    {
+      "time": "15:30",
+      "title": "Fenerbahçe Tarfin vs Körfez Basket",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "18:00",
+      "title": "Bandırma Bordo vs Anadolu Efes",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Kosova vs Avusturya",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "THY vs Galatasaray Daikin",
       "type": "TVF Sultanlar Ligi",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "15:30",
-      "title": "Bursaspor vs Türk Telekom",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "16:00",
-      "title": "Finlandiya vs Arnavutluk",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "18:00",
-      "title": "Esenler Erokspor vs Petkimspor",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Turan vs Fenerbahçe",
-      "type": "Hazırlık Maçı",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Hırvatistan vs İngiltere",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "as",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Gençlerbirliği vs Keçiörengücü",
-      "type": "TSYD Ankara Futbol Turnuvasi",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
       "time": "19:30",
-      "title": "Cadiz vs Leganes",
+      "title": "Las Palmas vs Valladolid",
       "type": "İspanya La Liga 2",
       "channel_id": "ss",
       "hidden": false
     },
     {
+      "time": "20:00",
+      "title": "Murcia vs Barcelona",
+      "type": "İspanya Basketbol Ligi",
+      "channel_id": "smarts",
+      "hidden": false
+    },
+    {
       "time": "21:45",
-      "title": "İspanya vs Çekya",
+      "title": "Hollanda vs Sırbistan",
+      "type": "UEFA Uluslar Ligi",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Portekiz vs Norveç",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "ex2",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "İsviçre vs Slovenya",
-      "type": "UEFA Uluslar Ligi",
-      "channel_id": "as",
+      "time": "22:00",
+      "title": "Girona vs Mallorca",
+      "type": "İspanya La Liga 2",
+      "channel_id": "ss",
       "hidden": false
     }
   ]
