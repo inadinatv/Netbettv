@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-05T11:45:41Z",
-  "updated_at_display": "05.10.2026 11:45",
+  "updated_at": "2026-10-05T20:17:26Z",
+  "updated_at_display": "05.10.2026 20:17",
   "source": "https://fixbettv84.com/",
   "count": 5,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "17:00",
       "title": "Nilüfer Bld. vs İstanbul Gençlik",
       "type": "Hentbol Erkekler Süper Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Trabzonspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Şanlıurfaspor vs Gebzespor",
       "type": "TFF 2. Lig",
-      "channel_id": "t1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
