@@ -1,42 +1,77 @@
 {
-  "updated_at": "2026-10-05T20:17:26Z",
-  "updated_at_display": "05.10.2026 20:17",
+  "updated_at": "2026-10-06T01:22:25Z",
+  "updated_at_display": "06.10.2026 01:22",
   "source": "https://fixbettv84.com/",
-  "count": 5,
+  "count": 10,
   "matches": [
     {
+      "time": "11:30",
+      "title": "İngiltere vs Türkiye",
+      "type": "Görme Engelliler Avrupa Şampiyonası",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "14:00",
+      "title": "Kırklarelispor vs Bayburtspor",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
       "time": "17:00",
-      "title": "Nilüfer Bld. vs İstanbul Gençlik",
-      "type": "Hentbol Erkekler Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Sakaryaspor vs Arıt Kayadibi",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "18:00",
+      "title": "Vakıfbank vs Eczacıbaşı",
+      "type": "TVF Axa Kadınlar Şampiyonlar Kupası",
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Beşiktaş vs Trabzonspor",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Karşıyaka vs Afyonkarahisarspor",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Şanlıurfaspor vs Gebzespor",
-      "type": "TFF 2. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "BC Cibona vs Galatasaray MCT",
+      "type": "FIBA Şampiyonlar Ligi",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "19:30",
+      "title": "Türk Telekom vs Maxima Roma",
+      "type": "Eurocup",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "20:30",
+      "title": "JL Bourg vs Tofaş",
+      "type": "Eurocup",
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Fransa vs Belçika",
+      "title": "İngiltere vs Çekya",
       "type": "UEFA Uluslar Ligi",
       "channel_id": "as",
       "hidden": false
     },
     {
       "time": "21:45",
-      "title": "İtalya vs Türkiye",
+      "title": "Hırvatistan vs İspanya",
       "type": "UEFA Uluslar Ligi",
-      "channel_id": "atv",
+      "channel_id": "ex1",
       "hidden": false
     }
   ]
