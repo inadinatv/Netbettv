@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-07T16:47:53Z",
-  "updated_at_display": "07.10.2026 16:47",
+  "updated_at": "2026-10-07T21:47:34Z",
+  "updated_at_display": "07.10.2026 21:47",
   "source": "https://fixbettv84.com/",
   "count": 8,
   "matches": [
@@ -36,22 +36,22 @@
       "time": "19:00",
       "title": "Balkan Botevgrad vs Bahçeşehir Klj",
       "type": "Eurocup",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "ÇBK Mersin vs Fenerbahçe Tarfin",
       "type": "FIBA Kadınlar Süper Kupa",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Eskişehirspor vs Akşehirspor",
       "type": "Ziraat Türkiye Kupası",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
