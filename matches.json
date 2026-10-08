@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-08T08:00:29Z",
-  "updated_at_display": "08.10.2026 08:00",
+  "updated_at": "2026-10-08T15:37:27Z",
+  "updated_at_display": "08.10.2026 15:37",
   "source": "https://fixbettv84.com/",
   "count": 9,
   "matches": [
@@ -8,29 +8,29 @@
       "time": "10:00",
       "title": "K.Muchova vs N.Bartunkova",
       "type": "WTA Pekin",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "L.Van Assche vs Y.Bu",
       "type": "ATP Shanghai",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:00",
       "title": "Erciyes 38 FK vs Kahta 02",
       "type": "Ziraat Türkiye Kupası",
-      "channel_id": "as",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "TFL Altekma vs Gaziantep Gençlik",
       "type": "TVF Erkekler Kupa Volley",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
