@@ -1,63 +1,70 @@
 {
-  "updated_at": "2026-10-07T21:47:34Z",
-  "updated_at_display": "07.10.2026 21:47",
+  "updated_at": "2026-10-08T01:35:38Z",
+  "updated_at_display": "08.10.2026 01:35",
   "source": "https://fixbettv84.com/",
-  "count": 8,
+  "count": 9,
   "matches": [
     {
-      "time": "02:00",
-      "title": "Arjantin vs Benin",
-      "type": "Hazırlık Maçı",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "14:00",
-      "title": "Zonguldakspor vs Düzcespor",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "14:00",
-      "title": "A.Charaeva vs Q.Zheng",
+      "time": "10:00",
+      "title": "K.Muchova vs N.Bartunkova",
       "type": "WTA Pekin",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "13:00",
+      "title": "L.Van Assche vs Y.Bu",
+      "type": "ATP Shanghai",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "14:00",
+      "title": "Erciyes 38 FK vs Kahta 02",
+      "type": "Ziraat Türkiye Kupası",
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "16:00",
+      "title": "TFL Altekma vs Gaziantep Gençlik",
+      "type": "TVF Erkekler Kupa Volley",
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "17:00",
-      "title": "Yeşilyurt Bld. vs Gelecek Siirt 56 SK",
+      "title": "Denizli İdmanyurdu vs Serik Bld.",
       "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "as",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Balkan Botevgrad vs Bahçeşehir Klj",
-      "type": "Eurocup",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:30",
-      "title": "ÇBK Mersin vs Fenerbahçe Tarfin",
-      "type": "FIBA Kadınlar Süper Kupa",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Dubai Basket vs Kızılyıldız",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Eskişehirspor vs Akşehirspor",
+      "title": "Orduspor vs Karadeniz Ereğli",
       "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "as",
+      "hidden": false
+    },
+    {
+      "time": "21:15",
+      "title": "Panathinaikos vs Fenerbahçe Tarfin",
+      "type": "Euroleague",
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Paris vs Asvel Villeurbanne",
+      "title": "Real Madrid vs Partizan",
       "type": "Euroleague",
-      "channel_id": "ss",
+      "channel_id": "ss2",
       "hidden": false
     }
   ]
