@@ -1,70 +1,91 @@
 {
-  "updated_at": "2026-10-08T20:50:03Z",
-  "updated_at_display": "08.10.2026 20:50",
+  "updated_at": "2026-10-09T01:00:41Z",
+  "updated_at_display": "09.10.2026 01:00",
   "source": "https://fixbettv84.com/",
-  "count": 9,
+  "count": 12,
   "matches": [
     {
       "time": "10:00",
-      "title": "K.Muchova vs N.Bartunkova",
+      "title": "Q.Zheng vs E.Svitolina",
       "type": "WTA Pekin",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
-      "time": "13:00",
-      "title": "L.Van Assche vs Y.Bu",
-      "type": "ATP Shanghai",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "14:00",
-      "title": "Erciyes 38 FK vs Kahta 02",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "TFL Altekma vs Gaziantep Gençlik",
-      "type": "TVF Erkekler Kupa Volley",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "15:30",
+      "title": "Veres Rivne vs Shakhtar Donetsk",
+      "type": "Ukrayna Premier Ligi",
+      "channel_id": "t1",
+      "hidden": false
     },
     {
       "time": "17:00",
-      "title": "Denizli İdmanyurdu vs Serik Bld.",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Sivasspor vs Pendikspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "17:00",
+      "title": "Bodrumspor vs Keçiörengücü",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "b2",
+      "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Dubai Basket vs Kızılyıldız",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Sungurlu Bld. vs Sultanbeyli Bld.",
+      "type": "TVF Erkekler Kupa Volley",
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Orduspor vs Karadeniz Ereğli",
-      "type": "Ziraat Türkiye Kupası",
-      "channel_id": "yayinss",
-      "hidden": true
+      "title": "Galatasaray vs Kasımpaşa",
+      "type": "Trendyol Süper Lig [Günün Maçı]",
+      "channel_id": "zirve",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Ümraniyespor vs Sarıyer",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "b2",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Vanspor vs Bandırmaspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "21:15",
-      "title": "Panathinaikos vs Fenerbahçe Tarfin",
+      "title": "Olympiakos vs Anadolu Efes",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "21:30",
+      "title": "Baskonia vs Beşiktaş",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "21:45",
-      "title": "Real Madrid vs Partizan",
-      "type": "Euroleague",
-      "channel_id": "ss2",
+      "title": "Lens vs Lyon",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b4",
+      "hidden": false
+    },
+    {
+      "time": "22:15",
+      "title": "Braga vs Sporting Lisbon",
+      "type": "Portekiz Liga NOS",
+      "channel_id": "b3",
       "hidden": false
     }
   ]
