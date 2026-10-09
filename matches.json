@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-09T14:30:51Z",
-  "updated_at_display": "09.10.2026 14:30",
+  "updated_at": "2026-10-09T19:47:44Z",
+  "updated_at_display": "09.10.2026 19:47",
   "source": "https://fixbettv84.com/",
   "count": 11,
   "matches": [
@@ -8,50 +8,50 @@
       "time": "15:30",
       "title": "Veres Rivne vs Shakhtar Donetsk",
       "type": "Ukrayna Premier Ligi",
-      "channel_id": "t1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Sivasspor vs Pendikspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Bodrumspor vs Keçiörengücü",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Sungurlu Bld. vs Sultanbeyli Bld.",
       "type": "TVF Erkekler Kupa Volley",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Galatasaray vs Kasımpaşa",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Ümraniyespor vs Sarıyer",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Vanspor vs Bandırmaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:15",
