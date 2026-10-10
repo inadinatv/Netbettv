@@ -1,85 +1,36 @@
 {
-  "updated_at": "2026-10-10T10:49:09Z",
-  "updated_at_display": "10.10.2026 10:49",
+  "updated_at": "2026-10-10T16:07:00Z",
+  "updated_at_display": "10.10.2026 16:07",
   "source": "https://fixbettv84.com/",
-  "count": 30,
+  "count": 23,
   "matches": [
-    {
-      "time": "13:00",
-      "title": "Bahçeşehir Klj vs Karşıyaka",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "13:00",
-      "title": "Gaziantep Gençlik vs Onikişubat Belediyespor",
-      "type": "TVF Erkekler Kupa Volley",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
-    {
-      "time": "13:30",
-      "title": "Gençlerbirliği vs Amedspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "13:30",
-      "title": "Boluspor vs Antalyaspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "14:30",
-      "title": "Arsenal vs Leeds United",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "15:00",
-      "title": "Nantes vs Reims",
-      "type": "Fransa Ligue 2",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "15:30",
-      "title": "Petkimspor vs Körfez Basket",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
     {
       "time": "16:00",
       "title": "Genoa vs Fiorentina",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Alanyaspor vs Erzurumspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Samsunspor vs Trabzonspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Iğdırspor vs Batman Petrol",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
