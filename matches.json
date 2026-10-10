@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-10T20:04:15Z",
-  "updated_at_display": "10.10.2026 20:04",
+  "updated_at": "2026-10-10T23:33:51Z",
+  "updated_at_display": "10.10.2026 23:33",
   "source": "https://fixbettv84.com/",
   "count": 9,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "19:30",
       "title": "Manchester Utd vs Tottenham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b3",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Barcelona vs Getafe",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Maritimo vs Porto",
       "type": "Portekiz Liga NOS",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm2",
+      "hidden": false
     },
     {
       "time": "20:30",
