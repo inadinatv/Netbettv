@@ -1,127 +1,29 @@
 {
-  "updated_at": "2026-10-10T16:07:00Z",
-  "updated_at_display": "10.10.2026 16:07",
+  "updated_at": "2026-10-10T20:04:15Z",
+  "updated_at_display": "10.10.2026 20:04",
   "source": "https://fixbettv84.com/",
-  "count": 23,
+  "count": 9,
   "matches": [
-    {
-      "time": "16:00",
-      "title": "Genoa vs Fiorentina",
-      "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Alanyaspor vs Erzurumspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Samsunspor vs Trabzonspor",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Iğdırspor vs Batman Petrol",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "17:00",
-      "title": "Aston Villa vs Brentford",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "bm1",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Chelsea vs Bournemouth",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Sunderland vs Brighton",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "bm2",
-      "hidden": false
-    },
-    {
-      "time": "17:15",
-      "title": "Alaves vs Atletico Madrid",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "18:00",
-      "title": "Tofaş vs Esenler Erokspor",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "18:30",
-      "title": "Beykoz Bld. vs Beşiktaş",
-      "type": "Hentbol Erkekler Süper Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Ç.Rizespor vs Fenerbahçe",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Inter vs Parma",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Kayserispor vs Manisa FK",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "İstanbulspor vs Esenler Erokspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
     {
       "time": "19:30",
       "title": "Manchester Utd vs Tottenham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Barcelona vs Getafe",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Maritimo vs Porto",
       "type": "Portekiz Liga NOS",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:30",
