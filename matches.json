@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-11T19:40:24Z",
-  "updated_at_display": "11.10.2026 19:40",
+  "updated_at": "2026-10-11T23:11:07Z",
+  "updated_at_display": "11.10.2026 23:11",
   "source": "https://fixbettv84.com/",
   "count": 17,
   "matches": [
@@ -8,71 +8,71 @@
       "time": "17:15",
       "title": "Real Sociedad vs Deportivo",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "18:00",
       "title": "Türk Telekom vs Beşiktaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b5",
+      "hidden": false
     },
     {
       "time": "18:00",
       "title": "Baskonia vs Joventut Badalona",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "18:15",
       "title": "Rennes vs Auxerre",
       "type": "Fransa Ligue 1",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "18:30",
       "title": "Liverpool vs Manchester City",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b3",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Kocaelispor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Sassuolo vs Milan",
       "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Bursaspor vs Mardin 1969",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Fenerbahçe Medicana",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Real Betis vs Osasuna",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "20:00",
