@@ -1,127 +1,78 @@
 {
-  "updated_at": "2026-10-11T15:30:06Z",
-  "updated_at_display": "11.10.2026 15:30",
+  "updated_at": "2026-10-11T19:40:24Z",
+  "updated_at_display": "11.10.2026 19:40",
   "source": "https://fixbettv84.com/",
-  "count": 24,
+  "count": 17,
   "matches": [
-    {
-      "time": "15:30",
-      "title": "Anadolu Efes vs Denizli Basket",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Crystal Palace vs Nottingham Forest",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Hull City vs Everton",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Lazio vs Monza",
-      "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Gaziantep FK vs Çorum FK",
-      "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Karagümrük vs Muğlaspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "16:00",
-      "title": "Eczacıbaşı vs Aras Kargo",
-      "type": "TVF Sultanlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
     {
       "time": "17:15",
       "title": "Real Sociedad vs Deportivo",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Türk Telekom vs Beşiktaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Baskonia vs Joventut Badalona",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:15",
       "title": "Rennes vs Auxerre",
       "type": "Fransa Ligue 1",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:30",
       "title": "Liverpool vs Manchester City",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Kocaelispor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Sassuolo vs Milan",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Bursaspor vs Mardin 1969",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Beşiktaş vs Fenerbahçe Medicana",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Real Betis vs Osasuna",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
