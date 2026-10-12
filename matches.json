@@ -1,126 +1,84 @@
 {
-  "updated_at": "2026-10-11T23:11:07Z",
-  "updated_at_display": "11.10.2026 23:11",
+  "updated_at": "2026-10-12T02:25:09Z",
+  "updated_at_display": "12.10.2026 02:25",
   "source": "https://fixbettv84.com/",
-  "count": 17,
+  "count": 11,
   "matches": [
     {
-      "time": "17:15",
-      "title": "Real Sociedad vs Deportivo",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
+      "time": "16:45",
+      "title": "Pakhtakor vs Al Qadsiah",
+      "type": "AFC Şampiyonlar Ligi",
+      "channel_id": "smarts",
       "hidden": false
     },
     {
-      "time": "18:00",
-      "title": "Türk Telekom vs Beşiktaş",
+      "time": "19:00",
+      "title": "Al Wasl vs Al Ahli",
+      "type": "AFC Şampiyonlar Ligi",
+      "channel_id": "sms2",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Galatasaray MCT vs Bursaspor",
       "type": "Basketbol Süper Ligi",
       "channel_id": "b5",
       "hidden": false
     },
     {
-      "time": "18:00",
-      "title": "Baskonia vs Joventut Badalona",
-      "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "18:15",
-      "title": "Rennes vs Auxerre",
-      "type": "Fransa Ligue 1",
-      "channel_id": "bm1",
-      "hidden": false
-    },
-    {
-      "time": "18:30",
-      "title": "Liverpool vs Manchester City",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Beşiktaş vs Kocaelispor",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Sassuolo vs Milan",
+      "time": "19:30",
+      "title": "Atalanta vs Venezia",
       "type": "İtalya Serie A",
       "channel_id": "ss2",
       "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Bursaspor vs Mardin 1969",
-      "type": "Trendyol 1. Lig",
+      "time": "19:30",
+      "title": "Ziraat Bankkart vs Galatasaray",
+      "type": "TVF Axa Erkekler Şampiyonlar Kupası",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Beşiktaş vs Fenerbahçe Medicana",
-      "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
-    {
-      "time": "19:30",
-      "title": "Real Betis vs Osasuna",
-      "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
-    },
-    {
       "time": "20:00",
-      "title": "Barcelona vs Valencia Basket",
-      "type": "İspanya Basketbol Ligi",
+      "title": "Eyüpspor vs Göztepe",
+      "type": "Trendyol Süper Lig",
+      "channel_id": "zirve",
+      "hidden": false
+    },
+    {
+      "time": "21:15",
+      "title": "Al Gharafa vs Esteghlal FC",
+      "type": "AFC Şampiyonlar Ligi",
+      "channel_id": "sms2",
+      "hidden": false
+    },
+    {
+      "time": "21:15",
+      "title": "Al Nassr Riyadh vs Neftchi Fargona",
+      "type": "AFC Şampiyonlar Ligi",
       "channel_id": "smarts",
       "hidden": false
     },
     {
-      "time": "20:00",
-      "title": "Benfica vs Vitoria",
-      "type": "Portekiz Liga NOS",
-      "channel_id": "b4",
-      "hidden": false
-    },
-    {
       "time": "21:45",
-      "title": "Troyes vs Marsilya",
-      "type": "Fransa Ligue 1",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "21:45",
-      "title": "Cagliari vs Juventus",
+      "title": "Torino vs Udinese",
       "type": "İtalya Serie A",
       "channel_id": "ss2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Racing Santander vs Valencia",
+      "title": "Coventry vs Newcastle",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Levante vs Sevilla",
       "type": "İspanya La Liga",
       "channel_id": "ss",
-      "hidden": false
-    },
-    {
-      "time": "23:00",
-      "title": "Rosario Central vs Independiente",
-      "type": "Arjantin Primera Division",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "23:30",
-      "title": "Palmeiras vs Corinthians",
-      "type": "Brezilya Serie A",
-      "channel_id": "sms2",
       "hidden": false
     }
   ]
