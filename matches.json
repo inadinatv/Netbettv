@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-13T08:28:17Z",
-  "updated_at_display": "13.10.2026 08:28",
+  "updated_at": "2026-10-13T16:20:45Z",
+  "updated_at_display": "13.10.2026 16:20",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
@@ -8,50 +8,50 @@
       "time": "10:45",
       "title": "Newcastle Jets vs Gamba Osaka",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "Kyoto vs Ratchaburi",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "Shanghai Port vs Daejeon Citizen",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:30",
       "title": "Bandırmaspor vs Sivasspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:15",
       "title": "Buriram vs Beijing Guoan",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:15",
       "title": "Cong An Ha Noi vs Kashima Antlers",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Sarıyer vs Bodrumspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
