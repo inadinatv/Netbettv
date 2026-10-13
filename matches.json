@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-13T16:20:45Z",
-  "updated_at_display": "13.10.2026 16:20",
+  "updated_at": "2026-10-13T21:25:25Z",
+  "updated_at_display": "13.10.2026 21:25",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
@@ -57,36 +57,36 @@
       "time": "19:00",
       "title": "Bahçeşehir Klj vs Manresa",
       "type": "Eurocup",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Al Sadd vs Al Hilal",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Al Seeb vs Al Hussein",
       "type": "AFC Şampiyonlar Ligi 2",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Lens vs Sporting Lisbon",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Sabah Bakü vs Slavia Prag",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:45",
