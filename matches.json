@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-14T19:35:48Z",
-  "updated_at_display": "14.10.2026 19:35",
+  "updated_at": "2026-10-14T22:39:23Z",
+  "updated_at_display": "14.10.2026 22:39",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
@@ -8,85 +8,85 @@
       "time": "13:00",
       "title": "Kashiwa Reysol vs Port FC",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "sms2",
+      "hidden": false
     },
     {
       "time": "13:00",
       "title": "Vissel Kobe vs Jeonbuk",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "14:00",
       "title": "A.Sabalenka vs A.Li",
       "type": "WTA Pekin",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "14:30",
       "title": "Batman Petrol vs İstanbulspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "16:00",
       "title": "Aras Kargo vs Galatasaray",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Ümraniyespor vs Boluspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Hapoel Tel Aviv vs Beşiktaş",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "İlbank vs Eczacibasi",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:45",
       "title": "Feyenoord vs Como",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ex1",
+      "hidden": false
     },
     {
       "time": "19:45",
       "title": "LASK Linz vs Liverpool",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ex7",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Antalyaspor vs Kayserispor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b2",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Tofaş vs Buducnost",
       "type": "Eurocup",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "20:30",
