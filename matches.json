@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-13T21:25:25Z",
-  "updated_at_display": "13.10.2026 21:25",
+  "updated_at": "2026-10-14T00:29:16Z",
+  "updated_at_display": "14.10.2026 00:29",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
@@ -8,85 +8,85 @@
       "time": "10:45",
       "title": "Newcastle Jets vs Gamba Osaka",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "13:00",
       "title": "Kyoto vs Ratchaburi",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "sms2",
+      "hidden": false
     },
     {
       "time": "13:00",
       "title": "Shanghai Port vs Daejeon Citizen",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "14:30",
       "title": "Bandırmaspor vs Sivasspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "15:15",
       "title": "Buriram vs Beijing Guoan",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "sms2",
+      "hidden": false
     },
     {
       "time": "15:15",
       "title": "Cong An Ha Noi vs Kashima Antlers",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Sarıyer vs Bodrumspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Bahçeşehir Klj vs Manresa",
       "type": "Eurocup",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Al Sadd vs Al Hilal",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Al Seeb vs Al Hussein",
       "type": "AFC Şampiyonlar Ligi 2",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "sms2",
+      "hidden": false
     },
     {
       "time": "19:45",
       "title": "Lens vs Sporting Lisbon",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ex7",
+      "hidden": false
     },
     {
       "time": "19:45",
       "title": "Sabah Bakü vs Slavia Prag",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ex1",
+      "hidden": false
     },
     {
       "time": "20:45",
