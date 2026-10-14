@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-14T10:27:36Z",
-  "updated_at_display": "14.10.2026 10:27",
+  "updated_at": "2026-10-14T15:23:29Z",
+  "updated_at_display": "14.10.2026 15:23",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
@@ -8,36 +8,36 @@
       "time": "13:00",
       "title": "Kashiwa Reysol vs Port FC",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "Vissel Kobe vs Jeonbuk",
       "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:00",
       "title": "A.Sabalenka vs A.Li",
       "type": "WTA Pekin",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:30",
       "title": "Batman Petrol vs İstanbulspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Aras Kargo vs Galatasaray",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
