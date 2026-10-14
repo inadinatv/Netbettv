@@ -1,161 +1,161 @@
 {
-  "updated_at": "2026-10-14T00:29:16Z",
-  "updated_at_display": "14.10.2026 00:29",
+  "updated_at": "2026-10-14T05:17:11Z",
+  "updated_at_display": "14.10.2026 05:17",
   "source": "https://fixbettv84.com/",
   "count": 22,
   "matches": [
     {
-      "time": "10:45",
-      "title": "Newcastle Jets vs Gamba Osaka",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
       "time": "13:00",
-      "title": "Kyoto vs Ratchaburi",
+      "title": "Kashiwa Reysol vs Port FC",
       "type": "AFC Şampiyonlar Ligi",
       "channel_id": "sms2",
       "hidden": false
     },
     {
       "time": "13:00",
-      "title": "Shanghai Port vs Daejeon Citizen",
+      "title": "Vissel Kobe vs Jeonbuk",
       "type": "AFC Şampiyonlar Ligi",
       "channel_id": "smarts",
+      "hidden": false
+    },
+    {
+      "time": "14:00",
+      "title": "A.Sabalenka vs A.Li",
+      "type": "WTA Pekin",
+      "channel_id": "bm1",
       "hidden": false
     },
     {
       "time": "14:30",
-      "title": "Bandırmaspor vs Sivasspor",
+      "title": "Batman Petrol vs İstanbulspor",
       "type": "Trendyol 1. Lig",
       "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "15:15",
-      "title": "Buriram vs Beijing Guoan",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
-      "hidden": false
-    },
-    {
-      "time": "15:15",
-      "title": "Cong An Ha Noi vs Kashima Antlers",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Sarıyer vs Bodrumspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Bahçeşehir Klj vs Manresa",
-      "type": "Eurocup",
+      "time": "16:00",
+      "title": "Aras Kargo vs Galatasaray",
+      "type": "TVF Sultanlar Ligi",
       "channel_id": "trtspor2",
       "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Al Sadd vs Al Hilal",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "smarts",
+      "time": "17:00",
+      "title": "Ümraniyespor vs Boluspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "trtspor",
       "hidden": false
     },
     {
       "time": "19:00",
-      "title": "Al Seeb vs Al Hussein",
-      "type": "AFC Şampiyonlar Ligi 2",
-      "channel_id": "sms2",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Lens vs Sporting Lisbon",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Sabah Bakü vs Slavia Prag",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "20:45",
-      "title": "Fenerbahçe Tarfin vs Zalgiris Kaunas",
+      "title": "Hapoel Tel Aviv vs Beşiktaş",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:15",
-      "title": "Al Ittihad vs Al Ahli Dubai",
-      "type": "AFC Şampiyonlar Ligi",
-      "channel_id": "sms2",
+      "time": "19:00",
+      "title": "İlbank vs Eczacibasi",
+      "type": "TVF Sultanlar Ligi",
+      "channel_id": "trtspor2",
       "hidden": false
     },
     {
-      "time": "21:30",
-      "title": "Partizan vs Panathinaikos",
+      "time": "19:45",
+      "title": "Feyenoord vs Como",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "LASK Linz vs Liverpool",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Antalyaspor vs Kayserispor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "b2",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Tofaş vs Buducnost",
+      "type": "Eurocup",
+      "channel_id": "trtspor",
+      "hidden": false
+    },
+    {
+      "time": "20:30",
+      "title": "Anadolu Efes vs Bayern Münih",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Paris vs Virtus Bologna",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Galatasaray vs Barcelona",
+      "title": "Aston Villa vs Fenerbahçe",
       "type": "UEFA Şampiyonlar Ligi [Günün Maçı]",
       "channel_id": "trt1",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Atletico Madrid vs Manchester Utd",
+      "title": "Roma vs Real Madrid",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
+      "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Inter vs Club Brugge",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Leipzig vs PSV",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex5",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Viking vs Bayern Münih",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Villarreal vs Napoli",
+      "title": "Real Betis vs Porto",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex4",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Arsenal vs Lille",
+      "title": "Bodo Glimt vs Borussia Dortmund",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex1",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Manchester City vs PSG",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Shakhtar Donetsk vs AEK",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Slovan Bratislava vs Stuttgart",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex5",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Venezia vs Türk Telekom",
+      "type": "Eurocup",
+      "channel_id": "trtspor",
       "hidden": false
     }
   ]
