@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T15:13:40Z",
-  "updated_at_display": "15.10.2026 15:13",
+  "updated_at": "2026-10-15T19:12:47Z",
+  "updated_at_display": "15.10.2026 19:12",
   "source": "https://fixbettv84.com/",
   "count": 18,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "17:00",
       "title": "Mardin 1969 vs Karagümrük",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
