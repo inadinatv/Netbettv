@@ -1,133 +1,49 @@
 {
-  "updated_at": "2026-10-15T19:12:47Z",
-  "updated_at_display": "15.10.2026 19:12",
+  "updated_at": "2026-10-15T22:23:12Z",
+  "updated_at_display": "15.10.2026 22:23",
   "source": "https://fixbettv84.com/",
-  "count": 18,
+  "count": 6,
   "matches": [
     {
-      "time": "17:00",
-      "title": "Mardin 1969 vs Karagümrük",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "KuPS vs Trabzonspor",
-      "type": "UEFA Avrupa Konferans Ligi [Günün Maçı]",
-      "channel_id": "trt1",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Lech Poznan vs Bayer Leverkusen",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Lyon vs Crystal Palace",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "St.Gilloise vs Real Sociedad",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex3",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Salzburg vs Milan",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Torreense vs Sunderland",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex4",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "CSKA Sofya vs Monaco",
-      "type": "UEFA Avrupa Konferans Ligi",
-      "channel_id": "ex5",
+      "time": "19:00",
+      "title": "Karşıyaka vs Çayırova Bld.",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
       "hidden": false
     },
     {
       "time": "20:00",
-      "title": "Muğlaspor vs Bursaspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "20:45",
-      "title": "Fenerbahçe Tarfin vs Partizan",
+      "title": "Beşiktaş vs Bayern Münih",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Hoffenheim vs Beşiktaş",
-      "type": "UEFA Avrupa Ligi [Günün Maçı]",
-      "channel_id": "trt1",
+      "time": "20:00",
+      "title": "Zalgiris Kaunas vs Anadolu Efes",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Çorum FK vs Ç.Rizespor",
+      "type": "Trendyol Süper Lig",
+      "channel_id": "zirve",
+      "hidden": false
+    },
+    {
+      "time": "21:45",
+      "title": "Le Mans vs Toulouse",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b4",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Benfica vs Celtic",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Bournemouth vs Sturm Graz",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Celta Vigo vs Juventus",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Dinamo Zagreb vs Anderlecht",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex4",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Marsilya vs Olympiakos",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Kopenhag vs Braga",
-      "type": "UEFA Avrupa Konferans Ligi",
-      "channel_id": "ex5",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Real Madrid vs Asvel Villeurbanne",
-      "type": "Euroleague2",
-      "channel_id": "ss",
+      "title": "Deportivo vs Levante",
+      "type": "İspanya La Liga",
+      "channel_id": "ss2",
       "hidden": false
     }
   ]
