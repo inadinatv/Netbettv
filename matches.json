@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-17T12:06:33Z",
-  "updated_at_display": "17.10.2026 12:06",
+  "updated_at": "2026-10-17T15:35:10Z",
+  "updated_at_display": "17.10.2026 15:35",
   "source": "https://fixbettv84.com/",
   "count": 30,
   "matches": [
@@ -8,15 +8,15 @@
       "time": "13:00",
       "title": "Bandırma Bordo vs Türk Telekom",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Erzurumspor vs Eyüpspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:30",
