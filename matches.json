@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-17T17:56:20Z",
-  "updated_at_display": "17.10.2026 17:56",
+  "updated_at": "2026-10-17T20:19:39Z",
+  "updated_at_display": "17.10.2026 20:19",
   "source": "https://fixbettv84.com/",
   "count": 30,
   "matches": [
@@ -106,78 +106,78 @@
       "time": "18:00",
       "title": "Körfez Basket vs Tofaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Shakhtar Donetsk vs Kolos",
       "type": "Ukrayna Premier Ligi",
-      "channel_id": "t1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:15",
       "title": "Strasbourg vs PSG",
       "type": "Fransa Ligue 1",
-      "channel_id": "b4",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Fenerbahçe vs Alanyaspor",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Bologna vs Inter",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Bodrumspor vs Bandırmaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Fenerbahçe Medicana vs Ziraat Bankkart",
       "type": "TVF Efeler Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Manresa vs Unicaja Malaga",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Newcastle vs Aston Villa",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Real Betis vs Barcelona",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:00",
       "title": "Red Star vs St. Etienne",
       "type": "Fransa Ligue 2",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
