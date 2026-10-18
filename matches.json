@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T13:26:11Z",
-  "updated_at_display": "18.10.2026 13:26",
+  "updated_at": "2026-10-18T16:44:12Z",
+  "updated_at_display": "18.10.2026 16:44",
   "source": "https://fixbettv84.com/",
   "count": 32,
   "matches": [
@@ -15,99 +15,99 @@
       "time": "13:30",
       "title": "Udinese vs Lecce",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Kasımpaşa vs Samsunspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Iğdırspor vs Boluspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Real Madrid vs Bilbao Basket",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:00",
       "title": "Zeren Spor vs Fenerbahçe Medicana",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:00",
       "title": "Osasuna vs Racing Santander",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
       "title": "Fenerbahçe Tarfin vs Petkimspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Bournemouth vs Sunderland",
       "type": "İngiltere Premier Lig",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Brighton vs Crystal Palace",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b4",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Leeds United vs Manchester Utd",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Fiorentina vs Como",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Kocaelispor vs Göztepe",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Kayserispor vs Batman Petrol",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Vanspor vs Ümraniyespor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:15",
