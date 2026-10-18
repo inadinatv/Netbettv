@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T16:44:12Z",
-  "updated_at_display": "18.10.2026 16:44",
+  "updated_at": "2026-10-18T18:59:08Z",
+  "updated_at_display": "18.10.2026 18:59",
   "source": "https://fixbettv84.com/",
   "count": 32,
   "matches": [
@@ -113,71 +113,71 @@
       "time": "17:15",
       "title": "Celta Vigo vs Alaves",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Eczacıbaşı vs Vakıfbank",
       "type": "TVF Sultanlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Valencia Basket vs Murcia",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:15",
       "title": "Lorient vs Monaco",
       "type": "Fransa Ligue 1",
-      "channel_id": "b4",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:15",
       "title": "Paris FC vs Rennes",
       "type": "Fransa Ligue 1",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:30",
       "title": "Nottingham Forest vs Arsenal",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Milan vs Atalanta",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "İstanbul Başakşehir vs Gaziantep FK",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "İstanbulspor vs Antalyaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Malaga vs Real Sociedad",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
