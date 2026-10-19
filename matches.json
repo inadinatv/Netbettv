@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-19T14:26:27Z",
-  "updated_at_display": "19.10.2026 14:26",
+  "updated_at": "2026-10-19T20:06:25Z",
+  "updated_at_display": "19.10.2026 20:06",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -15,50 +15,50 @@
       "time": "17:00",
       "title": "Manisa FK vs Muğlaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Karagümrük vs Keçiörengücü",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Esenler Erokspor vs Anadolu Efes",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Monza vs Cagliari",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Trabzonspor vs Beşiktaş",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Bursaspor vs Pendikspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Esenler Erokspor vs Mardin 1969",
       "type": "Trendyol 1. Lig",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
