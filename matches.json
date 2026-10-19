@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-19T20:06:25Z",
-  "updated_at_display": "19.10.2026 20:06",
+  "updated_at": "2026-10-19T23:42:27Z",
+  "updated_at_display": "19.10.2026 23:42",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -8,57 +8,57 @@
       "time": "02:15",
       "title": "Belgrano vs Argentinos Jrs.",
       "type": "Arjantin Primera Division",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Manisa FK vs Muğlaspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Karagümrük vs Keçiörengücü",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b2",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Esenler Erokspor vs Anadolu Efes",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b5",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Monza vs Cagliari",
       "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Trabzonspor vs Beşiktaş",
       "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Bursaspor vs Pendikspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "20:00",
       "title": "Esenler Erokspor vs Mardin 1969",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm1",
+      "hidden": false
     },
     {
       "time": "21:45",
