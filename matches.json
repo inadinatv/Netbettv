@@ -1,91 +1,91 @@
 {
-  "updated_at": "2026-10-19T23:42:27Z",
-  "updated_at_display": "19.10.2026 23:42",
+  "updated_at": "2026-10-20T02:07:54Z",
+  "updated_at_display": "20.10.2026 02:07",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
     {
-      "time": "02:15",
-      "title": "Belgrano vs Argentinos Jrs.",
-      "type": "Arjantin Primera Division",
-      "channel_id": "smarts",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Manisa FK vs Muğlaspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "17:00",
-      "title": "Karagümrük vs Keçiörengücü",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "19:00",
-      "title": "Esenler Erokspor vs Anadolu Efes",
-      "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
-    },
-    {
-      "time": "19:30",
-      "title": "Monza vs Cagliari",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Trabzonspor vs Beşiktaş",
-      "type": "Trendyol Süper Lig [Günün Maçı]",
-      "channel_id": "zirve",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Bursaspor vs Pendikspor",
-      "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Esenler Erokspor vs Mardin 1969",
-      "type": "Trendyol 1. Lig",
+      "time": "07:30",
+      "title": "M.Joint vs Zeynep Sönmez",
+      "type": "WTA Osaka",
       "channel_id": "bm1",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Parma vs Torino",
-      "type": "İtalya Serie A",
-      "channel_id": "ss2",
+      "time": "19:30",
+      "title": "Türk Telekom vs BC Siauliai",
+      "type": "Eurocup",
+      "channel_id": "trtspor",
       "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Rodez vs Montpellier",
-      "type": "Fransa Ligue 2",
-      "channel_id": "b4",
+      "time": "19:45",
+      "title": "Fenerbahçe vs Slavia Prag",
+      "type": "UEFA Şampiyonlar Ligi [Günün Maçı]",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Sabah Bakü vs Borussia Dortmund",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "20:00",
+      "title": "Galatasaray MCT vs Strasbourg",
+      "type": "FIBA Şampiyonlar Ligi",
+      "channel_id": "trtspor2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Tottenham vs Coventry",
-      "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Getafe vs Rayo Vallecano",
-      "type": "İspanya La Liga",
+      "title": "Detroit Pistons vs Boston Celtics",
+      "type": "NBA",
       "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Stuttgart vs Atletico Madrid",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "PSG vs Barcelona",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Napoli vs Bodo Glimt",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex5",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Manchester City vs AEK",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Liverpool vs Villarreal",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Porto vs PSV",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex4",
       "hidden": false
     }
   ]
