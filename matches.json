@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-20T02:07:54Z",
-  "updated_at_display": "20.10.2026 02:07",
+  "updated_at": "2026-10-20T07:34:44Z",
+  "updated_at_display": "20.10.2026 07:34",
   "source": "https://fixbettv84.com/",
   "count": 12,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "07:30",
       "title": "M.Joint vs Zeynep Sönmez",
       "type": "WTA Osaka",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
