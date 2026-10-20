@@ -1,44 +1,9 @@
 {
-  "updated_at": "2026-10-20T17:58:48Z",
-  "updated_at_display": "20.10.2026 17:58",
+  "updated_at": "2026-10-20T21:30:50Z",
+  "updated_at_display": "20.10.2026 21:30",
   "source": "https://fixbettv84.com/",
-  "count": 12,
+  "count": 7,
   "matches": [
-    {
-      "time": "07:30",
-      "title": "M.Joint vs Zeynep Sönmez",
-      "type": "WTA Osaka",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:30",
-      "title": "Türk Telekom vs BC Siauliai",
-      "type": "Eurocup",
-      "channel_id": "trtspor",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Fenerbahçe vs Slavia Prag",
-      "type": "UEFA Şampiyonlar Ligi [Günün Maçı]",
-      "channel_id": "trt1",
-      "hidden": false
-    },
-    {
-      "time": "19:45",
-      "title": "Sabah Bakü vs Borussia Dortmund",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "20:00",
-      "title": "Galatasaray MCT vs Strasbourg",
-      "type": "FIBA Şampiyonlar Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
-    },
     {
       "time": "22:00",
       "title": "Detroit Pistons vs Boston Celtics",
