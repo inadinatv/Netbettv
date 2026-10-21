@@ -1,56 +1,112 @@
 {
-  "updated_at": "2026-10-20T21:30:50Z",
-  "updated_at_display": "20.10.2026 21:30",
+  "updated_at": "2026-10-21T00:08:45Z",
+  "updated_at_display": "21.10.2026 00:08",
   "source": "https://fixbettv84.com/",
-  "count": 7,
+  "count": 15,
   "matches": [
     {
-      "time": "22:00",
-      "title": "Detroit Pistons vs Boston Celtics",
+      "time": "02:00",
+      "title": "New York Knicks vs Philadelphia 76ers",
       "type": "NBA",
       "channel_id": "ss",
       "hidden": false
     },
     {
+      "time": "04:30",
+      "title": "SA Spurs vs OKC Thunder",
+      "type": "NBA",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Hapoel Tel Aviv vs Virtus Bologna",
+      "type": "Euroleague",
+      "channel_id": "ss2",
+      "hidden": false
+    },
+    {
+      "time": "19:00",
+      "title": "Esenler Erokspor vs SCMU Craiova",
+      "type": "FIBA Europe Cup",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Lille vs Galatasaray",
+      "type": "UEFA Şampiyonlar Ligi [Günün Maçı]",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Como vs Manchester Utd",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "21:00",
+      "title": "Levante vs Athletic Bilbao",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
+      "hidden": false
+    },
+    {
+      "time": "21:00",
+      "title": "Basket Napoli vs Tofaş",
+      "type": "Eurocup",
+      "channel_id": "trtspor2",
+      "hidden": false
+    },
+    {
       "time": "22:00",
-      "title": "Stuttgart vs Atletico Madrid",
+      "title": "Aston Villa vs Viking",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex3",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "PSG vs Barcelona",
+      "title": "Bayern Münih vs Arsenal",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex7",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Napoli vs Bodo Glimt",
+      "title": "Real Betis vs Feyenoord",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex5",
+      "channel_id": "ex4",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Manchester City vs AEK",
+      "title": "Club Brugge vs Lens",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex1",
+      "channel_id": "ex6",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Liverpool vs Villarreal",
+      "title": "Inter vs Shakhtar Donetsk",
       "type": "UEFA Şampiyonlar Ligi",
       "channel_id": "ex2",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Porto vs PSV",
+      "title": "Real Madrid vs Leipzig",
       "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex4",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Sporting Lisbon vs LASK Linz",
+      "type": "UEFA Şampiyonlar Ligi",
+      "channel_id": "ex5",
       "hidden": false
     }
   ]
