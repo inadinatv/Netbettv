@@ -1,105 +1,189 @@
 {
-  "updated_at": "2026-10-21T19:08:08Z",
-  "updated_at_display": "21.10.2026 19:08",
+  "updated_at": "2026-10-21T22:21:52Z",
+  "updated_at_display": "21.10.2026 22:21",
   "source": "https://fixbettv84.com/",
-  "count": 14,
+  "count": 26,
   "matches": [
     {
-      "time": "04:30",
-      "title": "SA Spurs vs OKC Thunder",
+      "time": "02:30",
+      "title": "Miami Heat vs Minnesota TW",
       "type": "NBA",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Hapoel Tel Aviv vs Virtus Bologna",
-      "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "05:00",
+      "title": "LA Lakers vs GS Warriors",
+      "type": "NBA",
+      "channel_id": "ss",
+      "hidden": false
     },
     {
-      "time": "19:00",
-      "title": "Esenler Erokspor vs SCMU Craiova",
-      "type": "FIBA Europe Cup",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "05:30",
+      "title": "A.Li vs Zeynep Sönmez",
+      "type": "WTA Osaka",
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "07:30",
+      "title": "M.Stoiana vs M.Uchijima",
+      "type": "WTA Osaka",
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "08:00",
+      "title": "I.Jovic vs J.Paolini",
+      "type": "WTA Ningbo",
+      "channel_id": "bm2",
+      "hidden": false
+    },
+    {
+      "time": "09:30",
+      "title": "M.Linette vs K.Siniakova",
+      "type": "WTA Osaka",
+      "channel_id": "bm1",
+      "hidden": false
+    },
+    {
+      "time": "10:00",
+      "title": "K.Kawa vs B.Bencic",
+      "type": "WTA Ningbo",
+      "channel_id": "bm2",
+      "hidden": false
+    },
+    {
+      "time": "12:00",
+      "title": "A.Eala vs D.Shnaider",
+      "type": "WTA Ningbo",
+      "channel_id": "bm2",
+      "hidden": false
     },
     {
       "time": "19:45",
-      "title": "Lille vs Galatasaray",
-      "type": "UEFA Şampiyonlar Ligi [Günün Maçı]",
+      "title": "Trabzonspor vs Hearts",
+      "type": "UEFA Avrupa Konferans Ligi [Günün Maçı]",
       "channel_id": "trt1",
       "hidden": false
     },
     {
       "time": "19:45",
-      "title": "Como vs Manchester Utd",
-      "type": "UEFA Şampiyonlar Ligi",
+      "title": "Ararat vs AZ Alkmaar",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex6",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Dinamo Zagreb vs NEC Nijmegen",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex5",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Ferencvaros vs Torreense",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex3",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Juventus vs Rennes",
+      "type": "UEFA Avrupa Ligi",
       "channel_id": "ex7",
       "hidden": false
     },
     {
-      "time": "21:00",
-      "title": "Levante vs Athletic Bilbao",
-      "type": "İspanya La Liga",
+      "time": "19:45",
+      "title": "Lech Poznan vs Sunderland",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "OFI Crete vs Bayer Leverkusen",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex1",
+      "hidden": false
+    },
+    {
+      "time": "19:45",
+      "title": "Sturm Graz vs Marsilya",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex4",
+      "hidden": false
+    },
+    {
+      "time": "20:30",
+      "title": "Anadolu Efes vs Beşiktaş",
+      "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "21:00",
-      "title": "Basket Napoli vs Tofaş",
-      "type": "Eurocup",
-      "channel_id": "trtspor2",
+      "time": "21:45",
+      "title": "Partizan vs Kızılyıldız",
+      "type": "Euroleague",
+      "channel_id": "ss",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Aston Villa vs Viking",
-      "type": "UEFA Şampiyonlar Ligi",
+      "title": "Beşiktaş vs Crystal Palace",
+      "type": "UEFA Avrupa Ligi [Günün Maçı]",
+      "channel_id": "trt1",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Bournemouth vs Milan",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex7",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Celtic vs Celta Vigo",
+      "type": "UEFA Avrupa Ligi",
       "channel_id": "ex3",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Bayern Münih vs Arsenal",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex7",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Real Betis vs Feyenoord",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex4",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Club Brugge vs Lens",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex6",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Inter vs Shakhtar Donetsk",
-      "type": "UEFA Şampiyonlar Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Real Madrid vs Leipzig",
-      "type": "UEFA Şampiyonlar Ligi",
+      "title": "Hoffenheim vs Lyon",
+      "type": "UEFA Avrupa Ligi",
       "channel_id": "ex1",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Sporting Lisbon vs LASK Linz",
-      "type": "UEFA Şampiyonlar Ligi",
+      "title": "Lilleström vs Real Sociedad",
+      "type": "UEFA Avrupa Ligi",
       "channel_id": "ex5",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Olympiakos vs Sparta Prag",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex4",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Omonia vs Benfica",
+      "type": "UEFA Avrupa Ligi",
+      "channel_id": "ex2",
+      "hidden": false
+    },
+    {
+      "time": "22:00",
+      "title": "Ajax vs Atalanta",
+      "type": "UEFA Avrupa Konferans Ligi",
+      "channel_id": "ex6",
       "hidden": false
     }
   ]
