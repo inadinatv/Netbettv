@@ -1,22 +1,15 @@
 {
-  "updated_at": "2026-10-21T00:08:45Z",
-  "updated_at_display": "21.10.2026 00:08",
+  "updated_at": "2026-10-21T04:47:51Z",
+  "updated_at_display": "21.10.2026 04:47",
   "source": "https://fixbettv84.com/",
-  "count": 15,
+  "count": 14,
   "matches": [
-    {
-      "time": "02:00",
-      "title": "New York Knicks vs Philadelphia 76ers",
-      "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
-    },
     {
       "time": "04:30",
       "title": "SA Spurs vs OKC Thunder",
       "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
