@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T15:57:16Z",
-  "updated_at_display": "22.10.2026 15:57",
+  "updated_at": "2026-10-22T19:53:34Z",
+  "updated_at_display": "22.10.2026 19:53",
   "source": "https://fixbettv84.com/",
   "count": 26,
   "matches": [
@@ -64,64 +64,64 @@
       "time": "19:45",
       "title": "Trabzonspor vs Hearts",
       "type": "UEFA Avrupa Konferans Ligi [Günün Maçı]",
-      "channel_id": "trt1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Ararat vs AZ Alkmaar",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex6",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Dinamo Zagreb vs NEC Nijmegen",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Ferencvaros vs Torreense",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Juventus vs Rennes",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex7",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Lech Poznan vs Sunderland",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "OFI Crete vs Bayer Leverkusen",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:45",
       "title": "Sturm Graz vs Marsilya",
       "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex4",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:30",
       "title": "Anadolu Efes vs Beşiktaş",
       "type": "Euroleague",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
