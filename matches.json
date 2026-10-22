@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T05:47:54Z",
-  "updated_at_display": "22.10.2026 05:47",
+  "updated_at": "2026-10-22T11:16:28Z",
+  "updated_at_display": "22.10.2026 11:16",
   "source": "https://fixbettv84.com/",
   "count": 26,
   "matches": [
@@ -29,29 +29,29 @@
       "time": "07:30",
       "title": "M.Stoiana vs M.Uchijima",
       "type": "WTA Osaka",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "08:00",
       "title": "I.Jovic vs J.Paolini",
       "type": "WTA Ningbo",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "09:30",
       "title": "M.Linette vs K.Siniakova",
       "type": "WTA Osaka",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "10:00",
       "title": "K.Kawa vs B.Bencic",
       "type": "WTA Ningbo",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "12:00",
