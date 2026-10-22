@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T00:48:47Z",
-  "updated_at_display": "22.10.2026 00:48",
+  "updated_at": "2026-10-22T05:47:54Z",
+  "updated_at_display": "22.10.2026 05:47",
   "source": "https://fixbettv84.com/",
   "count": 26,
   "matches": [
@@ -8,22 +8,22 @@
       "time": "02:30",
       "title": "Miami Heat vs Minnesota TW",
       "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "05:00",
       "title": "LA Lakers vs GS Warriors",
       "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "05:30",
       "title": "A.Li vs Zeynep Sönmez",
       "type": "WTA Osaka",
-      "channel_id": "bm1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "07:30",
