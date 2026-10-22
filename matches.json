@@ -1,189 +1,77 @@
 {
-  "updated_at": "2026-10-22T19:53:34Z",
-  "updated_at_display": "22.10.2026 19:53",
+  "updated_at": "2026-10-22T22:59:46Z",
+  "updated_at_display": "22.10.2026 22:59",
   "source": "https://fixbettv84.com/",
-  "count": 26,
+  "count": 10,
   "matches": [
     {
-      "time": "02:30",
-      "title": "Miami Heat vs Minnesota TW",
+      "time": "02:00",
+      "title": "Philadelphia 76ers vs Cleveland Cavaliers",
       "type": "NBA",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
-      "time": "05:00",
-      "title": "LA Lakers vs GS Warriors",
+      "time": "04:30",
+      "title": "OKC Thunder vs Denver Nuggets",
       "type": "NBA",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
-      "time": "05:30",
-      "title": "A.Li vs Zeynep Sönmez",
-      "type": "WTA Osaka",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "19:00",
+      "title": "Çayırova Bld. vs Bursaspor",
+      "type": "Basketbol Süper Ligi",
+      "channel_id": "b5",
+      "hidden": false
     },
     {
-      "time": "07:30",
-      "title": "M.Stoiana vs M.Uchijima",
-      "type": "WTA Osaka",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "20:00",
+      "title": "Alanyaspor vs Kocaelispor",
+      "type": "Trendyol Süper Lig",
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
-      "time": "08:00",
-      "title": "I.Jovic vs J.Paolini",
-      "type": "WTA Ningbo",
-      "channel_id": "yayinss",
-      "hidden": true
+      "time": "20:00",
+      "title": "Boluspor vs Vanspor",
+      "type": "Trendyol 1. Lig",
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
-      "time": "09:30",
-      "title": "M.Linette vs K.Siniakova",
-      "type": "WTA Osaka",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "10:00",
-      "title": "K.Kawa vs B.Bencic",
-      "type": "WTA Ningbo",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "12:00",
-      "title": "A.Eala vs D.Shnaider",
-      "type": "WTA Ningbo",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Trabzonspor vs Hearts",
-      "type": "UEFA Avrupa Konferans Ligi [Günün Maçı]",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Ararat vs AZ Alkmaar",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Dinamo Zagreb vs NEC Nijmegen",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Ferencvaros vs Torreense",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Juventus vs Rennes",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Lech Poznan vs Sunderland",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "OFI Crete vs Bayer Leverkusen",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "19:45",
-      "title": "Sturm Graz vs Marsilya",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
-    },
-    {
-      "time": "20:30",
-      "title": "Anadolu Efes vs Beşiktaş",
+      "time": "20:00",
+      "title": "Zalgiris Kaunas vs Asvel Villeurbanne",
       "type": "Euroleague",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
-      "time": "21:45",
-      "title": "Partizan vs Kızılyıldız",
+      "time": "21:15",
+      "title": "Olympiakos vs Fenerbahçe Tarfin",
       "type": "Euroleague",
       "channel_id": "ss",
       "hidden": false
     },
     {
-      "time": "22:00",
-      "title": "Beşiktaş vs Crystal Palace",
-      "type": "UEFA Avrupa Ligi [Günün Maçı]",
-      "channel_id": "trt1",
+      "time": "21:45",
+      "title": "Brest vs Nice",
+      "type": "Fransa Ligue 1",
+      "channel_id": "b5",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Bournemouth vs Milan",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex7",
+      "title": "Ipswich Town vs Nottingham Forest",
+      "type": "İngiltere Premier Lig",
+      "channel_id": "b3",
       "hidden": false
     },
     {
       "time": "22:00",
-      "title": "Celtic vs Celta Vigo",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex3",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Hoffenheim vs Lyon",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex1",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Lilleström vs Real Sociedad",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex5",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Olympiakos vs Sparta Prag",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex4",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Omonia vs Benfica",
-      "type": "UEFA Avrupa Ligi",
-      "channel_id": "ex2",
-      "hidden": false
-    },
-    {
-      "time": "22:00",
-      "title": "Ajax vs Atalanta",
-      "type": "UEFA Avrupa Konferans Ligi",
-      "channel_id": "ex6",
+      "title": "Alaves vs Malaga",
+      "type": "İspanya La Liga",
+      "channel_id": "ss",
       "hidden": false
     }
   ]
