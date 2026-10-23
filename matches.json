@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T01:24:24Z",
-  "updated_at_display": "23.10.2026 01:24",
+  "updated_at": "2026-10-23T06:19:23Z",
+  "updated_at_display": "23.10.2026 06:19",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -8,15 +8,15 @@
       "time": "02:00",
       "title": "Philadelphia 76ers vs Cleveland Cavaliers",
       "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "04:30",
       "title": "OKC Thunder vs Denver Nuggets",
       "type": "NBA",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
