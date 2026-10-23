@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T16:41:15Z",
-  "updated_at_display": "23.10.2026 16:41",
+  "updated_at": "2026-10-23T20:06:10Z",
+  "updated_at_display": "23.10.2026 20:06",
   "source": "https://fixbettv84.com/",
   "count": 10,
   "matches": [
@@ -22,29 +22,29 @@
       "time": "19:00",
       "title": "Çayırova Bld. vs Bursaspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Alanyaspor vs Kocaelispor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Boluspor vs Vanspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:00",
       "title": "Zalgiris Kaunas vs Asvel Villeurbanne",
       "type": "Euroleague",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:15",
