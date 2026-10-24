@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T20:20:38Z",
-  "updated_at_display": "24.10.2026 20:20",
+  "updated_at": "2026-10-24T22:39:15Z",
+  "updated_at_display": "24.10.2026 22:39",
   "source": "https://fixbettv84.com/",
   "count": 31,
   "matches": [
@@ -8,176 +8,176 @@
       "time": "10:00",
       "title": "L.Fernandez vs M.Bouzkova",
       "type": "WTA Ningbo",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm2",
+      "hidden": false
     },
     {
       "time": "12:30",
       "title": "E.Rybakina vs D.Shnaider",
       "type": "WTA Ningbo",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "bm2",
+      "hidden": false
     },
     {
       "time": "13:00",
       "title": "Trabzonspor vs Esenler Erokspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b5",
+      "hidden": false
     },
     {
       "time": "13:00",
       "title": "Galatasaray vs Onikişubat Belediyespor",
       "type": "TVF Efeler Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor2",
+      "hidden": false
     },
     {
       "time": "13:30",
       "title": "Eyüpspor vs Kasımpaşa",
       "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "13:30",
       "title": "Bandırmaspor vs Iğdırspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "13:30",
       "title": "Ümraniyespor vs Sivasspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b2",
+      "hidden": false
     },
     {
       "time": "14:30",
       "title": "Aston Villa vs Manchester City",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b3",
+      "hidden": false
     },
     {
       "time": "15:00",
       "title": "Rayo Vallecano vs Elche",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "15:30",
       "title": "Türk Telekom vs Denizli Basket",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b5",
+      "hidden": false
     },
     {
       "time": "16:00",
       "title": "Como vs Sassuolo",
       "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "16:00",
       "title": "Gaziantep FK vs Erzurumspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "16:00",
       "title": "Muğlaspor vs İstanbulspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Arsenal vs Everton",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b3",
+      "hidden": false
     },
     {
       "time": "17:00",
       "title": "Coventry vs Fulham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b4",
+      "hidden": false
     },
     {
       "time": "17:15",
       "title": "Racing Santander vs Espanyol",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "18:00",
       "title": "Shakhtar Donetsk vs Zorya",
       "type": "Ukrayna Premier Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "t1",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Napoli vs Roma",
       "type": "İtalya Serie A",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss2",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Samsunspor vs Amedspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "zirve",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Sarıyer vs Karagümrük",
       "type": "Trendyol 1. Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "trtspor",
+      "hidden": false
     },
     {
       "time": "19:00",
       "title": "Manresa vs SP Burgos",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "smarts",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Chelsea vs Tottenham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b3",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Borussia Dortmund vs Eintracht Frankfurt",
       "type": "Almanya Bundesliga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "19:30",
       "title": "Valencia vs Villarreal",
       "type": "İspanya La Liga",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "ss",
+      "hidden": false
     },
     {
       "time": "20:30",
       "title": "Bahçeşehir Klj vs Beşiktaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "yayinss",
-      "hidden": true
+      "channel_id": "b5",
+      "hidden": false
     },
     {
       "time": "21:45",
