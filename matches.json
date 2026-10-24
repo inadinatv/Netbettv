@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-24T14:47:46Z",
-  "updated_at_display": "24.10.2026 14:47",
+  "updated_at": "2026-10-24T17:53:05Z",
+  "updated_at_display": "24.10.2026 17:53",
   "source": "https://fixbettv84.com/",
-  "count": 32,
+  "count": 31,
   "matches": [
     {
       "time": "10:00",
@@ -57,71 +57,71 @@
       "time": "14:30",
       "title": "Aston Villa vs Manchester City",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:00",
       "title": "Rayo Vallecano vs Elche",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "15:30",
       "title": "Türk Telekom vs Denizli Basket",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Como vs Sassuolo",
       "type": "İtalya Serie A",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Gaziantep FK vs Erzurumspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "16:00",
       "title": "Muğlaspor vs İstanbulspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Arsenal vs Everton",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:00",
       "title": "Coventry vs Fulham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b4",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "17:15",
       "title": "Racing Santander vs Espanyol",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "18:00",
       "title": "Shakhtar Donetsk vs Zorya",
       "type": "Ukrayna Premier Ligi",
-      "channel_id": "t1",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
@@ -219,13 +219,6 @@
       "title": "Gil Vicente vs Porto",
       "type": "Portekiz Liga NOS",
       "channel_id": "b2",
-      "hidden": false
-    },
-    {
-      "time": "23:00",
-      "title": "A.Volkanovski vs M.Evloev",
-      "type": "UFC Dövüş Serisi",
-      "channel_id": "ss",
       "hidden": false
     }
   ]
