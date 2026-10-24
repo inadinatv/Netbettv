@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T17:53:05Z",
-  "updated_at_display": "24.10.2026 17:53",
+  "updated_at": "2026-10-24T20:20:38Z",
+  "updated_at_display": "24.10.2026 20:20",
   "source": "https://fixbettv84.com/",
   "count": 31,
   "matches": [
@@ -127,57 +127,57 @@
       "time": "19:00",
       "title": "Napoli vs Roma",
       "type": "İtalya Serie A",
-      "channel_id": "ss2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Samsunspor vs Amedspor",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Sarıyer vs Karagümrük",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:00",
       "title": "Manresa vs SP Burgos",
       "type": "İspanya Basketbol Ligi",
-      "channel_id": "smarts",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Chelsea vs Tottenham",
       "type": "İngiltere Premier Lig",
-      "channel_id": "b3",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Borussia Dortmund vs Eintracht Frankfurt",
       "type": "Almanya Bundesliga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "19:30",
       "title": "Valencia vs Villarreal",
       "type": "İspanya La Liga",
-      "channel_id": "ss",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "20:30",
       "title": "Bahçeşehir Klj vs Beşiktaş",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "21:45",
