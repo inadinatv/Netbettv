@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T11:29:26Z",
-  "updated_at_display": "24.10.2026 11:29",
+  "updated_at": "2026-10-24T14:47:46Z",
+  "updated_at_display": "24.10.2026 14:47",
   "source": "https://fixbettv84.com/",
   "count": 32,
   "matches": [
@@ -15,43 +15,43 @@
       "time": "12:30",
       "title": "E.Rybakina vs D.Shnaider",
       "type": "WTA Ningbo",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "Trabzonspor vs Esenler Erokspor",
       "type": "Basketbol Süper Ligi",
-      "channel_id": "b5",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:00",
       "title": "Galatasaray vs Onikişubat Belediyespor",
       "type": "TVF Efeler Ligi",
-      "channel_id": "trtspor2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Eyüpspor vs Kasımpaşa",
       "type": "Trendyol Süper Lig",
-      "channel_id": "zirve",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Bandırmaspor vs Iğdırspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "trtspor",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "13:30",
       "title": "Ümraniyespor vs Sivasspor",
       "type": "Trendyol 1. Lig",
-      "channel_id": "b2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "14:30",
