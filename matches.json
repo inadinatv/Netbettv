@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T06:29:25Z",
-  "updated_at_display": "24.10.2026 06:29",
+  "updated_at": "2026-10-24T11:29:26Z",
+  "updated_at_display": "24.10.2026 11:29",
   "source": "https://fixbettv84.com/",
   "count": 32,
   "matches": [
@@ -8,8 +8,8 @@
       "time": "10:00",
       "title": "L.Fernandez vs M.Bouzkova",
       "type": "WTA Ningbo",
-      "channel_id": "bm2",
-      "hidden": false
+      "channel_id": "yayinss",
+      "hidden": true
     },
     {
       "time": "12:30",
